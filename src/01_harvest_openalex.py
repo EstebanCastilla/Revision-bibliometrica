@@ -12,9 +12,12 @@ Uso:
     python src/01_harvest_openalex.py --only N1 N4a  # consultas puntuales
     python src/01_harvest_openalex.py --counts-only  # solo conteos
 
-Variables de entorno opcionales:
-    OPENALEX_API_KEY   clave gratuita de OpenAlex (https://openalex.org/settings/api)
-    OPENALEX_MAILTO    correo para el "polite pool"
+Variables de entorno:
+    OPENALEX_API_KEY   clave gratuita de OpenAlex (https://openalex.org/settings/api).
+                       Desde el 13-feb-2026 la API exige clave; con ella el
+                       presupuesto diario gratuito (~1 USD) cubre de sobra las
+                       ~300-500 peticiones de esta estrategia.
+    OPENALEX_MAILTO    (opcional) correo de contacto
 """
 from __future__ import annotations
 
@@ -61,7 +64,10 @@ def get(params: dict, retries: int = 6) -> dict:
             if r.status_code == 200:
                 return r.json()
             print(f"   ! HTTP {r.status_code}: {r.text[:300]}; reintento en {wait:.0f}s", flush=True)
-            if r.status_code in (400, 401, 403):
+            if r.status_code in (401, 403, 409):
+                raise SystemExit("OpenAlex rechazó la petición: defina OPENALEX_API_KEY "
+                                 "(clave gratuita en https://openalex.org/settings/api)")
+            if r.status_code == 400:
                 r.raise_for_status()
         time.sleep(wait)
         wait *= 2

@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 120
     env:
-      STAGE: ${{ github.event.inputs.stage || 'harvest' }}
+      STAGE: ${{ github.event.inputs.stage || 'all' }}
       OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
       OPENALEX_MAILTO: ${{ secrets.OPENALEX_MAILTO }}
       SCOPUS_API_KEY: ${{ secrets.SCOPUS_API_KEY }}
@@ -40,6 +40,7 @@ jobs:
           python-version: "3.12"
           cache: pip
       - run: pip install -r requirements.txt
+      - run: sudo apt-get install -y pandoc
 
       - name: Recoleccion (OpenAlex + Scopus API opcional)
         if: env.STAGE == 'harvest' || env.STAGE == 'all'
