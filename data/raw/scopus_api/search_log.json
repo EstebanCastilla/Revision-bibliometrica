@@ -1,0 +1,65 @@
+{
+  "N1": {
+    "id": "N1",
+    "query_scopus": "TITLE-ABS-KEY(biorefiner* AND (\"life cycle assessment\" OR \"life cycle analysis\" OR \"techno-economic\" OR technoeconomic OR \"economic feasibility\" OR \"sustainability assessment\" OR \"social life cycle\" OR \"life cycle sustainability\"))",
+    "parts": [
+      {
+        "years": "2000-2026",
+        "query": "TITLE-ABS-KEY(biorefiner* AND (\"life cycle assessment\" OR \"life cycle analysis\" OR \"techno-economic\" OR technoeconomic OR \"economic feasibility\" OR \"sustainability assessment\" OR \"social life cycle\" OR \"life cycle sustainability\")) AND PUBYEAR > 1999 AND PUBYEAR < 2027 AND DOCTYPE(ar OR re)",
+        "count": 2785
+      }
+    ],
+    "count": 2785,
+    "retrieved": 2785,
+    "with_doi": 2767,
+    "scopus_only_resolved_in_openalex": 646,
+    "view": "STANDARD",
+    "date": "2026-10-29T20:38:31+00:00",
+    "code_commit": "3dac005bdd6e0fc97d7a2865f689d2e5baf7b5f0",
+    "code_modified_since_commit": true,
+    "environment": "vm",
+    "python": "3.13.17"
+  },
+  "N2": {
+    "id": "N2",
+    "query_scopus": "TITLE-ABS-KEY((biorefiner* OR bioeconomy OR \"bio-based\" OR biofuel* OR bioenergy) AND (\"social life cycle assessment\" OR \"social life cycle analysis\" OR \"S-LCA\" OR \"social LCA\" OR \"life cycle sustainability assessment\" OR LCSA))",
+    "parts": [
+      {
+        "years": "2000-2026",
+        "query": "TITLE-ABS-KEY((biorefiner* OR bioeconomy OR \"bio-based\" OR biofuel* OR bioenergy) AND (\"social life cycle assessment\" OR \"social life cycle analysis\" OR \"S-LCA\" OR \"social LCA\" OR \"life cycle sustainability assessment\" OR LCSA)) AND PUBYEAR > 1999 AND PUBYEAR < 2027 AND DOCTYPE(ar OR re)",
+        "count": 142
+      }
+    ],
+    "count": 142,
+    "retrieved": 142,
+    "with_doi": 140,
+    "scopus_only_resolved_in_openalex": 42,
+    "view": "STANDARD",
+    "date": "2026-10-29T20:38:39+00:00",
+    "code_commit": "3dac005bdd6e0fc97d7a2865f689d2e5baf7b5f0",
+    "code_modified_since_commit": true,
+    "environment": "vm",
+    "python": "3.13.17"
+  },
+  "N3": {
+    "id": "N3",
+    "query_scopus": "TITLE-ABS-KEY((cassava OR manioc OR yam* OR dioscorea OR \"sweet potato*\" OR potato* OR taro OR cocoyam OR \"root crop*\" OR \"tuber crop*\") AND (biorefiner* OR bioethanol OR \"ethanol production\" OR \"ethanol fermentation\" OR \"fuel ethanol\" OR biogas OR \"anaerobic digestion\" OR biomethane OR biofertili* OR valori* OR \"life cycle assessment\" OR \"techno-economic\"))",
+    "parts": [
+      {
+        "years": "2000-2026",
+        "query": "TITLE-ABS-KEY((cassava OR manioc OR yam* OR dioscorea OR \"sweet potato*\" OR potato* OR taro OR cocoyam OR \"root crop*\" OR \"tuber crop*\") AND (biorefiner* OR bioethanol OR \"ethanol production\" OR \"ethanol fermentation\" OR \"fuel ethanol\" OR biogas OR \"anaerobic digestion\" OR biomethane OR biofertili* OR valori* OR \"life cycle assessment\" OR \"techno-economic\")) AND PUBYEAR > 1999 AND PUBYEAR < 2027 AND DOCTYPE(ar OR re)",
+        "count": 2950
+      }
+    ],
+    "count": 2950,
+    "retrieved": 2950,
+    "with_doi": 2680,
+    "scopus_only_resolved_in_openalex": 553,
+    "view": "STANDARD",
+    "date": "2026-10-29T20:41:21+00:00",
+    "code_commit": "4bec39c83549e41b09b7f24520762ad60c78ed87",
+    "code_modified_since_commit": false,
+    "environment": "vm",
+    "python": "3.13.17"
+  }
+}
