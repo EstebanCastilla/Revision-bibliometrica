@@ -1,0 +1,65 @@
+name: Pipeline bibliometrico
+
+# Ejecuta la recolección de datos (APIs de OpenAlex y, si hay clave, Scopus),
+# el análisis bibliométrico y la generación del artículo. Los resultados se
+# versionan en el propio repositorio para garantizar la trazabilidad.
+on:
+  workflow_dispatch:
+    inputs:
+      stage:
+        description: "Etapa a ejecutar: harvest | analyze | all"
+        required: true
+        default: all
+  push:
+    paths:
+      - "config/queries.yaml"
+      - "src/01_harvest_openalex.py"
+      - ".github/workflows/pipeline.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pipeline-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      STAGE: ${{ github.event.inputs.stage || 'harvest' }}
+      OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+      OPENALEX_MAILTO: ${{ secrets.OPENALEX_MAILTO }}
+      SCOPUS_API_KEY: ${{ secrets.SCOPUS_API_KEY }}
+      SCOPUS_INSTTOKEN: ${{ secrets.SCOPUS_INSTTOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+
+      - name: Recoleccion (OpenAlex + Scopus API opcional)
+        if: env.STAGE == 'harvest' || env.STAGE == 'all'
+        run: |
+          python src/01_harvest_openalex.py
+          python src/02_harvest_scopus_api.py
+
+      - name: Analisis bibliometrico
+        if: env.STAGE == 'analyze' || env.STAGE == 'all'
+        run: bash run_analysis.sh
+
+      - name: Versionar resultados
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data results articulo || true
+          if git diff --cached --quiet; then echo "Sin cambios"; exit 0; fi
+          git commit -m "Pipeline (${STAGE}): datos y resultados actualizados [skip ci]"
+          for i in 1 2 3 4; do
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            sleep $((2**i))
+          done
+          exit 1
