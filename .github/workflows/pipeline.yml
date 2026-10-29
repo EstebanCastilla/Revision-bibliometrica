@@ -4,17 +4,15 @@ name: Pipeline bibliometrico
 # el análisis bibliométrico y la generación del artículo. Los resultados se
 # versionan en el propio repositorio para garantizar la trazabilidad.
 on:
+  # Solo ejecución manual: el corpus publicado corresponde a la cosecha del
+  # 2026-10-29. Una nueva cosecha es una decisión deliberada (y se registra
+  # en protocolo/bitacora_decisiones.md), no un efecto de editar el código.
   workflow_dispatch:
     inputs:
       stage:
         description: "Etapa a ejecutar: harvest | analyze | all"
         required: true
-        default: all
-  push:
-    paths:
-      - "config/queries.yaml"
-      - "src/01_harvest_openalex.py"
-      - ".github/workflows/pipeline.yml"
+        default: analyze
 
 permissions:
   contents: write
@@ -28,7 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 120
     env:
-      STAGE: ${{ github.event.inputs.stage || 'all' }}
+      STAGE: ${{ github.event.inputs.stage || 'analyze' }}
       OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
       OPENALEX_MAILTO: ${{ secrets.OPENALEX_MAILTO }}
       SCOPUS_API_KEY: ${{ secrets.SCOPUS_API_KEY }}
@@ -45,6 +43,7 @@ jobs:
       - name: Recoleccion (OpenAlex + Scopus API opcional)
         if: env.STAGE == 'harvest' || env.STAGE == 'all'
         run: |
+          if [ -z "$OPENALEX_API_KEY" ]; then echo "::error::Defina el secret OPENALEX_API_KEY"; exit 1; fi
           python src/01_harvest_openalex.py
           python src/02_harvest_scopus_api.py
 
