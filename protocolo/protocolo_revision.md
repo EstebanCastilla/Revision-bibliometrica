@@ -50,7 +50,11 @@ Las cadenas completas (sintaxis OpenAlex y Scopus) están en [`config/queries.ya
 
 **Inclusión**
 - Documentos de tipo artículo o revisión (`type: article | review`).
-- Publicados entre 2000 y la fecha de corte (2026 se trata como año parcial).
+- Publicados entre 2000 y la fecha de corte (2026 se trata como año parcial). Justificación del periodo:
+  1. El campo de la biorrefinería evaluada con ACV, TEA o ACV-S es posterior a 2000.
+  2. Los marcos que usa la tesis se consolidan después: ISO 14040/14044:2006, LCSA (Kloepffer, 2008) y las guías de ACV-S de UNEP (2009 y 2020).
+  3. El límite superior es la fecha de ejecución de la búsqueda.
+  La decisión se verificó con `src/10_period_sensitivity.py` (ver `results/tables/period_sensitivity.csv`).
 - Términos de búsqueda presentes en el título o el resumen.
 - Cualquier idioma (se reporta la distribución por idioma).
 
