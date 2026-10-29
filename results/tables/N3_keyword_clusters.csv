@@ -1,0 +1,81 @@
+palabra,frecuencia,cluster,grado,fuerza
+bioethanol production,656,C1,64,2103
+saccharomyces cerevisiae,331,C1,63,1221
+agricultural waste valorization,252,C1,64,608
+ethanol yield,246,C1,54,920
+lignocellulosic biomass,222,C1,66,770
+enzymatic hydrolysis,202,C1,60,836
+cassava starch,172,C1,54,367
+simultaneous saccharification and fermentation,159,C1,44,573
+starch hydrolysis,158,C1,56,543
+fermentation,144,C1,55,536
+reducing sugars,138,C1,58,578
+alcoholic fermentation,136,C1,54,381
+glucoamylase,128,C1,42,571
+alpha-amylase,126,C1,43,563
+acid hydrolysis,112,C1,54,435
+fermentation optimization,108,C1,47,399
+agro-industrial waste valorization,107,C1,48,292
+potato peel waste,103,C1,52,312
+saccharification,96,C1,41,388
+cassava pulp,91,C1,50,282
+aspergillus niger,90,C1,50,337
+sugarcane bagasse,85,C1,60,265
+potato starch,84,C1,41,138
+solid-state fermentation,81,C1,47,212
+circular bioeconomy,76,C1,54,175
+anaerobic digestion,457,C2,66,1328
+biogas production,328,C2,57,1011
+cassava peel,273,C2,66,924
+potato peel,224,C2,66,567
+co-digestion,169,C2,49,600
+biogas,154,C2,58,420
+methane yield,142,C2,50,519
+waste valorization,134,C2,66,294
+circular economy,133,C2,65,303
+renewable energy,132,C2,64,471
+antioxidant activity,121,C2,38,182
+volatile fatty acids,113,C2,51,317
+cassava wastewater,111,C2,51,275
+agro-industrial waste,104,C2,56,346
+cod removal,103,C2,39,215
+potato waste,100,C2,61,324
+food waste valorization,98,C2,49,204
+cattle manure,97,C2,58,351
+agricultural waste,96,C2,53,313
+methane production,88,C2,41,248
+wastewater treatment,87,C2,36,179
+biogas yield,79,C2,41,271
+food waste,78,C2,55,221
+mesophilic digestion,77,C2,36,290
+agricultural residues,76,C2,55,218
+bioenergy,71,C2,51,189
+phenolic compounds,70,C2,41,141
+biofertilizers,584,C3,62,1296
+potato,578,C3,69,1361
+tuber yield,287,C3,27,869
+crop yield,120,C3,44,280
+starch content,109,C3,48,314
+tuber quality,107,C3,23,396
+farmyard manure,92,C3,23,343
+mineral fertilizers,92,C3,30,349
+sustainable agriculture,91,C3,38,224
+organic fertilizer,87,C3,45,268
+integrated nutrient management,80,C3,21,334
+azotobacter,74,C3,18,261
+plant growth,74,C3,27,233
+taro,72,C3,48,122
+soil fertility,71,C3,31,192
+bioethanol,581,C4,71,1448
+cassava,518,C4,76,1113
+sweet potato,274,C4,67,590
+biofuels,184,C4,65,549
+life cycle assessment,135,C4,52,252
+ghg emissions,132,C4,49,233
+biorefinery,130,C4,62,349
+maize,123,C4,61,358
+food security,103,C4,48,204
+techno-economic analysis,90,C4,57,191
+yam,89,C4,41,129
+environmental impact,80,C4,37,144
+sugarcane,74,C4,38,234

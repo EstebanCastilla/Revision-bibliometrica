@@ -12,6 +12,7 @@ a título + resumen + palabras clave.
 from __future__ import annotations
 
 import re
+import textwrap
 import warnings
 from collections import Counter
 
@@ -89,7 +90,7 @@ def heatmap(m: pd.DataFrame, title, path, fmt="{:.0f}", cbar="Documentos"):
     fig, ax = plt.subplots(figsize=(1.0 * m.shape[1] + 2.5, 0.5 * m.shape[0] + 1.6))
     vals = np.log1p(m.values.astype(float))
     im = ax.imshow(vals, cmap=SEQ, aspect="auto")
-    ax.set_xticks(range(m.shape[1]), m.columns, rotation=35, ha="right", fontsize=8)
+    ax.set_xticks(range(m.shape[1]), [textwrap.fill(c, 16) for c in m.columns], fontsize=8)
     ax.set_yticks(range(m.shape[0]), m.index, fontsize=8.5)
     ax.grid(False)
     for (i, j), v in np.ndenumerate(m.values):
@@ -178,7 +179,8 @@ def main() -> None:
             parts.append(g.sort_values("Índice de priorización", ascending=False))
         met = pd.concat(parts)
         met.to_csv(TABLES / "metabolite_candidates.csv", index=False)
-        fig, axes = plt.subplots(1, 2, figsize=(11, 4))
+        fig, axes = plt.subplots(1, 2, figsize=(13, 4.6))
+        fig.subplots_adjust(wspace=0.6)
         for ax, (crop, g) in zip(axes, met.groupby("Cultivo", sort=False)):
             g = g.sort_values("Documentos")
             y = np.arange(len(g))

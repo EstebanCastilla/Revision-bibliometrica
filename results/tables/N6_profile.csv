@@ -1,0 +1,20 @@
+,,docs
+cultivo,Yuca,44
+cultivo,Papa,18
+cultivo,Ñame,117
+cultivo,Batata,64
+cultivo,Malanga/Taro,10
+ruta,Almidón,56
+ruta,Bioetanol,54
+ruta,Biogás,63
+ruta,Biofertilizante,29
+ruta,Metabolitos/bioactivos,39
+ruta,Bioplásticos/biomateriales,17
+ruta,Alimento animal,19
+ruta,Biorrefinería integrada,141
+metodo,ACV,73
+metodo,TEA,107
+metodo,Análisis económico agrícola/mercado,112
+metodo,ACV-S,6
+metodo,Dimensión socioeconómica (no ACV-S),41
+metodo,LCSA / multicriterio,19

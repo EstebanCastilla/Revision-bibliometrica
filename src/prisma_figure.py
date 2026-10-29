@@ -18,13 +18,22 @@ def arrow(ax, x1, y1, x2, y2):
     ax.annotate("", (x2, y2), (x1, y1), arrowprops=dict(arrowstyle="-|>", color=INK2, lw=1))
 
 
+def es(n) -> str:
+    return f"{int(n):,}".replace(",", ".")
+
+
 def main() -> None:
     p = pd.read_csv(TABLES / "prisma_flow.csv").set_index("level")
     ident = pd.read_csv(TABLES / "prisma_identification_by_query.csv")
     t = p.loc["Total"]
     by_src = ident.groupby("source")["records"].sum()
-    src_txt = "\n".join(f"{s}: {n:,}" for s, n in by_src.items())
-    items = [f"{i}: {int(r.included):,}" for i, r in p.drop("Total").iterrows()]
+    enrich = int(by_src.get("Scopus -> OpenAlex (DOI)", 0))
+    by_src = by_src.drop("Scopus -> OpenAlex (DOI)", errors="ignore")
+    src_txt = " · ".join(f"{s}: {es(n)}" for s, n in by_src.items())
+    if enrich:
+        src_txt += f"\n(+{es(enrich)} DOI de Scopus completados\ncon metadatos de OpenAlex)"
+    nq = ident["query"].nunique()
+    items = [f"{i}: {es(int(r.included))}" for i, r in p.drop("Total").iterrows()]
     lv = "\n".join("   ".join(items[k:k + 2]) for k in range(0, len(items), 2))
 
     fig, ax = plt.subplots(figsize=(8, 7))
@@ -34,16 +43,16 @@ def main() -> None:
     L, W, H = 0.05, 0.42, 0.13
     R = 0.55
     rows = [0.82, 0.60, 0.38, 0.04]
-    box(ax, L, rows[0], W, H, f"Registros identificados\n(13 consultas, niveles N1-N6)\n{src_txt}\nTotal: {int(t.identified):,}")
-    box(ax, R, rows[0], W, H, f"Duplicados eliminados\n(DOI y título normalizado + año)\nn = {int(t.duplicates_removed):,}",
+    box(ax, L, rows[0], W, H, f"Registros identificados ({nq} consultas, N1-N6)\n{src_txt}\nTotal: {es(int(t.identified))}")
+    box(ax, R, rows[0], W, H, f"Duplicados eliminados\n(DOI y título normalizado + año)\nn = {es(int(t.duplicates_removed))}",
         fc="#fdf3ee", ec="#eb6834")
-    box(ax, L, rows[1], W, H, f"Registros únicos cribados\nn = {int(t.screened):,}")
-    box(ax, R, rows[1], W, H, f"Excluidos en cribado\n(sin título, retractados,\nfuera de periodo o de tipo)\nn = {int(t.excluded_screening):,}",
+    box(ax, L, rows[1], W, H, f"Registros únicos cribados\nn = {es(int(t.screened))}")
+    box(ax, R, rows[1], W, H, f"Excluidos en cribado\n(sin título, retractados,\nfuera de periodo o de tipo)\nn = {es(int(t.excluded_screening))}",
         fc="#fdf3ee", ec="#eb6834")
-    box(ax, L, rows[2], W, H, f"Registros evaluados para elegibilidad\n(verificación léxica en título,\nresumen y palabras clave)\nn = {int(t.assessed_eligibility):,}")
-    box(ax, R, rows[2], W, H, f"Excluidos por elegibilidad\n(falsos positivos, fuera de alcance)\nn = {int(t.excluded_eligibility):,}",
+    box(ax, L, rows[2], W, H, f"Registros evaluados para elegibilidad\n(verificación léxica en título,\nresumen y palabras clave)\nn = {es(int(t.assessed_eligibility))}")
+    box(ax, R, rows[2], W, H, f"Excluidos por elegibilidad\n(falsos positivos, fuera de alcance)\nn = {es(int(t.excluded_eligibility))}",
         fc="#fdf3ee", ec="#eb6834")
-    box(ax, L, rows[3], W, H + 0.08, f"Estudios incluidos (registros únicos)\nn = {int(t.included):,}\n\nPor nivel (un registro puede\npertenecer a varios niveles):\n{lv}",
+    box(ax, L, rows[3], W, H + 0.08, f"Estudios incluidos (registros únicos)\nn = {es(int(t.included))}\n\nPor nivel (un registro puede\npertenecer a varios niveles):\n{lv}",
         fc="#e8f6ef", ec="#1baf7a")
     for i in range(3):
         arrow(ax, L + W / 2, rows[i], L + W / 2, rows[i + 1] + H + (0.08 if i == 2 else 0))

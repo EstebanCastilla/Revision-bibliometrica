@@ -19,7 +19,7 @@ def main() -> None:
         return
     src = ART / "articulo_revision_bibliometrica.md"
     out = ART / "articulo_revision_bibliometrica.docx"
-    cmd = ["pandoc", src.name, "-o", out.name, "--resource-path=.:..", "--toc=false"]
+    cmd = ["pandoc", src.name, "-o", out.name, "--resource-path=.:.."]
     ref = ART / "plantilla_referencia.docx"
     if ref.exists():
         cmd.append(f"--reference-doc={ref.name}")

@@ -210,7 +210,10 @@ def main() -> None:
 
     # ---- Tablas PRISMA por nivel -------------------------------------------
     prisma = []
-    raw_df = pd.DataFrame({"query": [r["_query"] for r in raw]})
+    # Los registros "Scopus -> OpenAlex" completan metadatos de DOI ya identificados
+    # en Scopus; no son identificaciones nuevas y no se cuentan en esa etapa.
+    ENRICH = "Scopus -> OpenAlex (DOI)"
+    raw_df = pd.DataFrame({"query": [r["_query"] for r in raw if r["_source"] != ENRICH]})
     raw_df["level"] = raw_df["query"].map(LEVEL_OF)
     for lvl in list(LEVEL_NAMES) + ["Total"]:
         sel = (lambda qs: True) if lvl == "Total" else (lambda qs, l=lvl: any(LEVEL_OF(q) == l for q in qs))
@@ -225,7 +228,7 @@ def main() -> None:
                        "assessed_eligibility": unique - exc_screen, "excluded_eligibility": exc_elig,
                        "included": incl})
     pd.DataFrame(prisma).to_csv(TABLES / "prisma_flow.csv", index=False)
-    ident.to_csv(TABLES / "prisma_identification_by_query.csv", index=False)
+    ident.to_csv(TABLES / "prisma_identification_by_query.csv", index=False)  # incluye filas de enlace
     if not exc.empty:
         (exc.assign(reason=exc["reason"].str.replace(r"N\d\w?: ", "", regex=True).str.split(" | ", regex=False))
             .explode("reason").groupby(["stage", "reason"]).size().rename("n").reset_index()

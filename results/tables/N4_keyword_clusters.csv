@@ -1,0 +1,81 @@
+palabra,frecuencia,cluster,grado,fuerza
+sweet potato,3266,C1,75,7202
+antioxidant activity,1480,C1,79,5456
+anthocyanin,1210,C1,72,3609
+purple sweet potato,1104,C1,69,3046
+flavonoids,774,C1,77,3118
+functional foods,515,C1,77,1898
+phenolic compounds,483,C1,77,1781
+total phenolic content,467,C1,70,1772
+carotenoid,423,C1,71,1535
+polyphenol,407,C1,74,1510
+dpph radical scavenging,342,C1,69,1431
+oxidative stress,325,C1,60,846
+bioactive compounds,324,C1,69,1328
+vitamin c,309,C1,70,1227
+tuber yield,287,C1,47,559
+extraction optimization,224,C1,46,478
+cultivar differences,210,C1,71,797
+sweet potato leaves,197,C1,48,720
+antioxidant capacity,187,C1,70,655
+functional food ingredients,184,C1,71,656
+chlorogenic acid,177,C1,59,556
+tuberous roots,171,C1,58,385
+polyphenol oxidase,171,C1,53,321
+free radical scavenging,159,C1,58,596
+sweet potato starch,771,C2,55,1888
+swelling power,389,C2,68,1720
+amylose content,384,C2,66,1561
+starch crystallinity,364,C2,63,1358
+starch modification,326,C2,52,1040
+resistant starch,323,C2,69,1041
+pasting properties,322,C2,65,1397
+yam starch,281,C2,55,906
+physicochemical properties,272,C2,73,979
+starch solubility,265,C2,60,1131
+starch granule morphology,264,C2,57,1094
+cassava starch,236,C2,58,777
+potato starch,219,C2,45,691
+corn starch,200,C2,47,593
+functional properties,195,C2,66,857
+gelatinization temperature,194,C2,52,820
+viscosity,192,C2,65,633
+thermal stability,179,C2,59,392
+water holding capacity,167,C2,64,602
+starch gelatinization,162,C2,59,510
+yam,735,C3,76,1749
+diosgenin,570,C3,59,1008
+dioscorea alata,488,C3,75,1412
+saponin,313,C3,71,1159
+dioscorea opposita,300,C3,68,678
+dioscorea zingiberensis,279,C3,42,355
+dioscorea bulbifera,270,C3,69,811
+anti-inflammatory activity,261,C3,55,983
+medicinal plants,254,C3,61,784
+steroidal saponins,253,C3,33,457
+cassava,212,C3,68,515
+tannins,209,C3,67,999
+dioscorea rotundata,199,C3,68,537
+polysaccharide,183,C3,57,445
+phytochemicals,182,C3,63,784
+anticancer activity,172,C3,49,630
+chinese yam,170,C3,64,400
+dioscorea nipponica,160,C3,39,293
+dioscin,156,C3,36,315
+antibacterial activity,154,C3,54,474
+alkaloids,153,C3,60,712
+beta-carotene,700,C4,73,2241
+orange-fleshed sweet potato,497,C4,66,1670
+dietary fiber,458,C4,74,1584
+starch content,414,C4,72,1078
+sensory evaluation,354,C4,70,1185
+proximate composition,346,C4,70,1490
+sensory acceptability,331,C4,65,1122
+sweet potato flour,262,C4,61,899
+protein content,237,C4,72,1009
+moisture content,237,C4,70,744
+mineral content,203,C4,68,936
+nutritional value,188,C4,66,738
+vitamin a deficiency,185,C4,49,585
+nutritional composition,184,C4,72,766
+starch,164,C4,72,547

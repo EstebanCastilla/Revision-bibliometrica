@@ -1,0 +1,81 @@
+palabra,frecuencia,cluster,grado,fuerza
+biorefinery,1620,C1,78,5904
+life cycle assessment,878,C1,79,3540
+biofuels,293,C1,79,1310
+circular bioeconomy,283,C1,77,1279
+ghg emissions,262,C1,78,989
+circular economy,241,C1,79,988
+environmental impact,216,C1,76,786
+global warming potential,157,C1,75,589
+bioeconomy,145,C1,77,604
+waste valorization,145,C1,76,667
+bioenergy,131,C1,73,627
+biomass valorization,109,C1,67,387
+sustainability assessment,104,C1,73,396
+bio-based chemicals,102,C1,68,433
+bioproducts,79,C1,62,335
+scale-up,77,C1,63,325
+eutrophication,61,C1,53,251
+food waste valorization,60,C1,57,284
+renewable energy,60,C1,64,289
+bioactive compounds,58,C1,48,262
+techno-economic feasibility,54,C1,59,209
+climate change impacts,53,C1,52,159
+polyhydroxyalkanoates,53,C1,47,205
+platform chemicals,52,C1,65,268
+biomass feedstock,51,C1,59,179
+ultrasound-assisted extraction,51,C1,33,173
+techno-economic analysis,1250,C2,78,4648
+lignocellulosic biomass,374,C2,76,1621
+bioethanol,280,C2,77,1299
+enzymatic hydrolysis,147,C2,71,665
+cellulosic ethanol,143,C2,62,531
+lignin valorization,128,C2,65,448
+corn stover,128,C2,66,486
+sugarcane bagasse,128,C2,70,593
+sensitivity analysis,120,C2,63,456
+net present value,106,C2,64,438
+biomass pretreatment,105,C2,68,500
+minimum selling price,102,C2,63,431
+lignocellulosic biorefinery,97,C2,65,324
+process integration,92,C2,75,384
+sugarcane biorefinery,92,C2,53,303
+combined heat and power,92,C2,67,421
+hydrogen production,86,C2,65,374
+production costs,86,C2,72,307
+environmental impact assessment,79,C2,63,308
+bioethanol production,75,C2,59,274
+process simulation,75,C2,66,309
+carbon footprint,73,C2,68,275
+payback period,72,C2,63,333
+internal rate of return,69,C2,58,302
+lignocellulosic biomass pretreatment,65,C2,52,243
+agricultural residues,64,C2,62,301
+wheat straw,61,C2,59,288
+deep eutectic solvents,61,C2,47,247
+lignin,60,C2,57,245
+sustainable aviation fuel,55,C2,46,175
+ethanol,54,C2,54,204
+succinic acid,53,C2,60,222
+co2 emissions,53,C2,65,222
+process design,52,C2,55,204
+economic feasibility,243,C3,78,873
+anaerobic digestion,233,C3,79,1126
+microalgae,180,C3,70,707
+biogas,157,C3,78,830
+biodiesel,138,C3,70,637
+microalgae biorefinery,116,C3,61,360
+biochar,107,C3,68,554
+hydrothermal liquefaction,91,C3,62,434
+bio-oil,81,C3,67,403
+wastewater treatment,79,C3,65,335
+greenhouse gas emissions reduction,76,C3,68,360
+biofuel production,75,C3,63,303
+algal biorefinery,73,C3,55,288
+pyrolysis,72,C3,64,446
+microalgae cultivation,68,C3,48,258
+value-added products,65,C3,67,305
+fermentation,63,C3,65,306
+thermochemical conversion,62,C3,61,341
+biomethane,56,C3,62,294
+gasification,54,C3,60,345
