@@ -8,6 +8,7 @@ consulta los metadatos de cada DOI en la API REST de Crossref y genera:
 """
 from __future__ import annotations
 
+import html
 import json
 import re
 import time
@@ -41,9 +42,23 @@ def fetch(doi: str, cache: dict) -> dict | None:
     return None
 
 
+PARTICLES = {"van", "von", "de", "der", "den", "da", "del", "la", "le", "du"}
+
+
+def fix_particles(a: dict) -> dict:
+    """Mueve partículas nobiliarias del nombre al apellido (p. ej. 'Nees Jan van' + 'Eck')."""
+    given = (a.get("given") or "").split()
+    tail = []
+    while given and given[-1].lower() in PARTICLES:
+        tail.insert(0, given.pop())
+    if tail:
+        a = {**a, "given": " ".join(given), "family": " ".join(tail + [a.get("family", "")])}
+    return a
+
+
 def apa_authors(m: dict) -> str:
     names = []
-    for a in m.get("author") or []:
+    for a in map(fix_particles, m.get("author") or []):
         if a.get("family"):
             ini = " ".join(f"{p[0]}." for p in re.split(r"[\s-]+", a.get("given", "")) if p)
             names.append(f"{a['family']}, {ini}".strip(", "))
@@ -64,9 +79,13 @@ def year_of(m: dict):
     return "s. f."
 
 
+def clean(text: str) -> str:
+    return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", html.unescape(text or ""))).strip()
+
+
 def apa(m: dict, doi: str) -> str:
-    title = (m.get("title") or [""])[0]
-    cont = (m.get("container-title") or [""])[0]
+    title = clean((m.get("title") or [""])[0])
+    cont = clean((m.get("container-title") or [""])[0])
     vol, iss, pg = m.get("volume"), m.get("issue"), m.get("page") or m.get("article-number")
     s = f"{apa_authors(m)} ({year_of(m)}). {title}."
     if cont:
@@ -98,8 +117,8 @@ def bibtex(m: dict, doi: str, key: str) -> str:
     authors = " and ".join(f"{a.get('family', '')}, {a.get('given', '')}".strip(", ") if a.get("family")
                            else a.get("name", "") for a in m.get("author") or [])
     typ = "article" if m.get("type") == "journal-article" else "misc"
-    fields = {"author": authors, "title": (m.get("title") or [""])[0],
-              "journal": (m.get("container-title") or [""])[0], "year": year_of(m),
+    fields = {"author": authors, "title": clean((m.get("title") or [""])[0]),
+              "journal": clean((m.get("container-title") or [""])[0]), "year": year_of(m),
               "volume": m.get("volume"), "number": m.get("issue"), "pages": m.get("page"), "doi": doi}
     body = ",\n".join(f"  {k} = {{{v}}}" for k, v in fields.items() if v)
     return f"@{typ}{{{key},\n{body}\n}}"
@@ -119,6 +138,7 @@ def main() -> None:
         c = corpus.get(doi)
         if m:
             key = bibkey(m, used)
+            m = {**m, "author": [fix_particles(a) for a in m.get("author") or []]}
             first = (m.get("author") or [{}])[0].get("family", "")
             n_aut = len(m.get("author") or [])
             cite = first if n_aut == 1 else (f"{first} y {m['author'][1].get('family', '')}" if n_aut == 2

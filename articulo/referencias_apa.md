@@ -4,7 +4,7 @@ Adomėnienė, A., & Venskutonis, P. R. (2022). Dioscorea spp.: Comprehensive Rev
 
 Agbede, T., Adekiya, A., & Ogeh, J. (2013). Effects of organic fertilizers on yam productivity and some soil properties of a nutrient-depleted tropical Alfisol. *Archives of Agronomy and Soil Science*, *59*(6), 803-822. https://doi.org/10.1080/03650340.2012.683423
 
-Alam, M. K. (2021). A comprehensive review of sweet potato (Ipomoea batatas [L.] Lam): Revisiting the associated health benefits. *Trends in Food Science &amp; Technology*, *115*, 512-529. https://doi.org/10.1016/j.tifs.2021.07.001
+Alam, M. K. (2021). A comprehensive review of sweet potato (Ipomoea batatas [L.] Lam): Revisiting the associated health benefits. *Trends in Food Science & Technology*, *115*, 512-529. https://doi.org/10.1016/j.tifs.2021.07.001
 
 Aria, M., & Cuccurullo, C. (2017). bibliometrix : An R-tool for comprehensive science mapping analysis. *Journal of Informetrics*, *11*(4), 959-975. https://doi.org/10.1016/j.joi.2017.08.007
 
@@ -36,9 +36,7 @@ Culbert, J. H., Hobert, A., Jahn, N., Haupka, N., Schmidt, M., Donner, P., & May
 
 Donthu, N., Kumar, S., Mukherjee, D., Pandey, N., & Lim, W. M. (2021). How to conduct a bibliometric analysis: An overview and guidelines. *Journal of Business Research*, *133*, 285-296. https://doi.org/10.1016/j.jbusres.2021.04.070
 
-Duque, S. H., Cardona, C. A., & Moncada, J. (2015). Techno-Economic and Environmental Analysis of Ethanol Production from 10 Agroindustrial Residues in Colombia. *Energy &amp; Fuels*, *29*(2), 775-783. https://doi.org/10.1021/ef5019274
-
-Eck, N. J. v., & Waltman, L. (2009). How to normalize cooccurrence data? An analysis of some well‐known similarity measures. *Journal of the American Society for Information Science and Technology*, *60*(8), 1635-1651. https://doi.org/10.1002/asi.21075
+Duque, S. H., Cardona, C. A., & Moncada, J. (2015). Techno-Economic and Environmental Analysis of Ethanol Production from 10 Agroindustrial Residues in Colombia. *Energy & Fuels*, *29*(2), 775-783. https://doi.org/10.1021/ef5019274
 
 Ferrari, M. D., Guigou, M., & Lareo, C. (2013). Energy consumption evaluation of fuel bioethanol production from sweet potato. *Bioresource Technology*, *136*, 377-384. https://doi.org/10.1016/j.biortech.2013.03.045
 
@@ -46,7 +44,7 @@ Fu, Y. C., Ferng, L. H. A., & Huang, P. Y. (2006). Quantitative analysis of alla
 
 Granados Conde, C., Gelvez Ordóñez, V., León-Méndez, G., Torrenegra Alarcón, M. E., & Herrera-García, U. (2026). Network Fragility and Sustainability of a Territorial Yam Supply Chain for Food Security in the Colombian Caribbean. *Sustainability*, *18*(20), 10416. https://doi.org/10.3390/su182010416
 
-Hou, W. C., Lee, M. H., Chen, H. J., Liang, W. L., Han, C. H., Liu, Y. W., & Lin, Y. H. (2001). Antioxidant Activities of Dioscorin, the Storage Protein of Yam (<i>Dioscorea batatas </i>Decne) Tuber. *Journal of Agricultural and Food Chemistry*, *49*(10), 4956-4960. https://doi.org/10.1021/jf010606m
+Hou, W. C., Lee, M. H., Chen, H. J., Liang, W. L., Han, C. H., Liu, Y. W., & Lin, Y. H. (2001). Antioxidant Activities of Dioscorin, the Storage Protein of Yam (Dioscorea batatas Decne) Tuber. *Journal of Agricultural and Food Chemistry*, *49*(10), 4956-4960. https://doi.org/10.1021/jf010606m
 
 Huertas-Valdivia, I., Ferrari, A. M., Settembre-Blundo, D., & García-Muiña, F. E. (2020). Social Life-Cycle Assessment: A Review by Bibliometric Analysis. *Sustainability*, *12*(15), 6211. https://doi.org/10.3390/su12156211
 
@@ -64,7 +62,7 @@ Lehmann, A., Zschieschang, E., Traverso, M., Finkbeiner, M., & Schebek, L. (2013
 
 Liao, Y., Koelewijn, S. F., Van den Bossche, G., Van Aelst, J., Van den Bosch, S., Renders, T., Navare, K., Nicolaï, T., Van Aelst, K., Maesen, M., Matsushima, H., Thevelein, J. M., Van Acker, K., Lagrain, B., Verboekend, D., & Sels, B. F. (2020). A sustainable wood biorefinery for low–carbon footprint chemicals production. *Science*, *367*(6484), 1385-1390. https://doi.org/10.1126/science.aau1567
 
-Macombe, C., Leskinen, P., Feschet, P., & Antikainen, R. (2013). Social life cycle assessment of biodiesel production at three levels: a literature review and development needs. *Journal of Cleaner Production*, *52*, 205-216. https://doi.org/10.1016/j.jclepro.2013.03.026
+Macombe, C., Leskinen, P., Feschet, P., & Antikainen, R. (2013). Social life cycle assessment of biodiesel production at three levels: a literature review and development needs. *Journal of Cleaner Production*, *52*, 205-216. https://doi.org/10.1016/j.jclepro.2013.03.026
 
 Mali, S., Grossmann, M. V. E., Garcia, M. A., Martino, M. N., & Zaritzky, N. E. (2002). Microstructural characterization of yam starch films. *Carbohydrate Polymers*, *50*(4), 379-386. https://doi.org/10.1016/s0144-8617(02)00058-9
 
@@ -76,9 +74,7 @@ Mei, X., Mu, T. H., & Han, J. J. (2010). Composition and Physicochemical Propert
 
 Mendoza-Crespo, H., & Ortiz-Velásquez, M. (2020). Importancia y determinantes de la asociación productiva agrícola: el cultivo de ñame en el caribe colombiano. *Sociedad y Economía*(41). https://doi.org/10.25100/sye.v0i41.8932
 
-Mokhtar, M. N. (2022). Techno‐economic evaluation of a process for the transformation of
-                    <scp>VitAto</scp>
-                    sweet potato into value‐added products. *Journal of Food Process Engineering*, *45*(8), e14043. https://doi.org/10.1111/jfpe.14043
+Mokhtar, M. N. (2022). Techno‐economic evaluation of a process for the transformation of VitAto sweet potato into value‐added products. *Journal of Food Process Engineering*, *45*(8), e14043. https://doi.org/10.1111/jfpe.14043
 
 Moncada B., J., Aristizábal M., V., & Cardona A., C. A. (2016). Design strategies for sustainable biorefineries. *Biochemical Engineering Journal*, *116*, 122-134. https://doi.org/10.1016/j.bej.2016.06.009
 
@@ -100,7 +96,7 @@ Onu, C. E., Nweke, C. N., & Nwabanne, J. T. (2022). Modeling of thermo-chemical 
 
 Page, M. J., McKenzie, J. E., Bossuyt, P. M., Boutron, I., Hoffmann, T. C., Mulrow, C. D., Shamseer, L., Tetzlaff, J. M., Akl, E. A., Brennan, S. E., Chou, R., Glanville, J., Grimshaw, J. M., Hróbjartsson, A., Lalu, M. M., Li, T., Loder, E. W., Mayo-Wilson, E., McDonald, S., ..., & Moher, D. (2021). The PRISMA 2020 statement: an updated guideline for reporting systematic reviews. *BMJ*, n71. https://doi.org/10.1136/bmj.n71
 
-Pao, M. L. (1985). Lotka's law: A testing procedure. *Information Processing &amp; Management*, *21*(4), 305-320. https://doi.org/10.1016/0306-4573(85)90055-x
+Pao, M. L. (1985). Lotka's law: A testing procedure. *Information Processing & Management*, *21*(4), 305-320. https://doi.org/10.1016/0306-4573(85)90055-x
 
 Paternina, K., Alfieri, F., Julio-Gonzalez, L. C., López-Padilla, A., Montero, P., Moreno, F. J., & Hernandez-Hernandez, O. (2026). Agro-Industrial Potential of Yam (Dioscorea spp.): From Biological and Chemical Characterization to Industrial Applications and Valorization. *Foods*, *15*(18), 3178. https://doi.org/10.3390/foods15183178
 
@@ -114,9 +110,9 @@ Ramos Huarachi, D. A., Piekarski, C. M., Puglieri, F. N., & de Francisco, A. C. 
 
 Reina-Aranza, Y. C. (2012). El cultivo de ñame en el Caribe colombiano. Banco de la República. https://doi.org/10.32468/dtseru.168
 
-Rodríguez‐Manrique, J. A., Salcedo‐Mendoza, J., Chávez‐Salazar, A., Cortés‐Rodríguez, M., & Castellanos‐Galeano, F. J. (2025). Isolation, Modification, and Characterization of Starches from Hawthorn yam (<i>Dioscorea rotundata</i>) Grown in Colombia: Bromatological Composition and Structural Analysis. *Starch - Stärke*, *77*(3), 2400052. https://doi.org/10.1002/star.202400052
+Rodríguez‐Manrique, J. A., Salcedo‐Mendoza, J., Chávez‐Salazar, A., Cortés‐Rodríguez, M., & Castellanos‐Galeano, F. J. (2025). Isolation, Modification, and Characterization of Starches from Hawthorn yam (Dioscorea rotundata) Grown in Colombia: Bromatological Composition and Structural Analysis. *Starch - Stärke*, *77*(3), 2400052. https://doi.org/10.1002/star.202400052
 
-Rosero, A., Rodríguez, E., Aguilera‐Arango, G., Rosero, M., Granda, L., Pastrana, I., Martínez, R., Perez, J., Espitia, L., Gomez, E., Rodríguez, T., & Sieber, S. (2022). Assessment of the Current State of In Situ Conservation and Use of Sweet Potato (<i>Ipomoea batatas</i> L.) in Colombia. *Culture, Agriculture, Food and Environment*, *44*(1), 76-89. https://doi.org/10.1111/cuag.12293
+Rosero, A., Rodríguez, E., Aguilera‐Arango, G., Rosero, M., Granda, L., Pastrana, I., Martínez, R., Perez, J., Espitia, L., Gomez, E., Rodríguez, T., & Sieber, S. (2022). Assessment of the Current State of In Situ Conservation and Use of Sweet Potato (Ipomoea batatas L.) in Colombia. *Culture, Agriculture, Food and Environment*, *44*(1), 76-89. https://doi.org/10.1111/cuag.12293
 
 Sadhukhan, J., Gadkari, S., Martinez-Hernandez, E., Ng, K. S., Shemfe, M., Torres-Garcia, E., & Lynch, J. (2019). Novel macroalgae (seaweed) biorefinery systems for integrated chemical, protein, salt, nutrient and mineral extractions and environmental protection by green synthesis and life cycle sustainability assessments. *Green Chemistry*, *21*(10), 2635-2655. https://doi.org/10.1039/c9gc00607a
 
@@ -137,6 +133,8 @@ Teow, C. C., Truong, V. D., McFeeters, R. F., Thompson, R. L., Pecota, K. V., & 
 Thatoi, H., Dash, P. K., Mohapatra, S., & Swain, M. R. (2016). Bioethanol production from tuber crops using fermentation technology: a review. *International Journal of Sustainable Energy*, *35*(5), 443-468. https://doi.org/10.1080/14786451.2014.918616
 
 Tran, T., Da, G., Moreno-Santander, M. A., Vélez-Hernández, G. A., Giraldo-Toro, A., Piyachomkwan, K., Sriroth, K., & Dufour, D. (2015). A comparison of energy use, water use and carbon footprint of cassava starch production in Thailand, Vietnam and Colombia. *Resources, Conservation and Recycling*, *100*, 31-40. https://doi.org/10.1016/j.resconrec.2015.04.007
+
+van Eck, N. J., & Waltman, L. (2009). How to normalize cooccurrence data? An analysis of some well‐known similarity measures. *Journal of the American Society for Information Science and Technology*, *60*(8), 1635-1651. https://doi.org/10.1002/asi.21075
 
 van Eck, N. J., & Waltman, L. (2010). Software survey: VOSviewer, a computer program for bibliometric mapping. *Scientometrics*, *84*(2), 523-538. https://doi.org/10.1007/s11192-009-0146-3
 

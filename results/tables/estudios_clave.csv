@@ -70,7 +70,7 @@ doi,seccion,justificacion,cita_texto,bibkey,titulo,en_corpus,niveles,citas_opena
 10.1016/j.jbusres.2021.04.070,Metodología,Guía para análisis bibliométricos,"Donthu et al., 2021",Donthu2021,How to conduct a bibliometric analysis: An overview and guidelines,False,,,False,True
 10.1136/bmj.n71,Metodología,PRISMA 2020,"Page et al., 2021",Page2021,The PRISMA 2020 statement: an updated guideline for reporting systematic reviews,False,,,True,True
 10.48550/arxiv.2205.01833,Metodología,OpenAlex,,,,False,,,False,False
-10.1002/asi.21075,Metodología,Normalización por fuerza de asociación,"Eck y Waltman, 2009",Eck2009,How to normalize cooccurrence data? An analysis of some well‐known similarity measures,False,,,False,True
+10.1002/asi.21075,Metodología,Normalización por fuerza de asociación,"van Eck y Waltman, 2009",Eck2009,How to normalize cooccurrence data? An analysis of some well‐known similarity measures,False,,,False,True
 10.1007/s11192-009-0146-3,Metodología,VOSviewer,"van Eck y Waltman, 2010",vanEck2010,"Software survey: VOSviewer, a computer program for bibliometric mapping",False,,,False,True
 10.1088/1742-5468/2008/10/p10008,Metodología,Algoritmo de Louvain,"Blondel et al., 2008",Blondel2008,Fast unfolding of communities in large networks,False,,,False,True
 10.1007/bf02019280,Metodología,Análisis de co-palabras (Callon),"Callon et al., 1991",Callon1991,Co-word analysis as a tool for describing the network of interactions between basic and technological research: The case of polymer chemsitry,False,,,False,True
