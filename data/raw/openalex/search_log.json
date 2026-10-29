@@ -7,8 +7,14 @@
     "filter": "title_and_abstract.search:(biorefinery OR biorefineries OR \"integrated biorefinery\") AND (\"life cycle assessment\" OR \"life cycle analysis\" OR \"techno-economic\" OR \"technoeconomic\" OR \"economic feasibility\" OR \"sustainability assessment\" OR \"social life cycle\" OR \"life cycle sustainability\"),publication_year:2000-2026,type:article|review",
     "query_scopus": "TITLE-ABS-KEY(biorefiner* AND (\"life cycle assessment\" OR \"life cycle analysis\" OR \"techno-economic\" OR technoeconomic OR \"economic feasibility\" OR \"sustainability assessment\" OR \"social life cycle\" OR \"life cycle sustainability\"))",
     "count": 2540,
-    "retrieved": 0,
-    "date": "2026-10-29T20:29:29+00:00"
+    "retrieved": 2539,
+    "date": "2026-10-29T20:32:34+00:00",
+    "api": "https://api.openalex.org/works",
+    "per_page": 200,
+    "code_commit": "f6dbbedfa220c0d2ecb14b60ae8a20971ab2f0d5",
+    "code_modified_since_commit": false,
+    "environment": "vm",
+    "python": "3.13.17"
   },
   "N2": {
     "id": "N2",
@@ -18,8 +24,14 @@
     "filter": "title_and_abstract.search:(biorefinery OR biorefineries OR bioeconomy OR \"bio-based\" OR biofuel OR bioenergy) AND (\"social life cycle assessment\" OR \"social life cycle analysis\" OR \"S-LCA\" OR \"social LCA\" OR \"life cycle sustainability assessment\" OR \"LCSA\"),publication_year:2000-2026,type:article|review",
     "query_scopus": "TITLE-ABS-KEY((biorefiner* OR bioeconomy OR \"bio-based\" OR biofuel* OR bioenergy) AND (\"social life cycle assessment\" OR \"social life cycle analysis\" OR \"S-LCA\" OR \"social LCA\" OR \"life cycle sustainability assessment\" OR LCSA))",
     "count": 131,
-    "retrieved": 0,
-    "date": "2026-10-29T20:29:30+00:00"
+    "retrieved": 131,
+    "date": "2026-10-29T20:32:59+00:00",
+    "api": "https://api.openalex.org/works",
+    "per_page": 200,
+    "code_commit": "f6dbbedfa220c0d2ecb14b60ae8a20971ab2f0d5",
+    "code_modified_since_commit": false,
+    "environment": "vm",
+    "python": "3.13.17"
   },
   "N3": {
     "id": "N3",
@@ -29,8 +41,14 @@
     "filter": "title_and_abstract.search:(cassava OR manioc OR yam OR yams OR Dioscorea OR \"sweet potato\" OR \"sweet potatoes\" OR potato OR potatoes OR taro OR cocoyam OR \"root crop\" OR \"root crops\" OR \"tuber crop\" OR \"tuber crops\") AND (biorefinery OR bioethanol OR \"ethanol production\" OR \"ethanol fermentation\" OR \"fuel ethanol\" OR biogas OR \"anaerobic digestion\" OR biomethane OR biofertilizer OR \"bio-fertilizer\" OR valorization OR valorisation OR \"life cycle assessment\" OR \"techno-economic\"),publication_year:2000-2026,type:article|review",
     "query_scopus": "TITLE-ABS-KEY((cassava OR manioc OR yam* OR dioscorea OR \"sweet potato*\" OR potato* OR taro OR cocoyam OR \"root crop*\" OR \"tuber crop*\") AND (biorefiner* OR bioethanol OR \"ethanol production\" OR \"ethanol fermentation\" OR \"fuel ethanol\" OR biogas OR \"anaerobic digestion\" OR biomethane OR biofertili* OR valori* OR \"life cycle assessment\" OR \"techno-economic\"))",
     "count": 4700,
-    "retrieved": 0,
-    "date": "2026-10-29T20:29:30+00:00"
+    "retrieved": 4704,
+    "date": "2026-10-29T20:33:01+00:00",
+    "api": "https://api.openalex.org/works",
+    "per_page": 200,
+    "code_commit": "f6dbbedfa220c0d2ecb14b60ae8a20971ab2f0d5",
+    "code_modified_since_commit": false,
+    "environment": "vm",
+    "python": "3.13.17"
   },
   "N4a": {
     "id": "N4a",
@@ -40,8 +58,14 @@
     "filter": "title_and_abstract.search:(yam OR yams OR Dioscorea OR \"sweet potato\" OR \"sweet potatoes\" OR \"Ipomoea batatas\") AND (starch) AND (extraction OR isolation OR \"native starch\" OR yield OR physicochemical OR characterization OR properties OR industrial),publication_year:2000-2026,type:article|review",
     "query_scopus": "TITLE-ABS-KEY((yam* OR dioscorea OR \"sweet potato*\" OR \"Ipomoea batatas\") AND starch AND (extraction OR isolation OR \"native starch\" OR yield OR physicochemical OR characteri* OR properties OR industrial))",
     "count": 3001,
-    "retrieved": 0,
-    "date": "2026-10-29T20:29:30+00:00"
+    "retrieved": 3005,
+    "date": "2026-10-29T20:33:39+00:00",
+    "api": "https://api.openalex.org/works",
+    "per_page": 200,
+    "code_commit": "f6dbbedfa220c0d2ecb14b60ae8a20971ab2f0d5",
+    "code_modified_since_commit": false,
+    "environment": "vm",
+    "python": "3.13.17"
   },
   "N4b": {
     "id": "N4b",
@@ -51,8 +75,14 @@
     "filter": "title_and_abstract.search:(yam OR yams OR Dioscorea OR \"sweet potato\" OR \"sweet potatoes\" OR \"Ipomoea batatas\") AND (bioethanol OR \"ethanol production\" OR \"ethanol fermentation\" OR \"fuel ethanol\" OR \"ethanol yield\" OR biofuel),publication_year:2000-2026,type:article|review",
     "query_scopus": "TITLE-ABS-KEY((yam* OR dioscorea OR \"sweet potato*\" OR \"Ipomoea batatas\") AND (bioethanol OR \"ethanol production\" OR \"ethanol fermentation\" OR \"fuel ethanol\" OR \"ethanol yield\" OR biofuel*))",
     "count": 346,
-    "retrieved": 0,
-    "date": "2026-10-29T20:29:31+00:00"
+    "retrieved": 346,
+    "date": "2026-10-29T20:34:03+00:00",
+    "api": "https://api.openalex.org/works",
+    "per_page": 200,
+    "code_commit": "f6dbbedfa220c0d2ecb14b60ae8a20971ab2f0d5",
+    "code_modified_since_commit": false,
+    "environment": "vm",
+    "python": "3.13.17"
   },
   "N4c": {
     "id": "N4c",
@@ -62,8 +92,14 @@
     "filter": "title_and_abstract.search:(yam OR yams OR Dioscorea OR \"sweet potato\" OR \"sweet potatoes\" OR \"Ipomoea batatas\") AND (biogas OR \"anaerobic digestion\" OR \"anaerobic co-digestion\" OR biomethane OR \"methane yield\" OR \"methane production\" OR \"biochemical methane potential\"),publication_year:2000-2026,type:article|review",
     "query_scopus": "TITLE-ABS-KEY((yam* OR dioscorea OR \"sweet potato*\" OR \"Ipomoea batatas\") AND (biogas OR \"anaerobic digestion\" OR \"anaerobic co-digestion\" OR biomethane OR \"methane yield\" OR \"methane production\" OR \"biochemical methane potential\"))",
     "count": 101,
-    "retrieved": 0,
-    "date": "2026-10-29T20:29:31+00:00"
+    "retrieved": 101,
+    "date": "2026-10-29T20:34:09+00:00",
+    "api": "https://api.openalex.org/works",
+    "per_page": 200,
+    "code_commit": "f6dbbedfa220c0d2ecb14b60ae8a20971ab2f0d5",
+    "code_modified_since_commit": false,
+    "environment": "vm",
+    "python": "3.13.17"
   },
   "N4d": {
     "id": "N4d",
@@ -73,8 +109,14 @@
     "filter": "title_and_abstract.search:(yam OR yams OR Dioscorea OR \"sweet potato\" OR \"sweet potatoes\" OR \"Ipomoea batatas\") AND (peel OR peels OR residue OR residues OR waste OR wastes OR \"by-product\" OR \"by-products\" OR byproduct OR vine OR vines OR digestate) AND (biofertilizer OR \"bio-fertilizer\" OR compost OR composting OR vermicompost OR \"organic fertilizer\" OR biochar OR \"soil amendment\"),publication_year:2000-2026,type:article|review",
     "query_scopus": "TITLE-ABS-KEY((yam* OR dioscorea OR \"sweet potato*\" OR \"Ipomoea batatas\") AND (peel* OR residue* OR waste* OR \"by-product*\" OR byproduct* OR vine* OR digestate) AND (biofertili* OR \"bio-fertili*\" OR compost* OR vermicompost OR \"organic fertili*\" OR biochar OR \"soil amendment\"))",
     "count": 174,
-    "retrieved": 0,
-    "date": "2026-10-29T20:29:31+00:00"
+    "retrieved": 174,
+    "date": "2026-10-29T20:34:12+00:00",
+    "api": "https://api.openalex.org/works",
+    "per_page": 200,
+    "code_commit": "f6dbbedfa220c0d2ecb14b60ae8a20971ab2f0d5",
+    "code_modified_since_commit": false,
+    "environment": "vm",
+    "python": "3.13.17"
   },
   "N4e": {
     "id": "N4e",
@@ -84,8 +126,14 @@
     "filter": "title_and_abstract.search:(yam OR yams OR Dioscorea) AND (diosgenin OR dioscorin OR allantoin OR saponin OR saponins OR polyphenol OR polyphenols OR phenolic OR flavonoid OR flavonoids OR mucilage OR \"non-starch polysaccharide\" OR polysaccharide OR polysaccharides OR \"bioactive compound\" OR \"bioactive compounds\" OR \"resistant starch\" OR batatasin OR dihydrodioscorine OR carotenoid OR carotenoids),publication_year:2000-2026,type:article|review",
     "query_scopus": "TITLE-ABS-KEY((yam* OR dioscorea) AND (diosgenin OR dioscorin OR allantoin OR saponin* OR polyphenol* OR phenolic* OR flavonoid* OR mucilage OR polysaccharide* OR \"bioactive compound*\" OR \"resistant starch\" OR batatasin* OR dioscorine OR carotenoid*))",
     "count": 2902,
-    "retrieved": 0,
-    "date": "2026-10-29T20:29:31+00:00"
+    "retrieved": 2903,
+    "date": "2026-10-29T20:34:15+00:00",
+    "api": "https://api.openalex.org/works",
+    "per_page": 200,
+    "code_commit": "f6dbbedfa220c0d2ecb14b60ae8a20971ab2f0d5",
+    "code_modified_since_commit": false,
+    "environment": "vm",
+    "python": "3.13.17"
   },
   "N4f": {
     "id": "N4f",
@@ -95,8 +143,14 @@
     "filter": "title_and_abstract.search:(\"sweet potato\" OR \"sweet potatoes\" OR \"Ipomoea batatas\") AND (anthocyanin OR anthocyanins OR \"chlorogenic acid\" OR \"caffeoylquinic\" OR \"beta-carotene\" OR \"β-carotene\" OR carotenoid OR carotenoids OR sporamin OR polyphenol OR polyphenols OR phenolic OR flavonoid OR flavonoids OR pectin OR \"dietary fiber\" OR \"resistant starch\" OR \"bioactive compound\" OR \"bioactive compounds\" OR \"protein isolate\"),publication_year:2000-2026,type:article|review",
     "query_scopus": "TITLE-ABS-KEY((\"sweet potato*\" OR \"Ipomoea batatas\") AND (anthocyanin* OR \"chlorogenic acid\" OR caffeoylquinic OR \"beta-carotene\" OR carotenoid* OR sporamin OR polyphenol* OR phenolic* OR flavonoid* OR pectin OR \"dietary fiber\" OR \"resistant starch\" OR \"bioactive compound*\" OR \"protein isolate\"))",
     "count": 4411,
-    "retrieved": 0,
-    "date": "2026-10-29T20:29:32+00:00"
+    "retrieved": 4416,
+    "date": "2026-10-29T20:34:36+00:00",
+    "api": "https://api.openalex.org/works",
+    "per_page": 200,
+    "code_commit": "f6dbbedfa220c0d2ecb14b60ae8a20971ab2f0d5",
+    "code_modified_since_commit": false,
+    "environment": "vm",
+    "python": "3.13.17"
   },
   "N4g": {
     "id": "N4g",
@@ -106,8 +160,14 @@
     "filter": "title_and_abstract.search:(yam OR yams OR Dioscorea OR \"sweet potato\" OR \"sweet potatoes\" OR \"Ipomoea batatas\") AND (biorefinery OR biorefineries OR valorization OR valorisation OR \"circular economy\" OR \"zero waste\" OR \"integrated process\" OR \"cascade\"),publication_year:2000-2026,type:article|review",
     "query_scopus": "TITLE-ABS-KEY((yam* OR dioscorea OR \"sweet potato*\" OR \"Ipomoea batatas\") AND (biorefiner* OR valori* OR \"circular economy\" OR \"zero waste\" OR \"integrated process\" OR cascad*))",
     "count": 492,
-    "retrieved": 0,
-    "date": "2026-10-29T20:29:32+00:00"
+    "retrieved": 492,
+    "date": "2026-10-29T20:35:14+00:00",
+    "api": "https://api.openalex.org/works",
+    "per_page": 200,
+    "code_commit": "f6dbbedfa220c0d2ecb14b60ae8a20971ab2f0d5",
+    "code_modified_since_commit": false,
+    "environment": "vm",
+    "python": "3.13.17"
   },
   "N5": {
     "id": "N5",
@@ -117,19 +177,48 @@
     "filter": "title_and_abstract.search:(yam OR yams OR Dioscorea OR \"sweet potato\" OR \"sweet potatoes\" OR \"Ipomoea batatas\") AND (\"life cycle assessment\" OR \"life cycle analysis\" OR \"LCA\" OR \"techno-economic\" OR \"economic feasibility\" OR \"economic analysis\" OR \"profitability\" OR \"social life cycle\" OR \"carbon footprint\" OR \"environmental impact\" OR \"sustainability assessment\" OR \"value chain\"),publication_year:2000-2026,type:article|review",
     "query_scopus": "TITLE-ABS-KEY((yam* OR dioscorea OR \"sweet potato*\" OR \"Ipomoea batatas\") AND (\"life cycle assessment\" OR \"life cycle analysis\" OR LCA OR \"techno-economic\" OR \"economic feasibility\" OR \"economic analysis\" OR profitability OR \"social life cycle\" OR \"carbon footprint\" OR \"environmental impact\" OR \"sustainability assessment\" OR \"value chain\"))",
     "count": 799,
-    "retrieved": 0,
-    "date": "2026-10-29T20:29:32+00:00"
+    "retrieved": 799,
+    "date": "2026-10-29T20:35:18+00:00",
+    "api": "https://api.openalex.org/works",
+    "per_page": 200,
+    "code_commit": "f6dbbedfa220c0d2ecb14b60ae8a20971ab2f0d5",
+    "code_modified_since_commit": false,
+    "environment": "vm",
+    "python": "3.13.17"
   },
   "N6": {
     "id": "N6",
     "parent": "N6",
-    "name": "Contexto territorial: Colombia y Caribe",
-    "query_openalex": "(yam OR yams OR \"ñame\" OR Dioscorea OR \"sweet potato\" OR batata OR cassava OR yuca OR biorefinery OR biorefineries OR \"biorrefinería\" OR bioethanol OR biogas) AND (Colombia OR Colombian OR \"Montes de María\" OR \"Montes de Maria\" OR \"Bolívar\" OR \"Caribbean region\")",
-    "filter": "title_and_abstract.search:(yam OR yams OR \"ñame\" OR Dioscorea OR \"sweet potato\" OR batata OR cassava OR yuca OR biorefinery OR biorefineries OR \"biorrefinería\" OR bioethanol OR biogas) AND (Colombia OR Colombian OR \"Montes de María\" OR \"Montes de Maria\" OR \"Bolívar\" OR \"Caribbean region\"),publication_year:2000-2026,type:article|review",
-    "query_scopus": "TITLE-ABS-KEY((yam* OR \"ñame\" OR dioscorea OR \"sweet potato*\" OR batata OR cassava OR yuca OR biorefiner* OR biorrefiner* OR bioethanol OR biogas) AND (colombia* OR \"Montes de María\" OR \"Montes de Maria\" OR bolivar OR \"Caribbean region\"))",
-    "count": 4386,
-    "retrieved": 0,
-    "date": "2026-10-29T20:29:33+00:00"
+    "name": "Contexto territorial: ñame y batata en Colombia",
+    "query_openalex": "(yam OR yams OR Dioscorea OR \"sweet potato\" OR \"sweet potatoes\" OR batata OR \"Ipomoea batatas\") AND (Colombia OR Colombian OR \"Montes de María\" OR \"Montes de Maria\")",
+    "filter": "title_and_abstract.search:(yam OR yams OR Dioscorea OR \"sweet potato\" OR \"sweet potatoes\" OR batata OR \"Ipomoea batatas\") AND (Colombia OR Colombian OR \"Montes de María\" OR \"Montes de Maria\"),publication_year:2000-2026,type:article|review",
+    "query_scopus": "TITLE-ABS-KEY((yam OR yams OR \"ñame\" OR dioscorea OR \"sweet potato*\" OR batata OR \"Ipomoea batatas\") AND (colombia* OR \"Montes de María\" OR \"Montes de Maria\"))",
+    "count": 186,
+    "retrieved": 186,
+    "date": "2026-10-29T20:35:25+00:00",
+    "api": "https://api.openalex.org/works",
+    "per_page": 200,
+    "code_commit": "f6dbbedfa220c0d2ecb14b60ae8a20971ab2f0d5",
+    "code_modified_since_commit": false,
+    "environment": "vm",
+    "python": "3.13.17"
+  },
+  "N6c": {
+    "id": "N6c",
+    "parent": "N6c",
+    "name": "Contexto territorial: bioprocesos con raíces, tubérculos y residuos agroindustriales en Colombia",
+    "query_openalex": "(biorefinery OR biorefineries OR \"biorrefinería\" OR bioethanol OR biogas OR \"anaerobic digestion\" OR biofertilizer OR \"life cycle assessment\" OR \"techno-economic\") AND (cassava OR yuca OR yam OR \"sweet potato\" OR \"agro-industrial\" OR agroindustrial OR \"crop residues\" OR starch) AND (Colombia OR Colombian)",
+    "filter": "title_and_abstract.search:(biorefinery OR biorefineries OR \"biorrefinería\" OR bioethanol OR biogas OR \"anaerobic digestion\" OR biofertilizer OR \"life cycle assessment\" OR \"techno-economic\") AND (cassava OR yuca OR yam OR \"sweet potato\" OR \"agro-industrial\" OR agroindustrial OR \"crop residues\" OR starch) AND (Colombia OR Colombian),publication_year:2000-2026,type:article|review",
+    "query_scopus": "TITLE-ABS-KEY((biorefiner* OR biorrefiner* OR bioethanol OR biogas OR \"anaerobic digestion\" OR biofertili* OR \"life cycle assessment\" OR \"techno-economic\") AND (cassava OR yuca OR yam* OR \"sweet potato*\" OR \"agro-industrial\" OR agroindustrial OR \"crop residue*\" OR starch) AND (colombia*))",
+    "count": 95,
+    "retrieved": 95,
+    "date": "2026-10-29T20:35:27+00:00",
+    "api": "https://api.openalex.org/works",
+    "per_page": 200,
+    "code_commit": "f6dbbedfa220c0d2ecb14b60ae8a20971ab2f0d5",
+    "code_modified_since_commit": false,
+    "environment": "vm",
+    "python": "3.13.17"
   },
   "N6b": {
     "id": "N6b",
@@ -139,7 +228,13 @@
     "filter": "title_and_abstract.search:(biorefinery OR biorefineries OR \"integrated biorefinery\") AND (\"life cycle assessment\" OR \"life cycle analysis\" OR \"techno-economic\" OR \"technoeconomic\" OR \"economic feasibility\" OR \"sustainability assessment\" OR \"social life cycle\" OR \"life cycle sustainability\"),publication_year:2000-2026,type:article|review,institutions.country_code:co",
     "query_scopus": "TITLE-ABS-KEY(biorefiner* AND (\"life cycle assessment\" OR \"techno-economic\" OR \"sustainability assessment\" OR \"social life cycle\")) AND AFFILCOUNTRY(colombia)",
     "count": 97,
-    "retrieved": 0,
-    "date": "2026-10-29T20:29:33+00:00"
+    "retrieved": 97,
+    "date": "2026-10-29T20:35:28+00:00",
+    "api": "https://api.openalex.org/works",
+    "per_page": 200,
+    "code_commit": "f6dbbedfa220c0d2ecb14b60ae8a20971ab2f0d5",
+    "code_modified_since_commit": false,
+    "environment": "vm",
+    "python": "3.13.17"
   }
 }
