@@ -61,5 +61,26 @@
     "code_modified_since_commit": false,
     "environment": "vm",
     "python": "3.13.17"
+  },
+  "N4a": {
+    "id": "N4a",
+    "query_scopus": "TITLE-ABS-KEY((yam* OR dioscorea OR \"sweet potato*\" OR \"Ipomoea batatas\") AND starch AND (extraction OR isolation OR \"native starch\" OR yield OR physicochemical OR characteri* OR properties OR industrial))",
+    "parts": [
+      {
+        "years": "2000-2026",
+        "query": "TITLE-ABS-KEY((yam* OR dioscorea OR \"sweet potato*\" OR \"Ipomoea batatas\") AND starch AND (extraction OR isolation OR \"native starch\" OR yield OR physicochemical OR characteri* OR properties OR industrial)) AND PUBYEAR > 1999 AND PUBYEAR < 2027 AND DOCTYPE(ar OR re)",
+        "count": 2422
+      }
+    ],
+    "count": 2422,
+    "retrieved": 2422,
+    "with_doi": 2212,
+    "scopus_only_resolved_in_openalex": 447,
+    "view": "STANDARD",
+    "date": "2026-10-29T20:43:25+00:00",
+    "code_commit": "687d7264e7fce6894a8a479ae6713da7ba8522f0",
+    "code_modified_since_commit": false,
+    "environment": "vm",
+    "python": "3.13.17"
   }
 }
