@@ -223,8 +223,9 @@ def main() -> None:
     # ---- 4. Contexto territorial -------------------------------------------
     co = df[df["levels"].apply(lambda ls: "N6" in ls)]
     if not co.empty:
-        inst = Counter(i for _, r in co.iterrows() for a in r["authors"] if "CO" in (a.get("countries") or [])
-                       for i in a.get("institutions") or [])
+        inst = Counter(i for _, r in co.iterrows() for i in {i for a in r["authors"]
+                                                             if "CO" in (a.get("countries") or [])
+                                                             for i in a.get("institutions") or []})
         pd.Series(inst).sort_values(ascending=False).head(20).rename("docs") \
             .to_csv(TABLES / "N6_colombian_institutions.csv")
         ct = tag(co["text"], CROPS).sum().rename("docs")

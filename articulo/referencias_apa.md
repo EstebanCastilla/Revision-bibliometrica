@@ -8,6 +8,8 @@ Alam, M. K. (2021). A comprehensive review of sweet potato (Ipomoea batatas [L.]
 
 Aria, M., & Cuccurullo, C. (2017). bibliometrix : An R-tool for comprehensive science mapping analysis. *Journal of Informetrics*, *11*(4), 959-975. https://doi.org/10.1016/j.joi.2017.08.007
 
+Benoit-Norris, C., Cavan, D. A., & Norris, G. (2012). Identifying Social Impacts in Product Supply Chains:Overview and Application of the Social Hotspot Database. *Sustainability*, *4*(9), 1946-1965. https://doi.org/10.3390/su4091946
+
 Blondel, V. D., Guillaume, J. L., Lambiotte, R., & Lefebvre, E. (2008). Fast unfolding of communities in large networks. *Journal of Statistical Mechanics: Theory and Experiment*, *2008*(10), P10008. https://doi.org/10.1088/1742-5468/2008/10/p10008
 
 Callon, M., Courtial, J. P., & Laville, F. (1991). Co-word analysis as a tool for describing the network of interactions between basic and technological research: The case of polymer chemsitry. *Scientometrics*, *22*(1), 155-205. https://doi.org/10.1007/bf02019280
@@ -54,13 +56,19 @@ Humbird, D., Davis, R., Tao, L., Kinchin, C., Hsu, D., Aden, A., Schoen, P., Luk
 
 Kloepffer, W. (2008). Life cycle sustainability assessment of products. *The International Journal of Life Cycle Assessment*, *13*(2), 89-95. https://doi.org/10.1065/lca2008.02.376
 
+Kühnen, M., & Hahn, R. (2017). Indicators in Social Life Cycle Assessment: A Review of Frameworks, Theories, and Empirical Experience. *Journal of Industrial Ecology*, *21*(6), 1547-1565. https://doi.org/10.1111/jiec.12663
+
 Lareo, C., Ferrari, M. D., Guigou, M., Fajardo, L., Larnaudie, V., Ramírez, M. B., & Martínez-Garreiro, J. (2013). Evaluation of sweet potato for fuel bioethanol production: hydrolysis and fermentation. *SpringerPlus*, *2*(1), 493. https://doi.org/10.1186/2193-1801-2-493
 
 Lehmann, A., Zschieschang, E., Traverso, M., Finkbeiner, M., & Schebek, L. (2013). Social aspects for sustainability assessment of technologies—challenges for social life cycle assessment (SLCA). *The International Journal of Life Cycle Assessment*, *18*(8), 1581-1592. https://doi.org/10.1007/s11367-013-0594-0
 
 Liao, Y., Koelewijn, S. F., Van den Bossche, G., Van Aelst, J., Van den Bosch, S., Renders, T., Navare, K., Nicolaï, T., Van Aelst, K., Maesen, M., Matsushima, H., Thevelein, J. M., Van Acker, K., Lagrain, B., Verboekend, D., & Sels, B. F. (2020). A sustainable wood biorefinery for low–carbon footprint chemicals production. *Science*, *367*(6484), 1385-1390. https://doi.org/10.1126/science.aau1567
 
+Macombe, C., Leskinen, P., Feschet, P., & Antikainen, R. (2013). Social life cycle assessment of biodiesel production at three levels: a literature review and development needs. *Journal of Cleaner Production*, *52*, 205-216. https://doi.org/10.1016/j.jclepro.2013.03.026
+
 Mali, S., Grossmann, M. V. E., Garcia, M. A., Martino, M. N., & Zaritzky, N. E. (2002). Microstructural characterization of yam starch films. *Carbohydrate Polymers*, *50*(4), 379-386. https://doi.org/10.1016/s0144-8617(02)00058-9
+
+Manik, Y., Leahy, J., & Halog, A. (2013). Social life cycle assessment of palm oil biodiesel: a case study in Jambi Province of Indonesia. *The International Journal of Life Cycle Assessment*, *18*(7), 1386-1392. https://doi.org/10.1007/s11367-013-0581-5
 
 Martín, M. A. B., Martínez, Y. T., & Quicazán, M. M. C. (2026). Application of lactic fermentation of yam (Dioscorea spp.) and mango (Mangifera indica) from Montes de María. *Applied Food Research*, *6*(1), 101663. https://doi.org/10.1016/j.afres.2026.101663
 
