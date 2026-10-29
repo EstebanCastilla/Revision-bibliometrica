@@ -1,0 +1,51 @@
+palabra,frecuencia,cluster,grado,fuerza
+biorefinery,84,C1,38,297
+techno-economic analysis,69,C1,39,243
+bioethanol,27,C1,33,110
+life cycle assessment,26,C1,27,70
+environmental impact assessment,26,C1,31,102
+lignocellulosic biomass,25,C1,31,101
+environmental impact,20,C1,28,79
+biomass valorization,19,C1,23,65
+sugarcane bagasse,15,C1,25,62
+ghg emissions,14,C1,25,45
+biofuels,13,C1,28,53
+combined heat and power,12,C1,20,48
+production costs,12,C1,23,45
+electricity generation,11,C1,23,49
+biochar,11,C1,20,33
+energy efficiency,11,C1,27,50
+hydrogen production,11,C1,19,40
+biodiesel,10,C1,20,46
+bioenergy,9,C1,19,29
+biorefinery design,9,C1,15,24
+yam,57,C2,16,96
+dioscorea rotundata,44,C2,13,68
+sweet potato,38,C2,10,29
+dioscorea alata,32,C2,10,57
+cassava,20,C2,15,32
+genetic diversity,15,C2,9,34
+bioethanol production,14,C2,13,22
+montes de maría,13,C2,17,25
+tuber yield,12,C2,9,23
+colletotrichum gloeosporioides,12,C2,7,21
+colombian caribbean,11,C2,8,13
+colombian caribbean region,11,C2,7,24
+food security,10,C2,11,20
+enzymatic hydrolysis,10,C2,17,32
+biofertilizers,10,C2,10,15
+colombia,38,C3,36,111
+anaerobic digestion,32,C3,28,104
+biogas,28,C3,28,93
+agro-industrial waste,26,C3,26,73
+economic feasibility,24,C3,27,78
+biogas production,19,C3,21,56
+waste valorization,18,C3,22,60
+process simulation,16,C3,28,60
+carbon footprint,14,C3,21,41
+net present value,13,C3,23,42
+circular economy,13,C3,25,43
+starch production,11,C3,11,22
+agro-industrial waste valorization,10,C3,20,29
+circular bioeconomy,10,C3,19,29
+sustainability assessment,9,C3,21,35

@@ -1,0 +1,311 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d2" for="edge" attr.name="weight" attr.type="long"/>
+<key id="d1" for="node" attr.name="name" attr.type="string"/>
+<key id="d0" for="node" attr.name="freq" attr.type="long"/>
+<graph edgedefault="undirected"><node id="BR">
+  <data key="d0">13</data>
+  <data key="d1">Brazil</data>
+</node>
+<node id="CL">
+  <data key="d0">3</data>
+  <data key="d1">Chile</data>
+</node>
+<node id="FI">
+  <data key="d0">1</data>
+  <data key="d1">Finland</data>
+</node>
+<node id="US">
+  <data key="d0">17</data>
+  <data key="d1">United States</data>
+</node>
+<node id="GB">
+  <data key="d0">11</data>
+  <data key="d1">United Kingdom</data>
+</node>
+<node id="JP">
+  <data key="d0">1</data>
+  <data key="d1">Japan</data>
+</node>
+<node id="PT">
+  <data key="d0">5</data>
+  <data key="d1">Portugal</data>
+</node>
+<node id="CN">
+  <data key="d0">2</data>
+  <data key="d1">China</data>
+</node>
+<node id="DE">
+  <data key="d0">7</data>
+  <data key="d1">Germany</data>
+</node>
+<node id="VN">
+  <data key="d0">2</data>
+  <data key="d1">Vietnam</data>
+</node>
+<node id="FR">
+  <data key="d0">10</data>
+  <data key="d1">France</data>
+</node>
+<node id="CU">
+  <data key="d0">1</data>
+  <data key="d1">Cuba</data>
+</node>
+<node id="AU">
+  <data key="d0">2</data>
+  <data key="d1">Australia</data>
+</node>
+<node id="KE">
+  <data key="d0">3</data>
+  <data key="d1">Kenya</data>
+</node>
+<node id="AR">
+  <data key="d0">3</data>
+  <data key="d1">Argentina</data>
+</node>
+<node id="TH">
+  <data key="d0">2</data>
+  <data key="d1">Thailand</data>
+</node>
+<node id="BO">
+  <data key="d0">1</data>
+  <data key="d1">Bolivia</data>
+</node>
+<node id="IT">
+  <data key="d0">9</data>
+  <data key="d1">Italy</data>
+</node>
+<node id="CO">
+  <data key="d0">283</data>
+  <data key="d1">Colombia</data>
+</node>
+<node id="NL">
+  <data key="d0">4</data>
+  <data key="d1">Netherlands</data>
+</node>
+<node id="HU">
+  <data key="d0">1</data>
+  <data key="d1">Hungary</data>
+</node>
+<node id="PY">
+  <data key="d0">1</data>
+  <data key="d1">Paraguay</data>
+</node>
+<node id="PE">
+  <data key="d0">7</data>
+  <data key="d1">Peru</data>
+</node>
+<node id="ES">
+  <data key="d0">28</data>
+  <data key="d1">Spain</data>
+</node>
+<node id="CZ">
+  <data key="d0">3</data>
+  <data key="d1">Czechia</data>
+</node>
+<node id="RU">
+  <data key="d0">3</data>
+  <data key="d1">Russian Federation</data>
+</node>
+<node id="ZA">
+  <data key="d0">1</data>
+  <data key="d1">South Africa</data>
+</node>
+<node id="MX">
+  <data key="d0">8</data>
+  <data key="d1">Mexico</data>
+</node>
+<node id="CA">
+  <data key="d0">3</data>
+  <data key="d1">Canada</data>
+</node>
+<node id="GR">
+  <data key="d0">3</data>
+  <data key="d1">Greece</data>
+</node>
+<edge source="BR" target="CO">
+  <data key="d2">11</data>
+</edge>
+<edge source="BR" target="PT">
+  <data key="d2">1</data>
+</edge>
+<edge source="BR" target="CA">
+  <data key="d2">1</data>
+</edge>
+<edge source="BR" target="FR">
+  <data key="d2">1</data>
+</edge>
+<edge source="BR" target="MX">
+  <data key="d2">1</data>
+</edge>
+<edge source="BR" target="PY">
+  <data key="d2">1</data>
+</edge>
+<edge source="BR" target="US">
+  <data key="d2">1</data>
+</edge>
+<edge source="CL" target="NL">
+  <data key="d2">1</data>
+</edge>
+<edge source="CL" target="GB">
+  <data key="d2">1</data>
+</edge>
+<edge source="CL" target="MX">
+  <data key="d2">1</data>
+</edge>
+<edge source="CL" target="US">
+  <data key="d2">1</data>
+</edge>
+<edge source="CL" target="CO">
+  <data key="d2">1</data>
+</edge>
+<edge source="FI" target="CO">
+  <data key="d2">1</data>
+</edge>
+<edge source="US" target="CO">
+  <data key="d2">9</data>
+</edge>
+<edge source="US" target="HU">
+  <data key="d2">1</data>
+</edge>
+<edge source="US" target="ES">
+  <data key="d2">3</data>
+</edge>
+<edge source="US" target="GB">
+  <data key="d2">1</data>
+</edge>
+<edge source="US" target="MX">
+  <data key="d2">1</data>
+</edge>
+<edge source="US" target="AU">
+  <data key="d2">1</data>
+</edge>
+<edge source="GB" target="CO">
+  <data key="d2">1</data>
+</edge>
+<edge source="GB" target="MX">
+  <data key="d2">1</data>
+</edge>
+<edge source="JP" target="CO">
+  <data key="d2">1</data>
+</edge>
+<edge source="JP" target="TH">
+  <data key="d2">1</data>
+</edge>
+<edge source="PT" target="CO">
+  <data key="d2">5</data>
+</edge>
+<edge source="PT" target="DE">
+  <data key="d2">1</data>
+</edge>
+<edge source="DE" target="CO">
+  <data key="d2">6</data>
+</edge>
+<edge source="DE" target="CZ">
+  <data key="d2">1</data>
+</edge>
+<edge source="DE" target="AR">
+  <data key="d2">1</data>
+</edge>
+<edge source="VN" target="CO">
+  <data key="d2">2</data>
+</edge>
+<edge source="VN" target="KE">
+  <data key="d2">2</data>
+</edge>
+<edge source="FR" target="CO">
+  <data key="d2">8</data>
+</edge>
+<edge source="FR" target="TH">
+  <data key="d2">1</data>
+</edge>
+<edge source="FR" target="CA">
+  <data key="d2">1</data>
+</edge>
+<edge source="FR" target="MX">
+  <data key="d2">1</data>
+</edge>
+<edge source="FR" target="PY">
+  <data key="d2">1</data>
+</edge>
+<edge source="FR" target="ES">
+  <data key="d2">1</data>
+</edge>
+<edge source="FR" target="GR">
+  <data key="d2">1</data>
+</edge>
+<edge source="CU" target="CO">
+  <data key="d2">1</data>
+</edge>
+<edge source="KE" target="CO">
+  <data key="d2">3</data>
+</edge>
+<edge source="AR" target="CO">
+  <data key="d2">2</data>
+</edge>
+<edge source="TH" target="CO">
+  <data key="d2">2</data>
+</edge>
+<edge source="BO" target="CO">
+  <data key="d2">1</data>
+</edge>
+<edge source="BO" target="ES">
+  <data key="d2">1</data>
+</edge>
+<edge source="IT" target="CO">
+  <data key="d2">9</data>
+</edge>
+<edge source="IT" target="CA">
+  <data key="d2">1</data>
+</edge>
+<edge source="IT" target="GR">
+  <data key="d2">1</data>
+</edge>
+<edge source="IT" target="ES">
+  <data key="d2">2</data>
+</edge>
+<edge source="CO" target="ES">
+  <data key="d2">26</data>
+</edge>
+<edge source="CO" target="PE">
+  <data key="d2">6</data>
+</edge>
+<edge source="CO" target="HU">
+  <data key="d2">1</data>
+</edge>
+<edge source="CO" target="CA">
+  <data key="d2">2</data>
+</edge>
+<edge source="CO" target="GR">
+  <data key="d2">3</data>
+</edge>
+<edge source="CO" target="NL">
+  <data key="d2">2</data>
+</edge>
+<edge source="CO" target="MX">
+  <data key="d2">6</data>
+</edge>
+<edge source="CO" target="RU">
+  <data key="d2">3</data>
+</edge>
+<edge source="CO" target="CZ">
+  <data key="d2">2</data>
+</edge>
+<edge source="CO" target="ZA">
+  <data key="d2">1</data>
+</edge>
+<edge source="PY" target="CA">
+  <data key="d2">1</data>
+</edge>
+<edge source="PY" target="MX">
+  <data key="d2">1</data>
+</edge>
+<edge source="RU" target="MX">
+  <data key="d2">1</data>
+</edge>
+<edge source="MX" target="CA">
+  <data key="d2">1</data>
+</edge>
+<edge source="CA" target="GR">
+  <data key="d2">1</data>
+</edge>
+</graph></graphml>

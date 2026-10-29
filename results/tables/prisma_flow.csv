@@ -1,0 +1,8 @@
+level,name,identified,duplicates_removed,screened,excluded_screening,assessed_eligibility,excluded_eligibility,included
+N1,N1 Sostenibilidad de biorrefinerías,5324,2121,3203,50,3153,175,2978
+N2,N2 ACV-S / LCSA en sistemas de base biológica,273,99,174,3,171,12,159
+N3,N3 Raíces y tubérculos en bioprocesos,7616,2239,5377,233,5144,128,5016
+N4,N4 Ñame y batata: rutas de transformación,19603,7370,12233,857,11376,488,10888
+N5,N5 Sostenibilidad de ñame y batata,1150,238,912,33,879,59,820
+N6,N6 Contexto Colombia / Caribe,650,229,421,15,406,18,388
+Total,Corpus total (registros únicos),34616,13457,21159,1150,20009,845,19164

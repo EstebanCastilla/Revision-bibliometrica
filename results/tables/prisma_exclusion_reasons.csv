@@ -1,0 +1,13 @@
+stage,reason,n
+cribado,"solo en Scopus, sin metadatos completos (no enlazable en OpenAlex)",1082
+elegibilidad,falso positivo (p. ej. 'yam bean') o sin ñame/batata,299
+elegibilidad,sin mención a ñame (Dioscorea),195
+elegibilidad,sin mención a biorrefinería,177
+elegibilidad,sin cultivo de raíz o tubérculo,118
+elegibilidad,sin mención a batata,101
+cribado,tipo documental no elegible,55
+elegibilidad,sin dimensión social / LCSA,12
+cribado,artículo retractado,10
+elegibilidad,sin vínculo con Colombia,9
+cribado,sin título,2
+cribado,fuera del periodo,1

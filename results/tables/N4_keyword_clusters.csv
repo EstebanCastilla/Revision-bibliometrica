@@ -1,0 +1,81 @@
+palabra,frecuencia,cluster,grado,fuerza
+sweet potato,3266,C1,75,7202
+anthocyanin,1210,C1,72,3609
+purple sweet potato,1104,C1,69,3046
+beta-carotene,700,C1,73,2241
+functional foods,514,C1,77,1896
+orange-fleshed sweet potato,497,C1,66,1670
+dietary fiber,458,C1,74,1584
+carotenoid,422,C1,71,1535
+starch content,414,C1,72,1078
+sensory evaluation,354,C1,70,1185
+proximate composition,346,C1,70,1490
+sensory acceptability,331,C1,65,1122
+vitamin c,308,C1,70,1224
+tuber yield,287,C1,47,559
+sweet potato flour,262,C1,61,899
+protein content,237,C1,72,1009
+moisture content,235,C1,70,739
+cassava,212,C1,68,515
+cultivar differences,209,C1,71,793
+mineral content,203,C1,68,936
+nutritional value,188,C1,66,738
+vitamin a deficiency,185,C1,49,585
+nutritional composition,184,C1,72,766
+tuberous roots,171,C1,58,385
+polyphenol oxidase,170,C1,53,317
+antioxidant activity,1474,C2,79,5445
+flavonoids,769,C2,77,3111
+yam,735,C2,76,1749
+diosgenin,568,C2,59,1006
+phenolic compounds,479,C2,77,1774
+total phenolic content,465,C2,70,1769
+polyphenol,405,C2,74,1508
+dpph radical scavenging,341,C2,69,1428
+oxidative stress,325,C2,60,846
+bioactive compounds,322,C2,69,1323
+saponin,313,C2,71,1159
+dioscorea opposita,300,C2,68,678
+dioscorea zingiberensis,279,C2,42,355
+dioscorea bulbifera,270,C2,69,811
+anti-inflammatory activity,261,C2,55,983
+medicinal plants,250,C2,61,782
+steroidal saponins,244,C2,33,453
+extraction optimization,224,C2,46,478
+tannins,208,C2,67,996
+sweet potato leaves,197,C2,48,720
+antioxidant capacity,186,C2,70,652
+functional food ingredients,184,C2,71,656
+phytochemicals,182,C2,63,784
+polysaccharide,181,C2,57,442
+chlorogenic acid,177,C2,59,556
+chinese yam,170,C2,64,400
+anticancer activity,167,C2,48,624
+dioscorea nipponica,160,C2,39,293
+free radical scavenging,159,C2,58,596
+dioscin,155,C2,36,313
+antibacterial activity,154,C2,54,474
+alkaloids,153,C2,60,712
+sweet potato starch,771,C3,55,1888
+dioscorea alata,488,C3,75,1412
+swelling power,389,C3,68,1720
+amylose content,383,C3,66,1561
+starch crystallinity,364,C3,63,1358
+starch modification,326,C3,52,1040
+resistant starch,323,C3,69,1041
+pasting properties,322,C3,65,1397
+yam starch,281,C3,55,906
+physicochemical properties,271,C3,72,978
+starch solubility,265,C3,60,1131
+starch granule morphology,264,C3,57,1094
+cassava starch,236,C3,58,777
+potato starch,219,C3,45,691
+corn starch,200,C3,47,593
+dioscorea rotundata,199,C3,68,537
+gelatinization temperature,194,C3,52,820
+functional properties,194,C3,66,854
+viscosity,192,C3,65,633
+thermal stability,179,C3,59,392
+water holding capacity,166,C3,64,602
+starch,164,C3,72,547
+starch gelatinization,160,C3,59,507

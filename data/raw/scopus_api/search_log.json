@@ -1,0 +1,296 @@
+{
+  "N1": {
+    "id": "N1",
+    "query_scopus": "TITLE-ABS-KEY(biorefiner* AND (\"life cycle assessment\" OR \"life cycle analysis\" OR \"techno-economic\" OR technoeconomic OR \"economic feasibility\" OR \"sustainability assessment\" OR \"social life cycle\" OR \"life cycle sustainability\"))",
+    "parts": [
+      {
+        "years": "2000-2026",
+        "query": "TITLE-ABS-KEY(biorefiner* AND (\"life cycle assessment\" OR \"life cycle analysis\" OR \"techno-economic\" OR technoeconomic OR \"economic feasibility\" OR \"sustainability assessment\" OR \"social life cycle\" OR \"life cycle sustainability\")) AND PUBYEAR > 1999 AND PUBYEAR < 2027 AND DOCTYPE(ar OR re)",
+        "count": 2785
+      }
+    ],
+    "count": 2785,
+    "retrieved": 2785,
+    "with_doi": 2767,
+    "scopus_only_resolved_in_openalex": 646,
+    "view": "STANDARD",
+    "date": "2026-10-29T20:38:31+00:00",
+    "code_commit": "3dac005bdd6e0fc97d7a2865f689d2e5baf7b5f0",
+    "code_modified_since_commit": true,
+    "environment": "vm",
+    "python": "3.13.17"
+  },
+  "N2": {
+    "id": "N2",
+    "query_scopus": "TITLE-ABS-KEY((biorefiner* OR bioeconomy OR \"bio-based\" OR biofuel* OR bioenergy) AND (\"social life cycle assessment\" OR \"social life cycle analysis\" OR \"S-LCA\" OR \"social LCA\" OR \"life cycle sustainability assessment\" OR LCSA))",
+    "parts": [
+      {
+        "years": "2000-2026",
+        "query": "TITLE-ABS-KEY((biorefiner* OR bioeconomy OR \"bio-based\" OR biofuel* OR bioenergy) AND (\"social life cycle assessment\" OR \"social life cycle analysis\" OR \"S-LCA\" OR \"social LCA\" OR \"life cycle sustainability assessment\" OR LCSA)) AND PUBYEAR > 1999 AND PUBYEAR < 2027 AND DOCTYPE(ar OR re)",
+        "count": 142
+      }
+    ],
+    "count": 142,
+    "retrieved": 142,
+    "with_doi": 140,
+    "scopus_only_resolved_in_openalex": 42,
+    "view": "STANDARD",
+    "date": "2026-10-29T20:38:39+00:00",
+    "code_commit": "3dac005bdd6e0fc97d7a2865f689d2e5baf7b5f0",
+    "code_modified_since_commit": true,
+    "environment": "vm",
+    "python": "3.13.17"
+  },
+  "N3": {
+    "id": "N3",
+    "query_scopus": "TITLE-ABS-KEY((cassava OR manioc OR yam OR yams OR dioscorea OR \"sweet potato*\" OR potato* OR taro OR cocoyam OR \"root crop*\" OR \"tuber crop*\") AND (biorefiner* OR bioethanol OR \"ethanol production\" OR \"ethanol fermentation\" OR \"fuel ethanol\" OR biogas OR \"anaerobic digestion\" OR biomethane OR biofertili* OR valori* OR \"life cycle assessment\" OR \"techno-economic\"))",
+    "parts": [
+      {
+        "years": "2000-2026",
+        "query": "TITLE-ABS-KEY((cassava OR manioc OR yam OR yams OR dioscorea OR \"sweet potato*\" OR potato* OR taro OR cocoyam OR \"root crop*\" OR \"tuber crop*\") AND (biorefiner* OR bioethanol OR \"ethanol production\" OR \"ethanol fermentation\" OR \"fuel ethanol\" OR biogas OR \"anaerobic digestion\" OR biomethane OR biofertili* OR valori* OR \"life cycle assessment\" OR \"techno-economic\")) AND PUBYEAR > 1999 AND PUBYEAR < 2027 AND DOCTYPE(ar OR re)",
+        "count": 2912
+      }
+    ],
+    "count": 2912,
+    "retrieved": 2912,
+    "with_doi": 2645,
+    "scopus_only_resolved_in_openalex": 519,
+    "view": "STANDARD",
+    "date": "2026-10-29T21:08:21+00:00",
+    "code_commit": "508ba9564c17b8c764e4dc4367bc6fe83c981b73",
+    "code_modified_since_commit": false,
+    "environment": "vm",
+    "python": "3.13.17"
+  },
+  "N4a": {
+    "id": "N4a",
+    "query_scopus": "TITLE-ABS-KEY((yam OR yams OR dioscorea OR \"sweet potato*\" OR \"Ipomoea batatas\") AND starch AND (extraction OR isolation OR \"native starch\" OR yield OR physicochemical OR characteri* OR properties OR industrial))",
+    "parts": [
+      {
+        "years": "2000-2026",
+        "query": "TITLE-ABS-KEY((yam OR yams OR dioscorea OR \"sweet potato*\" OR \"Ipomoea batatas\") AND starch AND (extraction OR isolation OR \"native starch\" OR yield OR physicochemical OR characteri* OR properties OR industrial)) AND PUBYEAR > 1999 AND PUBYEAR < 2027 AND DOCTYPE(ar OR re)",
+        "count": 2398
+      }
+    ],
+    "count": 2398,
+    "retrieved": 2398,
+    "with_doi": 2191,
+    "scopus_only_resolved_in_openalex": 427,
+    "view": "STANDARD",
+    "date": "2026-10-29T21:10:18+00:00",
+    "code_commit": "508ba9564c17b8c764e4dc4367bc6fe83c981b73",
+    "code_modified_since_commit": false,
+    "environment": "vm",
+    "python": "3.13.17"
+  },
+  "N4b": {
+    "id": "N4b",
+    "query_scopus": "TITLE-ABS-KEY((yam OR yams OR dioscorea OR \"sweet potato*\" OR \"Ipomoea batatas\") AND (bioethanol OR \"ethanol production\" OR \"ethanol fermentation\" OR \"fuel ethanol\" OR \"ethanol yield\" OR biofuel*))",
+    "parts": [
+      {
+        "years": "2000-2026",
+        "query": "TITLE-ABS-KEY((yam OR yams OR dioscorea OR \"sweet potato*\" OR \"Ipomoea batatas\") AND (bioethanol OR \"ethanol production\" OR \"ethanol fermentation\" OR \"fuel ethanol\" OR \"ethanol yield\" OR biofuel*)) AND PUBYEAR > 1999 AND PUBYEAR < 2027 AND DOCTYPE(ar OR re)",
+        "count": 232
+      }
+    ],
+    "count": 232,
+    "retrieved": 232,
+    "with_doi": 209,
+    "scopus_only_resolved_in_openalex": 51,
+    "view": "STANDARD",
+    "date": "2026-10-29T21:10:30+00:00",
+    "code_commit": "508ba9564c17b8c764e4dc4367bc6fe83c981b73",
+    "code_modified_since_commit": false,
+    "environment": "vm",
+    "python": "3.13.17"
+  },
+  "N4c": {
+    "id": "N4c",
+    "query_scopus": "TITLE-ABS-KEY((yam OR yams OR dioscorea OR \"sweet potato*\" OR \"Ipomoea batatas\") AND (biogas OR \"anaerobic digestion\" OR \"anaerobic co-digestion\" OR biomethane OR \"methane yield\" OR \"methane production\" OR \"biochemical methane potential\"))",
+    "parts": [
+      {
+        "years": "2000-2026",
+        "query": "TITLE-ABS-KEY((yam OR yams OR dioscorea OR \"sweet potato*\" OR \"Ipomoea batatas\") AND (biogas OR \"anaerobic digestion\" OR \"anaerobic co-digestion\" OR biomethane OR \"methane yield\" OR \"methane production\" OR \"biochemical methane potential\")) AND PUBYEAR > 1999 AND PUBYEAR < 2027 AND DOCTYPE(ar OR re)",
+        "count": 61
+      }
+    ],
+    "count": 61,
+    "retrieved": 61,
+    "with_doi": 55,
+    "scopus_only_resolved_in_openalex": 10,
+    "view": "STANDARD",
+    "date": "2026-10-29T21:10:33+00:00",
+    "code_commit": "508ba9564c17b8c764e4dc4367bc6fe83c981b73",
+    "code_modified_since_commit": false,
+    "environment": "vm",
+    "python": "3.13.17"
+  },
+  "N4d": {
+    "id": "N4d",
+    "query_scopus": "TITLE-ABS-KEY((yam OR yams OR dioscorea OR \"sweet potato*\" OR \"Ipomoea batatas\") AND (peel* OR residue* OR waste* OR \"by-product*\" OR byproduct* OR vine* OR digestate) AND (biofertili* OR \"bio-fertili*\" OR compost* OR vermicompost OR \"organic fertili*\" OR biochar OR \"soil amendment\"))",
+    "parts": [
+      {
+        "years": "2000-2026",
+        "query": "TITLE-ABS-KEY((yam OR yams OR dioscorea OR \"sweet potato*\" OR \"Ipomoea batatas\") AND (peel* OR residue* OR waste* OR \"by-product*\" OR byproduct* OR vine* OR digestate) AND (biofertili* OR \"bio-fertili*\" OR compost* OR vermicompost OR \"organic fertili*\" OR biochar OR \"soil amendment\")) AND PUBYEAR > 1999 AND PUBYEAR < 2027 AND DOCTYPE(ar OR re)",
+        "count": 100
+      }
+    ],
+    "count": 100,
+    "retrieved": 100,
+    "with_doi": 92,
+    "scopus_only_resolved_in_openalex": 34,
+    "view": "STANDARD",
+    "date": "2026-10-29T21:10:39+00:00",
+    "code_commit": "508ba9564c17b8c764e4dc4367bc6fe83c981b73",
+    "code_modified_since_commit": false,
+    "environment": "vm",
+    "python": "3.13.17"
+  },
+  "N4e": {
+    "id": "N4e",
+    "query_scopus": "TITLE-ABS-KEY((yam OR yams OR dioscorea) AND (diosgenin OR dioscorin OR allantoin OR saponin* OR polyphenol* OR phenolic* OR flavonoid* OR mucilage OR polysaccharide* OR \"bioactive compound*\" OR \"resistant starch\" OR batatasin* OR dioscorine OR carotenoid*))",
+    "parts": [
+      {
+        "years": "2000-2026",
+        "query": "TITLE-ABS-KEY((yam OR yams OR dioscorea) AND (diosgenin OR dioscorin OR allantoin OR saponin* OR polyphenol* OR phenolic* OR flavonoid* OR mucilage OR polysaccharide* OR \"bioactive compound*\" OR \"resistant starch\" OR batatasin* OR dioscorine OR carotenoid*)) AND PUBYEAR > 1999 AND PUBYEAR < 2027 AND DOCTYPE(ar OR re)",
+        "count": 2244
+      }
+    ],
+    "count": 2244,
+    "retrieved": 2244,
+    "with_doi": 1990,
+    "scopus_only_resolved_in_openalex": 451,
+    "view": "STANDARD",
+    "date": "2026-10-29T21:12:30+00:00",
+    "code_commit": "508ba9564c17b8c764e4dc4367bc6fe83c981b73",
+    "code_modified_since_commit": false,
+    "environment": "vm",
+    "python": "3.13.17"
+  },
+  "N4f": {
+    "id": "N4f",
+    "query_scopus": "TITLE-ABS-KEY((\"sweet potato*\" OR \"Ipomoea batatas\") AND (anthocyanin* OR \"chlorogenic acid\" OR caffeoylquinic OR \"beta-carotene\" OR carotenoid* OR sporamin OR polyphenol* OR phenolic* OR flavonoid* OR pectin OR \"dietary fiber\" OR \"resistant starch\" OR \"bioactive compound*\" OR \"protein isolate\"))",
+    "parts": [
+      {
+        "years": "2000-2026",
+        "query": "TITLE-ABS-KEY((\"sweet potato*\" OR \"Ipomoea batatas\") AND (anthocyanin* OR \"chlorogenic acid\" OR caffeoylquinic OR \"beta-carotene\" OR carotenoid* OR sporamin OR polyphenol* OR phenolic* OR flavonoid* OR pectin OR \"dietary fiber\" OR \"resistant starch\" OR \"bioactive compound*\" OR \"protein isolate\")) AND PUBYEAR > 1999 AND PUBYEAR < 2027 AND DOCTYPE(ar OR re)",
+        "count": 2931
+      }
+    ],
+    "count": 2931,
+    "retrieved": 2931,
+    "with_doi": 2762,
+    "scopus_only_resolved_in_openalex": 465,
+    "view": "STANDARD",
+    "date": "2026-10-29T20:48:33+00:00",
+    "code_commit": "fc26186dedab1abf3a0deab200c1de308ba4bf62",
+    "code_modified_since_commit": false,
+    "environment": "vm",
+    "python": "3.13.17"
+  },
+  "N4g": {
+    "id": "N4g",
+    "query_scopus": "TITLE-ABS-KEY((yam OR yams OR dioscorea OR \"sweet potato*\" OR \"Ipomoea batatas\") AND (biorefiner* OR valori* OR \"circular economy\" OR \"zero waste\" OR \"integrated process\" OR cascad*))",
+    "parts": [
+      {
+        "years": "2000-2026",
+        "query": "TITLE-ABS-KEY((yam OR yams OR dioscorea OR \"sweet potato*\" OR \"Ipomoea batatas\") AND (biorefiner* OR valori* OR \"circular economy\" OR \"zero waste\" OR \"integrated process\" OR cascad*)) AND PUBYEAR > 1999 AND PUBYEAR < 2027 AND DOCTYPE(ar OR re)",
+        "count": 200
+      }
+    ],
+    "count": 200,
+    "retrieved": 200,
+    "with_doi": 193,
+    "scopus_only_resolved_in_openalex": 43,
+    "view": "STANDARD",
+    "date": "2026-10-29T21:12:42+00:00",
+    "code_commit": "508ba9564c17b8c764e4dc4367bc6fe83c981b73",
+    "code_modified_since_commit": false,
+    "environment": "vm",
+    "python": "3.13.17"
+  },
+  "N5": {
+    "id": "N5",
+    "query_scopus": "TITLE-ABS-KEY((yam OR yams OR dioscorea OR \"sweet potato*\" OR \"Ipomoea batatas\") AND (\"life cycle assessment\" OR \"life cycle analysis\" OR LCA OR \"techno-economic\" OR \"economic feasibility\" OR \"economic analysis\" OR profitability OR \"social life cycle\" OR \"carbon footprint\" OR \"environmental impact\" OR \"sustainability assessment\" OR \"value chain\"))",
+    "parts": [
+      {
+        "years": "2000-2026",
+        "query": "TITLE-ABS-KEY((yam OR yams OR dioscorea OR \"sweet potato*\" OR \"Ipomoea batatas\") AND (\"life cycle assessment\" OR \"life cycle analysis\" OR LCA OR \"techno-economic\" OR \"economic feasibility\" OR \"economic analysis\" OR profitability OR \"social life cycle\" OR \"carbon footprint\" OR \"environmental impact\" OR \"sustainability assessment\" OR \"value chain\")) AND PUBYEAR > 1999 AND PUBYEAR < 2027 AND DOCTYPE(ar OR re)",
+        "count": 351
+      }
+    ],
+    "count": 351,
+    "retrieved": 351,
+    "with_doi": 318,
+    "scopus_only_resolved_in_openalex": 91,
+    "view": "STANDARD",
+    "date": "2026-10-29T21:13:00+00:00",
+    "code_commit": "508ba9564c17b8c764e4dc4367bc6fe83c981b73",
+    "code_modified_since_commit": false,
+    "environment": "vm",
+    "python": "3.13.17"
+  },
+  "N6": {
+    "id": "N6",
+    "query_scopus": "TITLE-ABS-KEY((yam OR yams OR dioscorea OR \"sweet potato*\" OR batata OR \"Ipomoea batatas\") AND (colombia* OR \"Montes de María\" OR \"Montes de Maria\"))",
+    "parts": [
+      {
+        "years": "2000-2026",
+        "query": "TITLE-ABS-KEY((yam OR yams OR dioscorea OR \"sweet potato*\" OR batata OR \"Ipomoea batatas\") AND (colombia* OR \"Montes de María\" OR \"Montes de Maria\")) AND PUBYEAR > 1999 AND PUBYEAR < 2027 AND DOCTYPE(ar OR re)",
+        "count": 80
+      }
+    ],
+    "count": 80,
+    "retrieved": 80,
+    "with_doi": 70,
+    "scopus_only_resolved_in_openalex": 15,
+    "view": "STANDARD",
+    "date": "2026-10-29T20:54:21+00:00",
+    "code_commit": "dd1ce58b0a21d1c896620ff0d5897d275a9e38ca",
+    "code_modified_since_commit": false,
+    "environment": "vm",
+    "python": "3.13.17"
+  },
+  "N6c": {
+    "id": "N6c",
+    "query_scopus": "TITLE-ABS-KEY((biorefiner* OR biorrefiner* OR bioethanol OR biogas OR \"anaerobic digestion\" OR biofertili* OR \"life cycle assessment\" OR \"techno-economic\") AND (cassava OR yuca OR yam OR yams OR \"sweet potato*\" OR \"agro-industrial\" OR agroindustrial OR \"crop residue*\" OR starch) AND (colombia*))",
+    "parts": [
+      {
+        "years": "2000-2026",
+        "query": "TITLE-ABS-KEY((biorefiner* OR biorrefiner* OR bioethanol OR biogas OR \"anaerobic digestion\" OR biofertili* OR \"life cycle assessment\" OR \"techno-economic\") AND (cassava OR yuca OR yam OR yams OR \"sweet potato*\" OR \"agro-industrial\" OR agroindustrial OR \"crop residue*\" OR starch) AND (colombia*)) AND PUBYEAR > 1999 AND PUBYEAR < 2027 AND DOCTYPE(ar OR re)",
+        "count": 89
+      }
+    ],
+    "count": 89,
+    "retrieved": 89,
+    "with_doi": 87,
+    "scopus_only_resolved_in_openalex": 16,
+    "view": "STANDARD",
+    "date": "2026-10-29T21:13:05+00:00",
+    "code_commit": "508ba9564c17b8c764e4dc4367bc6fe83c981b73",
+    "code_modified_since_commit": false,
+    "environment": "vm",
+    "python": "3.13.17"
+  },
+  "N6b": {
+    "id": "N6b",
+    "query_scopus": "TITLE-ABS-KEY(biorefiner* AND (\"life cycle assessment\" OR \"techno-economic\" OR \"sustainability assessment\" OR \"social life cycle\")) AND AFFILCOUNTRY(colombia)",
+    "parts": [
+      {
+        "years": "2000-2026",
+        "query": "TITLE-ABS-KEY(biorefiner* AND (\"life cycle assessment\" OR \"techno-economic\" OR \"sustainability assessment\" OR \"social life cycle\")) AND AFFILCOUNTRY(colombia) AND PUBYEAR > 1999 AND PUBYEAR < 2027 AND DOCTYPE(ar OR re)",
+        "count": 103
+      }
+    ],
+    "count": 103,
+    "retrieved": 103,
+    "with_doi": 103,
+    "scopus_only_resolved_in_openalex": 23,
+    "view": "STANDARD",
+    "date": "2026-10-29T20:50:23+00:00",
+    "code_commit": "fc26186dedab1abf3a0deab200c1de308ba4bf62",
+    "code_modified_since_commit": false,
+    "environment": "vm",
+    "python": "3.13.17"
+  }
+}

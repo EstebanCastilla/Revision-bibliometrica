@@ -1,0 +1,61 @@
+palabra,frecuencia,cluster,grado,fuerza
+social life cycle assessment,92,C1,56,321
+bioeconomy,31,C1,46,126
+social sustainability,21,C1,29,76
+social impact,16,C1,25,49
+social hotspots,12,C1,27,50
+biofuels,10,C1,27,42
+social impact assessment,10,C1,23,40
+stakeholder engagement,9,C1,21,32
+social indicators,8,C1,17,32
+socio-economic impacts,7,C1,19,26
+job creation,7,C1,22,29
+working conditions,6,C1,20,28
+sustainability assessment framework,5,C1,9,17
+stakeholder perspectives,4,C1,14,17
+social risk,4,C1,8,13
+bio-based value chains,4,C1,9,15
+social performance,4,C1,10,13
+system boundaries,4,C1,13,17
+stakeholder impact,4,C1,13,18
+bioelectricity,4,C1,8,12
+sustainable development,4,C1,15,19
+value chain,4,C1,12,15
+life cycle sustainability assessment,55,C2,53,186
+life cycle cost analysis,24,C2,36,112
+bioenergy,18,C2,32,72
+circular economy,18,C2,34,73
+multi-criteria decision making,14,C2,24,50
+environmental impact,13,C2,25,52
+sustainable development goals,9,C2,13,25
+sustainability indicators,9,C2,20,37
+global warming potential,5,C2,17,25
+eutrophication,5,C2,17,28
+acidification,4,C2,12,20
+life cycle cost,4,C2,12,19
+agent-based modeling,4,C2,12,16
+life cycle assessment,33,C3,45,141
+sustainability assessment,20,C3,33,87
+biorefinery,19,C3,38,86
+circular bioeconomy,12,C3,25,43
+bioproducts,11,C3,25,48
+ghg emissions,10,C3,27,38
+anaerobic digestion,10,C3,28,50
+food security,6,C3,15,23
+techno-economic analysis,6,C3,18,31
+waste valorization,6,C3,18,24
+cellulosic ethanol,5,C3,17,22
+land use,4,C3,12,20
+land use change,4,C3,15,19
+biofuel production,4,C3,12,15
+bio-based materials,4,C3,10,14
+economic feasibility,4,C3,13,18
+ecotoxicity,4,C3,13,18
+gasification,4,C3,13,19
+industrial symbiosis,4,C3,16,18
+brewer's spent grain,3,C3,6,12
+health and safety,6,C4,23,30
+bioethanol,6,C4,21,23
+combined heat and power,5,C4,14,22
+workers' rights,4,C4,18,24
+biomass,3,C4,11,15
