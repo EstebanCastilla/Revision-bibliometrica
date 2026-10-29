@@ -55,6 +55,14 @@ def text_of(rec: dict) -> str:
 
 
 def eligible(qid: str, rec: dict) -> tuple[bool, str]:
+    if FALSE_POSITIVES.search(rec.get("title") or "") and not (RX["yam"].search(
+            FALSE_POSITIVES.sub(" ", rec.get("title") or "")) or RX["sweet"].search(rec.get("title") or "")):
+        return False, "falso positivo (p. ej. 'yam bean') o sin ñame/batata"
+    # Sin resumen disponible en OpenAlex (p. ej. resúmenes de Elsevier no
+    # redistribuibles): si Scopus recuperó el registro con la misma consulta
+    # TITLE-ABS-KEY, la coincidencia en el resumen queda confirmada por Scopus.
+    if not rec.get("abstract") and (qid, "Scopus API") in rec.get("qsrc", set()):
+        return True, ""
     t = FALSE_POSITIVES.sub(" ", text_of(rec))
     if qid in ("N1", "N6b") and not RX["biorefinery"].search(t):
         return False, "sin mención a biorrefinería"
@@ -107,10 +115,11 @@ def merge(records: list[dict]) -> list[dict]:
             alias.setdefault(k, main)
         if main not in by_key:
             base = {k: v for k, v in r.items() if not k.startswith("_")}
-            base.update(queries=set(), sources=set())
+            base.update(queries=set(), sources=set(), qsrc=set())
             by_key[main] = base
         cur = by_key[main]
         cur["queries"].add(r["_query"])
+        cur["qsrc"].add((r["_query"], r["_source"]))
         cur["sources"].add(r["_source"])
         # completa campos vacíos con la otra fuente
         for k, v in r.items():
@@ -187,6 +196,7 @@ def main() -> None:
         r["queries"] = sorted(keep)
         r["levels"] = sorted({LEVEL_OF(q) for q in keep})
         r["sources"] = sorted(r["sources"])
+        r["confirmed_by_scopus"] = sorted(q for q, src in r.pop("qsrc") if src == "Scopus API")
         r["has_abstract"] = bool(r.get("abstract"))
         included.append(r)
 

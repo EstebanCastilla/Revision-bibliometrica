@@ -98,6 +98,21 @@ def annual_production(df):
     return ap
 
 
+def source_contribution(df):
+    """Aporte de cada base por año: búsqueda OpenAlex vs. registros recuperados solo vía Scopus."""
+    rows = []
+    for lvl in LEVELS:
+        d = subset(df, lvl)
+        oa = d["sources"].apply(lambda s: "OpenAlex" in s)
+        sc = d["sources"].apply(lambda s: "Scopus API" in s)
+        for y, g in d.groupby("year"):
+            rows.append({"level": lvl, "year": int(y), "total": len(g),
+                         "openalex_search": int(oa[g.index].sum()), "scopus_search": int(sc[g.index].sum()),
+                         "both": int((oa & sc)[g.index].sum()), "only_scopus": int((sc & ~oa)[g.index].sum()),
+                         "only_openalex": int((oa & ~sc)[g.index].sum())})
+    pd.DataFrame(rows).to_csv(TABLES / "annual_production_by_source.csv", index=False)
+
+
 def top_sources(df, lvl, n=15):
     t = (df.groupby("source").agg(docs=("id", "size"), citas=("cited_by", "sum"),
                                   h=("cited_by", h_index)).sort_values(["docs", "citas"], ascending=False))
@@ -289,6 +304,7 @@ def main() -> None:
     if brad:
         pd.concat(brad).to_csv(TABLES / "bradford_summary.csv", index=False)
     annual_production(df)
+    source_contribution(df)
 
     # Cobertura por sub-consulta (rutas N4a-N4g)
     routes = {q["id"]: q["name"].split(" - ")[-1] for q in iter_queries(cfg) if q["id"].startswith("N4")}

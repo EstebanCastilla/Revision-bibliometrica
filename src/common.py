@@ -80,7 +80,7 @@ def norm_title(title: str | None) -> str:
 
 
 def norm_doi(doi: str | None) -> str:
-    if not doi:
+    if not isinstance(doi, str) or not doi:
         return ""
     return re.sub(r"^https?://(dx\.)?doi\.org/", "", doi.strip().lower())
 

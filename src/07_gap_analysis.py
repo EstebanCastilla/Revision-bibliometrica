@@ -40,13 +40,18 @@ ROUTES = {
     "Biorrefinería integrada": r"bio-?refiner|cascad|zero[- ]waste|integrated (process|valori)",
 }
 METHODS = {
-    "ACV": r"life[- ]cycle assessment|life[- ]cycle analysis|\blca\b|carbon footprint|environmental impact assessment",
-    "TEA": r"techno-?economic|economic (feasibility|analysis|assessment|evaluation)|profitability|"
-           r"net present value|\bnpv\b|internal rate of return|payback|production cost|minimum (ethanol )?selling price",
-    "ACV-S": r"social life[- ]cycle|\bs-?lca\b|social lca|social (impact|sustainability|assessment)|"
-             r"stakeholder|working conditions|local communit",
-    "Sostenibilidad (LCSA/multicriterio)": r"life[- ]cycle sustainability|\blcsa\b|sustainability assessment|"
-                                           r"multi-?criteria|sustainability index",
+    "ACV": r"life[- ]cycle assessment|life[- ]cycle analysis|\blca\b|carbon footprint|"
+           r"environmental impact assessment|global warming potential",
+    "TEA": r"techno-?economic|minimum (ethanol |fuel )?selling price|net present value|\bnpv\b|"
+           r"internal rate of return|payback period|capital (cost|investment)|aspen plus|superpro|"
+           r"process simulation|plant design",
+    "Análisis económico agrícola/mercado": r"profitability|economic analysis|cost-benefit|gross margin|"
+                                           r"production cost|economic feasibility|market price|value chain",
+    "ACV-S": r"social life[- ]cycle|\bs-?lca\b|social lca|social hotspot|social impact assessment",
+    "Dimensión socioeconómica (no ACV-S)": r"livelihood|smallholder|stakeholder|working conditions|gender|"
+                                           r"food security|household income|rural development|employment",
+    "LCSA / multicriterio": r"life[- ]cycle sustainability|\blcsa\b|sustainability assessment|"
+                            r"multi-?criteria|sustainability index",
 }
 METABOLITES = {
     "Ñame": {
