@@ -78,6 +78,8 @@ def eligible(qid: str, rec: dict) -> tuple[bool, str]:
         return False, "falso positivo (p. ej. 'yam bean') o sin ñame/batata"
     if qid in ("N6", "N6c") and not (RX["colombia"].search(t) or "CO" in (rec.get("countries") or [])):
         return False, "sin vínculo con Colombia"
+    if qid == "N6" and not (RX["yam"].search(t) or RX["sweet"].search(t)):
+        return False, "falso positivo (p. ej. 'yam bean') o sin ñame/batata"
     return True, ""
 
 

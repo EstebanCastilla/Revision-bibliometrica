@@ -175,11 +175,13 @@ levels:
       Colombia o a Montes de María. Nota: el término "ñame" no se usa en
       OpenAlex porque el stemming elimina la tilde y lo convierte en "name",
       lo que recupera miles de falsos positivos (verificado el 2026-10-29).
+      Scopus aplica la misma normalización (837 registros con "ñame", la
+      mayoría sin relación), por lo que tampoco se usa en la cadena Scopus.
     openalex: >-
       (yam OR yams OR Dioscorea OR "sweet potato" OR "sweet potatoes" OR batata OR "Ipomoea batatas") AND
       (Colombia OR Colombian OR "Montes de María" OR "Montes de Maria")
     scopus: >-
-      TITLE-ABS-KEY((yam OR yams OR "ñame" OR dioscorea OR "sweet potato*" OR batata OR "Ipomoea batatas") AND
+      TITLE-ABS-KEY((yam OR yams OR dioscorea OR "sweet potato*" OR batata OR "Ipomoea batatas") AND
       (colombia* OR "Montes de María" OR "Montes de Maria"))
   - id: N6c
     name: "Contexto territorial: bioprocesos con raíces, tubérculos y residuos agroindustriales en Colombia"
