@@ -31,7 +31,7 @@ from collections import Counter
 
 import requests
 
-from common import RAW_OA, iter_queries, load_config, write_jsonl_gz
+from common import RAW_OA, iter_queries, load_config, run_metadata, write_jsonl_gz
 
 API = "https://api.openalex.org/works"
 SELECT = ",".join([
@@ -158,6 +158,7 @@ def harvest(q: dict, cfg: dict, counts_only: bool) -> dict:
         "query_openalex": q["openalex"], "filter": flt, "query_scopus": q["scopus"],
         "count": total, "retrieved": 0,
         "date": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
+        "api": API, "per_page": cfg["global"]["per_page"], **run_metadata(),
     }
     if counts_only:
         return log

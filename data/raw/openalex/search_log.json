@@ -1,0 +1,145 @@
+{
+  "N1": {
+    "id": "N1",
+    "parent": "N1",
+    "name": "Evaluación de sostenibilidad de biorrefinerías (marco general)",
+    "query_openalex": "(biorefinery OR biorefineries OR \"integrated biorefinery\") AND (\"life cycle assessment\" OR \"life cycle analysis\" OR \"techno-economic\" OR \"technoeconomic\" OR \"economic feasibility\" OR \"sustainability assessment\" OR \"social life cycle\" OR \"life cycle sustainability\")",
+    "filter": "title_and_abstract.search:(biorefinery OR biorefineries OR \"integrated biorefinery\") AND (\"life cycle assessment\" OR \"life cycle analysis\" OR \"techno-economic\" OR \"technoeconomic\" OR \"economic feasibility\" OR \"sustainability assessment\" OR \"social life cycle\" OR \"life cycle sustainability\"),publication_year:2000-2026,type:article|review",
+    "query_scopus": "TITLE-ABS-KEY(biorefiner* AND (\"life cycle assessment\" OR \"life cycle analysis\" OR \"techno-economic\" OR technoeconomic OR \"economic feasibility\" OR \"sustainability assessment\" OR \"social life cycle\" OR \"life cycle sustainability\"))",
+    "count": 2540,
+    "retrieved": 0,
+    "date": "2026-10-29T20:29:29+00:00"
+  },
+  "N2": {
+    "id": "N2",
+    "parent": "N2",
+    "name": "Evaluación integrada de tres pilares (ACV + TEA + ACV-S / LCSA)",
+    "query_openalex": "(biorefinery OR biorefineries OR bioeconomy OR \"bio-based\" OR biofuel OR bioenergy) AND (\"social life cycle assessment\" OR \"social life cycle analysis\" OR \"S-LCA\" OR \"social LCA\" OR \"life cycle sustainability assessment\" OR \"LCSA\")",
+    "filter": "title_and_abstract.search:(biorefinery OR biorefineries OR bioeconomy OR \"bio-based\" OR biofuel OR bioenergy) AND (\"social life cycle assessment\" OR \"social life cycle analysis\" OR \"S-LCA\" OR \"social LCA\" OR \"life cycle sustainability assessment\" OR \"LCSA\"),publication_year:2000-2026,type:article|review",
+    "query_scopus": "TITLE-ABS-KEY((biorefiner* OR bioeconomy OR \"bio-based\" OR biofuel* OR bioenergy) AND (\"social life cycle assessment\" OR \"social life cycle analysis\" OR \"S-LCA\" OR \"social LCA\" OR \"life cycle sustainability assessment\" OR LCSA))",
+    "count": 131,
+    "retrieved": 0,
+    "date": "2026-10-29T20:29:30+00:00"
+  },
+  "N3": {
+    "id": "N3",
+    "parent": "N3",
+    "name": "Raíces y tubérculos como materia prima de bioprocesos",
+    "query_openalex": "(cassava OR manioc OR yam OR yams OR Dioscorea OR \"sweet potato\" OR \"sweet potatoes\" OR potato OR potatoes OR taro OR cocoyam OR \"root crop\" OR \"root crops\" OR \"tuber crop\" OR \"tuber crops\") AND (biorefinery OR bioethanol OR \"ethanol production\" OR \"ethanol fermentation\" OR \"fuel ethanol\" OR biogas OR \"anaerobic digestion\" OR biomethane OR biofertilizer OR \"bio-fertilizer\" OR valorization OR valorisation OR \"life cycle assessment\" OR \"techno-economic\")",
+    "filter": "title_and_abstract.search:(cassava OR manioc OR yam OR yams OR Dioscorea OR \"sweet potato\" OR \"sweet potatoes\" OR potato OR potatoes OR taro OR cocoyam OR \"root crop\" OR \"root crops\" OR \"tuber crop\" OR \"tuber crops\") AND (biorefinery OR bioethanol OR \"ethanol production\" OR \"ethanol fermentation\" OR \"fuel ethanol\" OR biogas OR \"anaerobic digestion\" OR biomethane OR biofertilizer OR \"bio-fertilizer\" OR valorization OR valorisation OR \"life cycle assessment\" OR \"techno-economic\"),publication_year:2000-2026,type:article|review",
+    "query_scopus": "TITLE-ABS-KEY((cassava OR manioc OR yam* OR dioscorea OR \"sweet potato*\" OR potato* OR taro OR cocoyam OR \"root crop*\" OR \"tuber crop*\") AND (biorefiner* OR bioethanol OR \"ethanol production\" OR \"ethanol fermentation\" OR \"fuel ethanol\" OR biogas OR \"anaerobic digestion\" OR biomethane OR biofertili* OR valori* OR \"life cycle assessment\" OR \"techno-economic\"))",
+    "count": 4700,
+    "retrieved": 0,
+    "date": "2026-10-29T20:29:30+00:00"
+  },
+  "N4a": {
+    "id": "N4a",
+    "parent": "N4",
+    "name": "Ñame y batata: rutas de transformación - Almidón nativo",
+    "query_openalex": "(yam OR yams OR Dioscorea OR \"sweet potato\" OR \"sweet potatoes\" OR \"Ipomoea batatas\") AND (starch) AND (extraction OR isolation OR \"native starch\" OR yield OR physicochemical OR characterization OR properties OR industrial)",
+    "filter": "title_and_abstract.search:(yam OR yams OR Dioscorea OR \"sweet potato\" OR \"sweet potatoes\" OR \"Ipomoea batatas\") AND (starch) AND (extraction OR isolation OR \"native starch\" OR yield OR physicochemical OR characterization OR properties OR industrial),publication_year:2000-2026,type:article|review",
+    "query_scopus": "TITLE-ABS-KEY((yam* OR dioscorea OR \"sweet potato*\" OR \"Ipomoea batatas\") AND starch AND (extraction OR isolation OR \"native starch\" OR yield OR physicochemical OR characteri* OR properties OR industrial))",
+    "count": 3001,
+    "retrieved": 0,
+    "date": "2026-10-29T20:29:30+00:00"
+  },
+  "N4b": {
+    "id": "N4b",
+    "parent": "N4",
+    "name": "Ñame y batata: rutas de transformación - Bioetanol",
+    "query_openalex": "(yam OR yams OR Dioscorea OR \"sweet potato\" OR \"sweet potatoes\" OR \"Ipomoea batatas\") AND (bioethanol OR \"ethanol production\" OR \"ethanol fermentation\" OR \"fuel ethanol\" OR \"ethanol yield\" OR biofuel)",
+    "filter": "title_and_abstract.search:(yam OR yams OR Dioscorea OR \"sweet potato\" OR \"sweet potatoes\" OR \"Ipomoea batatas\") AND (bioethanol OR \"ethanol production\" OR \"ethanol fermentation\" OR \"fuel ethanol\" OR \"ethanol yield\" OR biofuel),publication_year:2000-2026,type:article|review",
+    "query_scopus": "TITLE-ABS-KEY((yam* OR dioscorea OR \"sweet potato*\" OR \"Ipomoea batatas\") AND (bioethanol OR \"ethanol production\" OR \"ethanol fermentation\" OR \"fuel ethanol\" OR \"ethanol yield\" OR biofuel*))",
+    "count": 346,
+    "retrieved": 0,
+    "date": "2026-10-29T20:29:31+00:00"
+  },
+  "N4c": {
+    "id": "N4c",
+    "parent": "N4",
+    "name": "Ñame y batata: rutas de transformación - Biogás",
+    "query_openalex": "(yam OR yams OR Dioscorea OR \"sweet potato\" OR \"sweet potatoes\" OR \"Ipomoea batatas\") AND (biogas OR \"anaerobic digestion\" OR \"anaerobic co-digestion\" OR biomethane OR \"methane yield\" OR \"methane production\" OR \"biochemical methane potential\")",
+    "filter": "title_and_abstract.search:(yam OR yams OR Dioscorea OR \"sweet potato\" OR \"sweet potatoes\" OR \"Ipomoea batatas\") AND (biogas OR \"anaerobic digestion\" OR \"anaerobic co-digestion\" OR biomethane OR \"methane yield\" OR \"methane production\" OR \"biochemical methane potential\"),publication_year:2000-2026,type:article|review",
+    "query_scopus": "TITLE-ABS-KEY((yam* OR dioscorea OR \"sweet potato*\" OR \"Ipomoea batatas\") AND (biogas OR \"anaerobic digestion\" OR \"anaerobic co-digestion\" OR biomethane OR \"methane yield\" OR \"methane production\" OR \"biochemical methane potential\"))",
+    "count": 101,
+    "retrieved": 0,
+    "date": "2026-10-29T20:29:31+00:00"
+  },
+  "N4d": {
+    "id": "N4d",
+    "parent": "N4",
+    "name": "Ñame y batata: rutas de transformación - Biofertilizante",
+    "query_openalex": "(yam OR yams OR Dioscorea OR \"sweet potato\" OR \"sweet potatoes\" OR \"Ipomoea batatas\") AND (peel OR peels OR residue OR residues OR waste OR wastes OR \"by-product\" OR \"by-products\" OR byproduct OR vine OR vines OR digestate) AND (biofertilizer OR \"bio-fertilizer\" OR compost OR composting OR vermicompost OR \"organic fertilizer\" OR biochar OR \"soil amendment\")",
+    "filter": "title_and_abstract.search:(yam OR yams OR Dioscorea OR \"sweet potato\" OR \"sweet potatoes\" OR \"Ipomoea batatas\") AND (peel OR peels OR residue OR residues OR waste OR wastes OR \"by-product\" OR \"by-products\" OR byproduct OR vine OR vines OR digestate) AND (biofertilizer OR \"bio-fertilizer\" OR compost OR composting OR vermicompost OR \"organic fertilizer\" OR biochar OR \"soil amendment\"),publication_year:2000-2026,type:article|review",
+    "query_scopus": "TITLE-ABS-KEY((yam* OR dioscorea OR \"sweet potato*\" OR \"Ipomoea batatas\") AND (peel* OR residue* OR waste* OR \"by-product*\" OR byproduct* OR vine* OR digestate) AND (biofertili* OR \"bio-fertili*\" OR compost* OR vermicompost OR \"organic fertili*\" OR biochar OR \"soil amendment\"))",
+    "count": 174,
+    "retrieved": 0,
+    "date": "2026-10-29T20:29:31+00:00"
+  },
+  "N4e": {
+    "id": "N4e",
+    "parent": "N4",
+    "name": "Ñame y batata: rutas de transformación - Metabolitos del ñame",
+    "query_openalex": "(yam OR yams OR Dioscorea) AND (diosgenin OR dioscorin OR allantoin OR saponin OR saponins OR polyphenol OR polyphenols OR phenolic OR flavonoid OR flavonoids OR mucilage OR \"non-starch polysaccharide\" OR polysaccharide OR polysaccharides OR \"bioactive compound\" OR \"bioactive compounds\" OR \"resistant starch\" OR batatasin OR dihydrodioscorine OR carotenoid OR carotenoids)",
+    "filter": "title_and_abstract.search:(yam OR yams OR Dioscorea) AND (diosgenin OR dioscorin OR allantoin OR saponin OR saponins OR polyphenol OR polyphenols OR phenolic OR flavonoid OR flavonoids OR mucilage OR \"non-starch polysaccharide\" OR polysaccharide OR polysaccharides OR \"bioactive compound\" OR \"bioactive compounds\" OR \"resistant starch\" OR batatasin OR dihydrodioscorine OR carotenoid OR carotenoids),publication_year:2000-2026,type:article|review",
+    "query_scopus": "TITLE-ABS-KEY((yam* OR dioscorea) AND (diosgenin OR dioscorin OR allantoin OR saponin* OR polyphenol* OR phenolic* OR flavonoid* OR mucilage OR polysaccharide* OR \"bioactive compound*\" OR \"resistant starch\" OR batatasin* OR dioscorine OR carotenoid*))",
+    "count": 2902,
+    "retrieved": 0,
+    "date": "2026-10-29T20:29:31+00:00"
+  },
+  "N4f": {
+    "id": "N4f",
+    "parent": "N4",
+    "name": "Ñame y batata: rutas de transformación - Metabolitos de la batata",
+    "query_openalex": "(\"sweet potato\" OR \"sweet potatoes\" OR \"Ipomoea batatas\") AND (anthocyanin OR anthocyanins OR \"chlorogenic acid\" OR \"caffeoylquinic\" OR \"beta-carotene\" OR \"β-carotene\" OR carotenoid OR carotenoids OR sporamin OR polyphenol OR polyphenols OR phenolic OR flavonoid OR flavonoids OR pectin OR \"dietary fiber\" OR \"resistant starch\" OR \"bioactive compound\" OR \"bioactive compounds\" OR \"protein isolate\")",
+    "filter": "title_and_abstract.search:(\"sweet potato\" OR \"sweet potatoes\" OR \"Ipomoea batatas\") AND (anthocyanin OR anthocyanins OR \"chlorogenic acid\" OR \"caffeoylquinic\" OR \"beta-carotene\" OR \"β-carotene\" OR carotenoid OR carotenoids OR sporamin OR polyphenol OR polyphenols OR phenolic OR flavonoid OR flavonoids OR pectin OR \"dietary fiber\" OR \"resistant starch\" OR \"bioactive compound\" OR \"bioactive compounds\" OR \"protein isolate\"),publication_year:2000-2026,type:article|review",
+    "query_scopus": "TITLE-ABS-KEY((\"sweet potato*\" OR \"Ipomoea batatas\") AND (anthocyanin* OR \"chlorogenic acid\" OR caffeoylquinic OR \"beta-carotene\" OR carotenoid* OR sporamin OR polyphenol* OR phenolic* OR flavonoid* OR pectin OR \"dietary fiber\" OR \"resistant starch\" OR \"bioactive compound*\" OR \"protein isolate\"))",
+    "count": 4411,
+    "retrieved": 0,
+    "date": "2026-10-29T20:29:32+00:00"
+  },
+  "N4g": {
+    "id": "N4g",
+    "parent": "N4",
+    "name": "Ñame y batata: rutas de transformación - Biorrefinería / valorización integral",
+    "query_openalex": "(yam OR yams OR Dioscorea OR \"sweet potato\" OR \"sweet potatoes\" OR \"Ipomoea batatas\") AND (biorefinery OR biorefineries OR valorization OR valorisation OR \"circular economy\" OR \"zero waste\" OR \"integrated process\" OR \"cascade\")",
+    "filter": "title_and_abstract.search:(yam OR yams OR Dioscorea OR \"sweet potato\" OR \"sweet potatoes\" OR \"Ipomoea batatas\") AND (biorefinery OR biorefineries OR valorization OR valorisation OR \"circular economy\" OR \"zero waste\" OR \"integrated process\" OR \"cascade\"),publication_year:2000-2026,type:article|review",
+    "query_scopus": "TITLE-ABS-KEY((yam* OR dioscorea OR \"sweet potato*\" OR \"Ipomoea batatas\") AND (biorefiner* OR valori* OR \"circular economy\" OR \"zero waste\" OR \"integrated process\" OR cascad*))",
+    "count": 492,
+    "retrieved": 0,
+    "date": "2026-10-29T20:29:32+00:00"
+  },
+  "N5": {
+    "id": "N5",
+    "parent": "N5",
+    "name": "Sostenibilidad de sistemas productivos de ñame y batata",
+    "query_openalex": "(yam OR yams OR Dioscorea OR \"sweet potato\" OR \"sweet potatoes\" OR \"Ipomoea batatas\") AND (\"life cycle assessment\" OR \"life cycle analysis\" OR \"LCA\" OR \"techno-economic\" OR \"economic feasibility\" OR \"economic analysis\" OR \"profitability\" OR \"social life cycle\" OR \"carbon footprint\" OR \"environmental impact\" OR \"sustainability assessment\" OR \"value chain\")",
+    "filter": "title_and_abstract.search:(yam OR yams OR Dioscorea OR \"sweet potato\" OR \"sweet potatoes\" OR \"Ipomoea batatas\") AND (\"life cycle assessment\" OR \"life cycle analysis\" OR \"LCA\" OR \"techno-economic\" OR \"economic feasibility\" OR \"economic analysis\" OR \"profitability\" OR \"social life cycle\" OR \"carbon footprint\" OR \"environmental impact\" OR \"sustainability assessment\" OR \"value chain\"),publication_year:2000-2026,type:article|review",
+    "query_scopus": "TITLE-ABS-KEY((yam* OR dioscorea OR \"sweet potato*\" OR \"Ipomoea batatas\") AND (\"life cycle assessment\" OR \"life cycle analysis\" OR LCA OR \"techno-economic\" OR \"economic feasibility\" OR \"economic analysis\" OR profitability OR \"social life cycle\" OR \"carbon footprint\" OR \"environmental impact\" OR \"sustainability assessment\" OR \"value chain\"))",
+    "count": 799,
+    "retrieved": 0,
+    "date": "2026-10-29T20:29:32+00:00"
+  },
+  "N6": {
+    "id": "N6",
+    "parent": "N6",
+    "name": "Contexto territorial: Colombia y Caribe",
+    "query_openalex": "(yam OR yams OR \"ñame\" OR Dioscorea OR \"sweet potato\" OR batata OR cassava OR yuca OR biorefinery OR biorefineries OR \"biorrefinería\" OR bioethanol OR biogas) AND (Colombia OR Colombian OR \"Montes de María\" OR \"Montes de Maria\" OR \"Bolívar\" OR \"Caribbean region\")",
+    "filter": "title_and_abstract.search:(yam OR yams OR \"ñame\" OR Dioscorea OR \"sweet potato\" OR batata OR cassava OR yuca OR biorefinery OR biorefineries OR \"biorrefinería\" OR bioethanol OR biogas) AND (Colombia OR Colombian OR \"Montes de María\" OR \"Montes de Maria\" OR \"Bolívar\" OR \"Caribbean region\"),publication_year:2000-2026,type:article|review",
+    "query_scopus": "TITLE-ABS-KEY((yam* OR \"ñame\" OR dioscorea OR \"sweet potato*\" OR batata OR cassava OR yuca OR biorefiner* OR biorrefiner* OR bioethanol OR biogas) AND (colombia* OR \"Montes de María\" OR \"Montes de Maria\" OR bolivar OR \"Caribbean region\"))",
+    "count": 4386,
+    "retrieved": 0,
+    "date": "2026-10-29T20:29:33+00:00"
+  },
+  "N6b": {
+    "id": "N6b",
+    "parent": "N6b",
+    "name": "Biorrefinerías evaluadas por instituciones colombianas",
+    "query_openalex": "(biorefinery OR biorefineries OR \"integrated biorefinery\") AND (\"life cycle assessment\" OR \"life cycle analysis\" OR \"techno-economic\" OR \"technoeconomic\" OR \"economic feasibility\" OR \"sustainability assessment\" OR \"social life cycle\" OR \"life cycle sustainability\")",
+    "filter": "title_and_abstract.search:(biorefinery OR biorefineries OR \"integrated biorefinery\") AND (\"life cycle assessment\" OR \"life cycle analysis\" OR \"techno-economic\" OR \"technoeconomic\" OR \"economic feasibility\" OR \"sustainability assessment\" OR \"social life cycle\" OR \"life cycle sustainability\"),publication_year:2000-2026,type:article|review,institutions.country_code:co",
+    "query_scopus": "TITLE-ABS-KEY(biorefiner* AND (\"life cycle assessment\" OR \"techno-economic\" OR \"sustainability assessment\" OR \"social life cycle\")) AND AFFILCOUNTRY(colombia)",
+    "count": 97,
+    "retrieved": 0,
+    "date": "2026-10-29T20:29:33+00:00"
+  }
+}

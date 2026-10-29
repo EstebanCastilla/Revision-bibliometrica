@@ -169,18 +169,34 @@ levels:
 
   # ---------------------------------------------------------------------------
   - id: N6
-    name: "Contexto territorial: Colombia y Caribe"
+    name: "Contexto territorial: ñame y batata en Colombia"
     description: >
-      Producción científica sobre ñame, batata, yuca y biorrefinerías con
-      referencia explícita a Colombia, la región Caribe o Montes de María.
+      Producción científica sobre ñame y batata con referencia explícita a
+      Colombia o a Montes de María. Nota: el término "ñame" no se usa en
+      OpenAlex porque el stemming elimina la tilde y lo convierte en "name",
+      lo que recupera miles de falsos positivos (verificado el 2026-10-29).
     openalex: >-
-      (yam OR yams OR "ñame" OR Dioscorea OR "sweet potato" OR batata OR cassava OR yuca OR
-      biorefinery OR biorefineries OR "biorrefinería" OR bioethanol OR biogas) AND
-      (Colombia OR Colombian OR "Montes de María" OR "Montes de Maria" OR "Bolívar" OR "Caribbean region")
+      (yam OR yams OR Dioscorea OR "sweet potato" OR "sweet potatoes" OR batata OR "Ipomoea batatas") AND
+      (Colombia OR Colombian OR "Montes de María" OR "Montes de Maria")
     scopus: >-
-      TITLE-ABS-KEY((yam* OR "ñame" OR dioscorea OR "sweet potato*" OR batata OR cassava OR yuca OR
-      biorefiner* OR biorrefiner* OR bioethanol OR biogas) AND
-      (colombia* OR "Montes de María" OR "Montes de Maria" OR bolivar OR "Caribbean region"))
+      TITLE-ABS-KEY((yam OR yams OR "ñame" OR dioscorea OR "sweet potato*" OR batata OR "Ipomoea batatas") AND
+      (colombia* OR "Montes de María" OR "Montes de Maria"))
+  - id: N6c
+    name: "Contexto territorial: bioprocesos con raíces, tubérculos y residuos agroindustriales en Colombia"
+    description: >
+      Biorrefinerías, bioetanol, biogás, biofertilizantes y evaluaciones de
+      sostenibilidad a partir de yuca, ñame, batata, almidón o residuos
+      agroindustriales en Colombia.
+    openalex: >-
+      (biorefinery OR biorefineries OR "biorrefinería" OR bioethanol OR biogas OR "anaerobic digestion" OR
+      biofertilizer OR "life cycle assessment" OR "techno-economic") AND
+      (cassava OR yuca OR yam OR "sweet potato" OR "agro-industrial" OR agroindustrial OR "crop residues" OR starch) AND
+      (Colombia OR Colombian)
+    scopus: >-
+      TITLE-ABS-KEY((biorefiner* OR biorrefiner* OR bioethanol OR biogas OR "anaerobic digestion" OR
+      biofertili* OR "life cycle assessment" OR "techno-economic") AND
+      (cassava OR yuca OR yam* OR "sweet potato*" OR "agro-industrial" OR agroindustrial OR "crop residue*" OR starch) AND
+      (colombia*))
   - id: N6b
     name: "Biorrefinerías evaluadas por instituciones colombianas"
     description: >

@@ -83,3 +83,23 @@ def norm_doi(doi: str | None) -> str:
     if not doi:
         return ""
     return re.sub(r"^https?://(dx\.)?doi\.org/", "", doi.strip().lower())
+
+
+def run_metadata() -> dict:
+    """Metadatos de trazabilidad: commit del código, entorno y versión de Python."""
+    import os
+    import platform
+    import subprocess
+
+    try:
+        commit = subprocess.run(["git", "rev-parse", "HEAD"], cwd=ROOT, capture_output=True,
+                                text=True, check=True).stdout.strip()
+        dirty = bool(subprocess.run(["git", "status", "--porcelain", "src", "config"], cwd=ROOT,
+                                    capture_output=True, text=True).stdout.strip())
+    except (OSError, subprocess.CalledProcessError):
+        commit, dirty = None, None
+    return {
+        "code_commit": commit, "code_modified_since_commit": dirty,
+        "environment": "GitHub Actions" if os.getenv("GITHUB_ACTIONS") else platform.node() or "local",
+        "python": platform.python_version(),
+    }
