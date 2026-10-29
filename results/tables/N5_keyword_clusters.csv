@@ -1,61 +1,61 @@
 palabra,frecuencia,cluster,grado,fuerza
-sweet potato,248,C1,54,459
-yam,100,C1,47,281
-food security,77,C1,52,240
-cassava,76,C1,43,222
-maize,52,C1,37,165
-value chain,41,C1,37,119
-orange-fleshed sweet potato,34,C1,23,56
+sweet potato,248,C1,55,469
+yam,100,C1,49,287
+food security,77,C1,54,246
+cassava,76,C1,45,229
+maize,52,C1,39,176
+value chain,41,C1,39,124
+orange-fleshed sweet potato,34,C1,25,62
 post-harvest losses,25,C1,26,59
-crop yield,24,C1,27,56
-ghana,24,C1,32,71
-soybean,19,C1,25,54
+ghana,24,C1,34,73
+crop yield,23,C1,28,57
 sustainable agriculture,19,C1,21,41
-rice,16,C1,24,56
+soybean,19,C1,27,59
 crop rotation,16,C1,20,44
+rice,16,C1,26,59
 sweet potato processing,15,C1,11,25
-micronutrient deficiency,15,C1,12,26
-potato,15,C1,23,47
-distribution channels,15,C1,16,35
+potato,15,C1,23,48
+micronutrient deficiency,15,C1,13,27
+sub-saharan africa,14,C1,20,48
 bioethanol production,14,C1,12,25
-profitability,99,C2,50,320
-smallholder farmers,98,C2,53,343
+cowpea,14,C1,23,44
+profitability,99,C2,51,321
+smallholder farmers,98,C2,55,347
 yam production,52,C2,35,204
 farm profitability,51,C2,37,159
-production costs,43,C2,39,152
+production costs,43,C2,40,153
 agricultural extension,41,C2,37,165
-gross margin,40,C2,41,141
+gross margin,40,C2,42,142
 farm income,35,C2,36,103
-access to credit,34,C2,34,145
-farm size,31,C2,30,132
+access to credit,33,C2,34,145
+farm size,31,C2,31,133
 return on investment,25,C2,35,100
 production constraints,23,C2,29,100
-fertilizer use,20,C2,23,63
-labor costs,19,C2,28,77
 resource efficiency,19,C2,30,87
+fertilizer use,19,C2,24,64
+labor costs,19,C2,28,77
 technical efficiency,18,C2,21,68
 socio-economic characteristics of farmers,17,C2,29,66
-marketing efficiency,17,C2,15,34
 sweet potato production,16,C2,23,65
-transportation costs,16,C2,18,39
-technology adoption,15,C2,21,39
-benefit-cost ratio,58,C3,46,191
+technology adoption,15,C2,22,40
+benefit-cost ratio,57,C3,46,188
 tuber yield,42,C3,30,120
-intercropping,35,C3,33,108
+intercropping,35,C3,34,109
 elephant foot yam,32,C3,24,83
 dioscorea alata,30,C3,29,76
 dioscorea rotundata,29,C3,24,71
-soil fertility,24,C3,27,74
 smallholder farming,24,C3,33,82
+soil fertility,24,C3,27,74
 crop diversification,23,C3,32,75
 npk fertilizer,19,C3,20,60
-climate change adaptation,18,C3,26,52
+climate change adaptation,17,C3,27,54
 economic profitability,16,C3,20,38
 dioscorea bulbifera,15,C3,20,42
-economic feasibility,40,C4,39,125
-economic growth,19,C4,3,11
-nigeria,18,C4,24,44
-net present value,18,C4,21,62
-payback period,16,C4,19,46
-co2 emissions,15,C4,4,12
-internal rate of return,15,C4,18,53
+economic feasibility,39,C4,40,123
+net present value,17,C4,22,60
+nigeria,17,C4,23,44
+payback period,16,C4,20,47
+internal rate of return,14,C4,19,51
+marketing efficiency,17,C5,15,34
+transportation costs,15,C5,19,40
+distribution channels,15,C5,17,36

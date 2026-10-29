@@ -16,8 +16,8 @@ bio-based chemicals,102,C1,68,433
 bioproducts,79,C1,62,335
 scale-up,77,C1,63,325
 eutrophication,61,C1,53,251
-food waste valorization,60,C1,57,284
 renewable energy,60,C1,64,289
+food waste valorization,60,C1,57,284
 bioactive compounds,58,C1,48,262
 techno-economic feasibility,54,C1,59,209
 climate change impacts,53,C1,52,159
@@ -30,19 +30,19 @@ lignocellulosic biomass,374,C2,76,1621
 bioethanol,280,C2,77,1299
 enzymatic hydrolysis,147,C2,71,665
 cellulosic ethanol,143,C2,62,531
-lignin valorization,128,C2,65,448
 corn stover,128,C2,66,486
+lignin valorization,128,C2,65,448
 sugarcane bagasse,128,C2,70,593
 sensitivity analysis,120,C2,63,456
 net present value,106,C2,64,438
 biomass pretreatment,105,C2,68,500
 minimum selling price,102,C2,63,431
 lignocellulosic biorefinery,97,C2,65,324
-process integration,92,C2,75,384
-sugarcane biorefinery,92,C2,53,303
 combined heat and power,92,C2,67,421
-hydrogen production,86,C2,65,374
+sugarcane biorefinery,92,C2,53,303
+process integration,92,C2,75,384
 production costs,86,C2,72,307
+hydrogen production,86,C2,65,374
 environmental impact assessment,79,C2,63,308
 bioethanol production,75,C2,59,274
 process simulation,75,C2,66,309

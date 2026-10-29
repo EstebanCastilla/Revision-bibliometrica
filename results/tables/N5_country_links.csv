@@ -1,31 +1,31 @@
 pais_a,pais_b,docs
 Nigeria,United Kingdom,7
-United States,Kenya,5
 United States,Ghana,5
+United States,Kenya,5
+Nigeria,Cameroon,4
 United Kingdom,Uganda,4
-Australia,China,4
-India,Saudi Arabia,4
+China,Australia,4
 United Kingdom,Germany,3
-Ghana,Kenya,3
-Colombia,Kenya,3
-Bangladesh,Saudi Arabia,3
-United States,Nigeria,3
-United States,China,3
+Nigeria,Benin,3
+United States,United Kingdom,3
 Nigeria,Tanzania,3
 Nigeria,Uganda,3
-Nigeria,Benin,3
-United States,India,3
 United Kingdom,Tanzania,3
-Peru,Uganda,3
-United States,United Kingdom,3
-South Africa,Ghana,3
-Tanzania,Uganda,2
-Italy,France,2
-France,Benin,2
-Japan,India,2
+Ghana,Kenya,3
+Kenya,Colombia,3
+Ghana,South Africa,3
+Uganda,Peru,3
+United Kingdom,Cameroon,2
+United States,China,2
+United States,Germany,2
+Nigeria,Germany,2
+United States,Cameroon,2
+Nigeria,France,2
 Nigeria,Kenya,2
-Nigeria,Colombia,2
-Peru,Kenya,2
-Nigeria,Türkiye,2
-United States,Brazil,2
-South Africa,Nigeria,2
+United States,India,2
+United States,Benin,2
+Nigeria,United States,2
+Nigeria,South Africa,2
+Colombia,Tanzania,2
+Germany,Cameroon,2
+Germany,Australia,2

@@ -15,29 +15,29 @@ N6c,N6,OpenAlex,95
 N6b,N6,OpenAlex,97
 N1,N1,Scopus -> OpenAlex (DOI),646
 N2,N2,Scopus -> OpenAlex (DOI),42
-N3,N3,Scopus -> OpenAlex (DOI),553
-N4a,N4,Scopus -> OpenAlex (DOI),447
-N4b,N4,Scopus -> OpenAlex (DOI),72
-N4c,N4,Scopus -> OpenAlex (DOI),24
-N4d,N4,Scopus -> OpenAlex (DOI),48
-N4e,N4,Scopus -> OpenAlex (DOI),688
+N3,N3,Scopus -> OpenAlex (DOI),519
+N4a,N4,Scopus -> OpenAlex (DOI),427
+N4b,N4,Scopus -> OpenAlex (DOI),51
+N4c,N4,Scopus -> OpenAlex (DOI),10
+N4d,N4,Scopus -> OpenAlex (DOI),34
+N4e,N4,Scopus -> OpenAlex (DOI),451
 N4f,N4,Scopus -> OpenAlex (DOI),465
-N4g,N4,Scopus -> OpenAlex (DOI),142
-N5,N5,Scopus -> OpenAlex (DOI),288
+N4g,N4,Scopus -> OpenAlex (DOI),43
+N5,N5,Scopus -> OpenAlex (DOI),91
 N6,N6,Scopus -> OpenAlex (DOI),15
 N6c,N6,Scopus -> OpenAlex (DOI),16
 N6b,N6,Scopus -> OpenAlex (DOI),23
 N1,N1,Scopus API,2785
 N2,N2,Scopus API,142
-N3,N3,Scopus API,2950
-N4a,N4,Scopus API,2422
-N4b,N4,Scopus API,254
-N4c,N4,Scopus API,77
-N4d,N4,Scopus API,117
-N4e,N4,Scopus API,2502
+N3,N3,Scopus API,2912
+N4a,N4,Scopus API,2398
+N4b,N4,Scopus API,232
+N4c,N4,Scopus API,61
+N4d,N4,Scopus API,100
+N4e,N4,Scopus API,2244
 N4f,N4,Scopus API,2931
-N4g,N4,Scopus API,309
-N5,N5,Scopus API,583
+N4g,N4,Scopus API,200
+N5,N5,Scopus API,351
 N6,N6,Scopus API,80
 N6c,N6,Scopus API,89
 N6b,N6,Scopus API,103

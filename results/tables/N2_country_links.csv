@@ -1,31 +1,31 @@
 pais_a,pais_b,docs
-Italy,Germany,6
-Italy,Spain,5
+Germany,Italy,6
 France,Spain,5
+Italy,Spain,5
 Sweden,China,3
 Belgium,Italy,3
 Portugal,Spain,3
-Spain,China,3
+China,Spain,3
 Germany,Spain,3
-Belgium,Germany,2
-Sweden,Spain,2
-Sweden,France,2
-Belgium,Netherlands,2
-France,China,2
-Spain,Netherlands,2
-Australia,Spain,2
+Brazil,Norway,2
 Denmark,China,2
+Sweden,France,2
+China,France,2
 Germany,Netherlands,2
-United Kingdom,Spain,2
-United Kingdom,France,2
-United Kingdom,Italy,2
-Italy,France,2
-France,Germany,2
 Germany,Australia,2
-Norway,Brazil,2
+Belgium,Germany,2
+Netherlands,Spain,2
+Belgium,Netherlands,2
+Australia,Spain,2
+Germany,France,2
+France,Italy,2
+Sweden,Spain,2
+United Kingdom,Italy,2
+United Kingdom,France,2
 United Kingdom,Germany,2
-Ireland,China,1
-Sweden,Canada,1
-Sweden,Latvia,1
-Belgium,Australia,1
-United States,United Kingdom,1
+United Kingdom,Spain,2
+Brazil,Australia,1
+Brazil,Ireland,1
+Brazil,Mexico,1
+Finland,Italy,1
+Brazil,Netherlands,1
