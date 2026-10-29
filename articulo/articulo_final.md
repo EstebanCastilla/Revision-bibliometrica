@@ -44,6 +44,14 @@ La recolección se automatizó mediante el **consumo programático de API REST d
 
 La cosecha se ejecutó el 29 de octubre de 2026. Sobre esta fecha de corte, 2026 se trata como un año parcial.
 
+**Periodo de búsqueda.** Se fijó el periodo 2000-2026 por tres razones:
+
+1. El objeto de estudio, la biorrefinería evaluada con herramientas de ciclo de vida, es un campo posterior al año 2000.
+2. Los marcos metodológicos que usará la tesis se consolidaron en ese periodo: la revisión de ISO 14040/14044 (ISO, 2006a, 2006b), el marco LCSA (Kloepffer, 2008) y las directrices de ACV-S (UNEP, 2020).
+3. La fecha de corte coincide con el día de la cosecha, para incluir la producción más reciente.
+
+La decisión se contrastó con un análisis de sensibilidad que contó, sin descargarlos, los documentos anteriores a 2000 en ambas bases (`results/tables/period_sensitivity.csv`). Antes de 2000 hay solo 7 documentos en OpenAlex y ninguno en Scopus para N1, ninguno para N2, N6b y N6c, y entre el 1,6 % y el 10,5 % para las consultas de cultivo. La mayor proporción corresponde a los metabolitos del ñame (N4e: 9,1 % en OpenAlex y 10,5 % en Scopus), que reúnen la literatura histórica sobre la diosgenina como precursor de esteroides.
+
 ## 2.3 Estrategia de búsqueda jerárquica
 
 La estrategia se organizó en seis niveles anidados (Tabla 1). El nivel N4 se descompuso en siete sub-consultas: las cuatro rutas fijas de la biorrefinería, los metabolitos candidatos de cada cultivo y la valorización integral. Las cadenas completas se encuentran en `config/queries.yaml`.
@@ -313,6 +321,7 @@ El análisis de N6 muestra que Colombia cuenta con una escuela consolidada de di
 3. La clasificación por diccionarios y las palabras clave de OpenAlex, asignadas automáticamente, introducen ruido. En N5 persisten documentos donde el cultivo se menciona de forma incidental. Esos documentos no se excluyeron manualmente, para preservar la reproducibilidad, y no se usaron en la interpretación cualitativa.
 4. La literatura gris (informes de AGROSAVIA, MADR, ICA y tesis) no forma parte del análisis bibliométrico.
 5. 2026 es un año parcial, por lo que las tasas de crecimiento se calcularon hasta 2025.
+6. El corte en el año 2000 excluye una fracción pequeña de la literatura de cultivo (entre el 1,6 % y el 10,5 % según la consulta). Esa exclusión no afecta a los niveles de sostenibilidad (N1, N2), pero subrepresenta la literatura histórica sobre la diosgenina del ñame.
 
 # 5. Conclusiones
 
