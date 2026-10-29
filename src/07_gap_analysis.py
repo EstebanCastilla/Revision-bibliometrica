@@ -192,6 +192,32 @@ def main() -> None:
             ax.legend(fontsize=7.5, loc="lower right")
         save(fig, FIGURES / "fig08_metabolites.png")
 
+    # ---- 3b. Estudios clave por ruta y metabolito (insumo para la discusión) --
+    keys = []
+    for qid, route in (("N4a", "Almidón nativo"), ("N4b", "Bioetanol"), ("N4c", "Biogás"),
+                       ("N4d", "Biofertilizante"), ("N4g", "Biorrefinería / valorización")):
+        d = df[df["queries"].apply(lambda qs, q=qid: q in qs)]
+        for crop, rx in (("Ñame", CROPS["Ñame"]), ("Batata", CROPS["Batata"])):
+            sel = d[d["text"].str.contains(rx, regex=True)]
+            for _, r in sel.sort_values("cited_by", ascending=False).head(8).iterrows():
+                keys.append({"ruta": route, "cultivo": crop, "año": r["year"], "citas": r["cited_by"],
+                             "primer_autor": r["authors"][0]["name"] if r["authors"] else "",
+                             "título": r["title"], "fuente": r["source"], "doi": r["doi"]})
+    pd.DataFrame(keys).to_csv(TABLES / "route_key_studies.csv", index=False)
+    mk = []
+    for crop, qid in (("Ñame", "N4e"), ("Batata", "N4f")):
+        d = df[df["queries"].apply(lambda qs, q=qid: q in qs)]
+        for name, rx in METABOLITES[crop].items():
+            sel = d[d["text"].str.contains(rx, regex=True)]
+            res = sel[sel["text"].str.contains(RESIDUE)]
+            for tag_, sub in (("más citados", sel), ("con residuos/subproductos", res)):
+                for _, r in sub.sort_values("cited_by", ascending=False).head(4).iterrows():
+                    mk.append({"cultivo": crop, "metabolito": name, "criterio": tag_, "año": r["year"],
+                               "citas": r["cited_by"], "rotundata": "rotundata" in r["text"],
+                               "primer_autor": r["authors"][0]["name"] if r["authors"] else "",
+                               "título": r["title"], "fuente": r["source"], "doi": r["doi"]})
+    pd.DataFrame(mk).to_csv(TABLES / "metabolite_key_studies.csv", index=False)
+
     # ---- 4. Contexto territorial -------------------------------------------
     co = df[df["levels"].apply(lambda ls: "N6" in ls)]
     if not co.empty:
