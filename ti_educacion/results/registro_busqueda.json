@@ -1,0 +1,7 @@
+{
+  "fecha_consulta": "2026-10-31",
+  "base": "OpenAlex (+ conteos Scopus Search API)",
+  "filtro_comun": "publication_year:2015-2026,type:article|review,is_retracted:false,primary_location.source.type:journal",
+  "scopus": "TITLE-ABS-KEY(<consulta>) AND PUBYEAR > 2014 AND PUBYEAR < 2027 AND (DOCTYPE(ar) OR DOCTYPE(re))",
+  "campo": "title_and_abstract.search"
+}
