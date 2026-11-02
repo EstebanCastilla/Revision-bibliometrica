@@ -130,3 +130,13 @@ def country_to_iso2(name: str) -> str | None:
         return pycountry.countries.lookup(key).alpha_2
     except (ImportError, LookupError):
         return None
+
+
+def elsevier_key() -> str | None:
+    """Clave de la API de Elsevier/Scopus: acepta SCOPUS_API_KEY, ELSEVIER_API_KEY o Elsevier_api_key."""
+    import os
+
+    for name in ("SCOPUS_API_KEY", "ELSEVIER_API_KEY", "Elsevier_api_key"):
+        if os.getenv(name, "").strip():
+            return os.environ[name].strip()
+    return None

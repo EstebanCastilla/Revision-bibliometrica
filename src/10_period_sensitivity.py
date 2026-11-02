@@ -11,12 +11,11 @@ from __future__ import annotations
 
 import datetime as dt
 import importlib.util
-import os
 
 import pandas as pd
 import requests
 
-from common import ROOT, TABLES, iter_queries, load_config
+from common import ROOT, TABLES, elsevier_key, iter_queries, load_config
 
 _spec = importlib.util.spec_from_file_location("oa", ROOT / "src" / "01_harvest_openalex.py")
 oa = importlib.util.module_from_spec(_spec)
@@ -36,11 +35,11 @@ def oa_count(q: dict, y0: int, y1: int) -> int:
 
 
 def scopus_count(q: dict, y0: int, y1: int) -> int | None:
-    if not os.getenv("SCOPUS_API_KEY"):
+    if not elsevier_key():
         return None
     query = f'{q["scopus"]} AND PUBYEAR > {y0 - 1} AND PUBYEAR < {y1 + 1} AND DOCTYPE(ar OR re)'
     r = requests.get(SCOPUS, timeout=60, params={"query": query, "count": 1},
-                     headers={"X-ELS-APIKey": os.environ["SCOPUS_API_KEY"], "Accept": "application/json"})
+                     headers={"X-ELS-APIKey": elsevier_key(), "Accept": "application/json"})
     r.raise_for_status()
     return int(r.json()["search-results"]["opensearch:totalResults"])
 
