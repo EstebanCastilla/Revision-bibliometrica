@@ -1,7 +1,8 @@
 """Paso 4 - Limpieza, fusión, deduplicación y cribado (flujo PRISMA).
 
 Entradas : data/raw/openalex/*.jsonl.gz, data/raw/scopus_api/*.jsonl.gz,
-           data/raw/scopus_export/*.jsonl.gz
+           data/raw/scopus_export/*.jsonl.gz, data/raw/wos_api/*.jsonl.gz,
+           data/raw/wos_export/*.jsonl.gz
 Salidas  : data/processed/corpus.jsonl.gz   (registros únicos incluidos)
            data/processed/excluded.csv       (registros excluidos y motivo)
            data/processed/vosviewer/<nivel>.csv (formato Scopus para VOSviewer/biblioshiny)
@@ -11,11 +12,11 @@ from __future__ import annotations
 
 import json
 import re
-from collections import defaultdict
+from collections import Counter, defaultdict
 
 import pandas as pd
 
-from common import (PROCESSED, RAW_OA, RAW_SCOPUS_API, RAW_SCOPUS_CSV, TABLES,
+from common import (PROCESSED, RAW_OA, RAW_SCOPUS_API, RAW_SCOPUS_CSV, RAW_WOS_API, RAW_WOS_EXPORT, TABLES,
                     iter_queries, load_config, norm_doi, norm_title, read_jsonl_gz, write_jsonl_gz)
 
 try:
@@ -59,9 +60,10 @@ def eligible(qid: str, rec: dict) -> tuple[bool, str]:
             FALSE_POSITIVES.sub(" ", rec.get("title") or "")) or RX["sweet"].search(rec.get("title") or "")):
         return False, "falso positivo (p. ej. 'yam bean') o sin ñame/batata"
     # Sin resumen disponible en OpenAlex (p. ej. resúmenes de Elsevier no
-    # redistribuibles): si Scopus recuperó el registro con la misma consulta
-    # TITLE-ABS-KEY, la coincidencia en el resumen queda confirmada por Scopus.
-    if not rec.get("abstract") and (qid, "Scopus API") in rec.get("qsrc", set()):
+    # redistribuibles): si Scopus (TITLE-ABS-KEY) o Web of Science (TS=) recuperó
+    # el registro con la misma consulta, la coincidencia en el resumen queda
+    # confirmada por esa base.
+    if not rec.get("abstract") and any((qid, s) in rec.get("qsrc", set()) for s in INDEX_APIS):
         return True, ""
     t = FALSE_POSITIVES.sub(" ", text_of(rec))
     if qid in ("N1", "N6b") and not RX["biorefinery"].search(t):
@@ -83,12 +85,20 @@ def eligible(qid: str, rec: dict) -> tuple[bool, str]:
     return True, ""
 
 
+# Bases cuyos registros de API traen metadatos mínimos (sin resumen ni afiliaciones)
+INDEX_APIS = ("Scopus API", "Web of Science API")
+# Registros que solo completan metadatos de DOI ya identificados (no son identificaciones nuevas)
+LINKS = ("Scopus -> OpenAlex (DOI)", "WoS -> OpenAlex (DOI)")
+
+
 def load_raw():
     """Devuelve (registros, conteos de identificación por consulta y fuente)."""
     out, ident = [], []
     # Primero las fuentes con metadatos completos, para que prevalezcan al fusionar
     sources = [("OpenAlex", RAW_OA, ""), ("Scopus -> OpenAlex (DOI)", RAW_SCOPUS_API, "_openalex"),
-               ("Scopus CSV", RAW_SCOPUS_CSV, ""), ("Scopus API", RAW_SCOPUS_API, "")]
+               ("WoS -> OpenAlex (DOI)", RAW_WOS_API, "_openalex"), ("Scopus CSV", RAW_SCOPUS_CSV, ""),
+               ("Web of Science export", RAW_WOS_EXPORT, ""),
+               ("Scopus API", RAW_SCOPUS_API, ""), ("Web of Science API", RAW_WOS_API, "")]
     cfg = load_config()
     for src_name, folder, suffix in sources:
         for q in iter_queries(cfg):
@@ -175,8 +185,8 @@ def main() -> None:
         reason = None
         if not r.get("title"):
             reason = "sin título"
-        elif set(r["sources"]) == {"Scopus API"} and not r.get("abstract"):
-            reason = "solo en Scopus, sin metadatos completos (no enlazable en OpenAlex)"
+        elif set(r["sources"]) <= set(INDEX_APIS) and not r.get("abstract"):
+            reason = "solo en Scopus/WoS, sin metadatos completos (no enlazable en OpenAlex)"
         elif r.get("is_retracted"):
             reason = "artículo retractado"
         elif not r.get("year") or not g["from_year"] <= r["year"] <= g["to_year"]:
@@ -198,7 +208,9 @@ def main() -> None:
         r["queries"] = sorted(keep)
         r["levels"] = sorted({LEVEL_OF(q) for q in keep})
         r["sources"] = sorted(r["sources"])
-        r["confirmed_by_scopus"] = sorted(q for q, src in r.pop("qsrc") if src == "Scopus API")
+        qsrc = r.pop("qsrc")
+        r["confirmed_by_scopus"] = sorted(q for q, src in qsrc if src == "Scopus API")
+        r["confirmed_by_wos"] = sorted(q for q, src in qsrc if src in ("Web of Science API", "Web of Science export"))
         r["has_abstract"] = bool(r.get("abstract"))
         included.append(r)
 
@@ -210,10 +222,9 @@ def main() -> None:
 
     # ---- Tablas PRISMA por nivel -------------------------------------------
     prisma = []
-    # Los registros "Scopus -> OpenAlex" completan metadatos de DOI ya identificados
-    # en Scopus; no son identificaciones nuevas y no se cuentan en esa etapa.
-    ENRICH = "Scopus -> OpenAlex (DOI)"
-    raw_df = pd.DataFrame({"query": [r["_query"] for r in raw if r["_source"] != ENRICH]})
+    # Los registros "-> OpenAlex (DOI)" completan metadatos de DOI ya identificados
+    # en Scopus o WoS; no son identificaciones nuevas y no se cuentan en esa etapa.
+    raw_df = pd.DataFrame({"query": [r["_query"] for r in raw if r["_source"] not in LINKS]})
     raw_df["level"] = raw_df["query"].map(LEVEL_OF)
     for lvl in list(LEVEL_NAMES) + ["Total"]:
         sel = (lambda qs: True) if lvl == "Total" else (lambda qs, l=lvl: any(LEVEL_OF(q) == l for q in qs))
@@ -234,41 +245,63 @@ def main() -> None:
             .explode("reason").groupby(["stage", "reason"]).size().rename("n").reset_index()
             .sort_values("n", ascending=False).to_csv(TABLES / "prisma_exclusion_reasons.csv", index=False))
 
-    # ---- Cobertura comparada OpenAlex vs Scopus ----------------------------
-    cov = []
-    for q in iter_queries(cfg):
-        oa_f, sc_f = RAW_OA / f"{q['id']}.jsonl.gz", RAW_SCOPUS_API / f"{q['id']}.jsonl.gz"
-        if not (oa_f.exists() and sc_f.exists()):
-            continue
-        oa_d = {norm_doi(r["doi"]) for r in read_jsonl_gz(oa_f)} - {""}
-        sc = list(read_jsonl_gz(sc_f))
-        sc_d = {norm_doi(r["doi"]) for r in sc} - {""}
-        enr = RAW_SCOPUS_API / f"{q['id']}_openalex.jsonl.gz"
-        n_enr = sum(1 for _ in read_jsonl_gz(enr)) if enr.exists() else 0
-        cov.append({"query": q["id"], "openalex_records": sum(1 for _ in read_jsonl_gz(oa_f)),
-                    "openalex_with_doi": len(oa_d), "scopus_records": len(sc), "scopus_with_doi": len(sc_d),
-                    "doi_in_both": len(oa_d & sc_d), "only_openalex": len(oa_d - sc_d),
-                    "only_scopus": len(sc_d - oa_d), "only_scopus_linked_in_openalex": n_enr,
-                    "scopus_in_openalex_search_pct": round(len(oa_d & sc_d) / max(len(sc_d), 1) * 100, 1),
-                    "scopus_in_openalex_index_pct": round((len(oa_d & sc_d) + n_enr) / max(len(sc_d), 1) * 100, 1)})
-    if cov:
-        pd.DataFrame(cov).to_csv(TABLES / "coverage_openalex_scopus.csv", index=False)
+    # ---- Cobertura comparada OpenAlex vs Scopus y vs Web of Science --------
+    for name, folder, fname in (("scopus", RAW_SCOPUS_API, "coverage_openalex_scopus.csv"),
+                                ("wos", RAW_WOS_API, "coverage_openalex_wos.csv")):
+        cov = []
+        for q in iter_queries(cfg):
+            oa_f, ix_f = RAW_OA / f"{q['id']}.jsonl.gz", folder / f"{q['id']}.jsonl.gz"
+            if not (oa_f.exists() and ix_f.exists()):
+                continue
+            oa_d = {norm_doi(r["doi"]) for r in read_jsonl_gz(oa_f)} - {""}
+            ix = list(read_jsonl_gz(ix_f))
+            ix_d = {norm_doi(r["doi"]) for r in ix} - {""}
+            enr = folder / f"{q['id']}_openalex.jsonl.gz"
+            n_enr = sum(1 for _ in read_jsonl_gz(enr)) if enr.exists() else 0
+            cov.append({"query": q["id"], "openalex_records": sum(1 for _ in read_jsonl_gz(oa_f)),
+                        "openalex_with_doi": len(oa_d), f"{name}_records": len(ix), f"{name}_with_doi": len(ix_d),
+                        "doi_in_both": len(oa_d & ix_d), "only_openalex": len(oa_d - ix_d),
+                        f"only_{name}": len(ix_d - oa_d), f"only_{name}_linked_in_openalex": n_enr,
+                        f"{name}_in_openalex_search_pct": round(len(oa_d & ix_d) / max(len(ix_d), 1) * 100, 1),
+                        f"{name}_in_openalex_index_pct":
+                            round((len(oa_d & ix_d) + n_enr) / max(len(ix_d), 1) * 100, 1)})
+        if cov:
+            pd.DataFrame(cov).to_csv(TABLES / fname, index=False)
+
+    # Solapamiento entre las tres bases (DOI de registros incluidos)
+    if "Web of Science API" in {r["_source"] for r in raw} or "Web of Science export" in {r["_source"] for r in raw}:
+        def has(r, *names):
+            return any(n in r["sources"] for n in names)
+        venn = Counter()
+        for r in included:
+            key = (has(r, "OpenAlex"), has(r, "Scopus API", "Scopus CSV"),
+                   has(r, "Web of Science API", "Web of Science export"))
+            venn[key] += 1
+        pd.DataFrame([{"OpenAlex": a, "Scopus": b, "Web of Science": c, "documentos": n}
+                      for (a, b, c), n in sorted(venn.items(), key=lambda kv: -kv[1])]) \
+            .to_csv(TABLES / "overlap_three_databases.csv", index=False)
 
     # ---- Estrategia de búsqueda documentada -------------------------------
     log_path = RAW_OA / "search_log.json"
     logs = json.loads(log_path.read_text()) if log_path.exists() else {}
     sc_path = RAW_SCOPUS_API / "search_log.json"
     sc_logs = json.loads(sc_path.read_text()) if sc_path.exists() else {}
+    wos_path = RAW_WOS_API / "search_log.json"
+    wos_logs = json.loads(wos_path.read_text()) if wos_path.exists() else {}
     strat = []
     for q in iter_queries(cfg):
         lg = logs.get(q["id"], {})
         strat.append({"id": q["id"], "level": LEVEL_OF(q["id"]), "name": q["name"],
                       "openalex_query": q["openalex"], "extra_filter": q.get("extra_filter") or "",
-                      "scopus_query": q["scopus"], "openalex_hits": lg.get("count"),
+                      "scopus_query": q["scopus"], "wos_query": q.get("wos", ""),
+                      "openalex_hits": lg.get("count"),
                       "openalex_retrieved": lg.get("retrieved"), "openalex_date": lg.get("date"),
                       "scopus_hits": sc_logs.get(q["id"], {}).get("count"),
                       "scopus_retrieved": sc_logs.get(q["id"], {}).get("retrieved"),
                       "scopus_date": sc_logs.get(q["id"], {}).get("date"),
+                      "wos_hits": wos_logs.get(q["id"], {}).get("count"),
+                      "wos_retrieved": wos_logs.get(q["id"], {}).get("retrieved"),
+                      "wos_date": wos_logs.get(q["id"], {}).get("date"),
                       "code_commit": lg.get("code_commit"),
                       "included": sum(1 for r in included if q["id"] in r["queries"])})
     pd.DataFrame(strat).to_csv(TABLES / "search_strategy.csv", index=False)

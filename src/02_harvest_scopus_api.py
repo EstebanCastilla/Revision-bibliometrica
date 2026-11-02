@@ -16,7 +16,7 @@ Si se define SCOPUS_INSTTOKEN (token institucional) el script solicita la
 vista COMPLETE.
 
 Uso:
-    export SCOPUS_API_KEY=xxxxx
+    export SCOPUS_API_KEY=xxxxx        # también se acepta Elsevier_api_key
     export OPENALEX_API_KEY=yyyy
     python src/02_harvest_scopus_api.py [--only N1 N4b]
 """
@@ -32,7 +32,7 @@ import time
 
 import requests
 
-from common import (RAW_OA, RAW_SCOPUS_API, iter_queries, load_config, norm_doi, read_jsonl_gz,
+from common import (RAW_OA, RAW_SCOPUS_API, elsevier_key, iter_queries, load_config, norm_doi, read_jsonl_gz,
                     run_metadata, write_jsonl_gz)
 
 API = "https://api.elsevier.com/content/search/scopus"
@@ -45,7 +45,7 @@ _spec.loader.exec_module(oa)
 
 
 def headers() -> dict:
-    h = {"X-ELS-APIKey": os.environ["SCOPUS_API_KEY"], "Accept": "application/json"}
+    h = {"X-ELS-APIKey": elsevier_key(), "Accept": "application/json"}
     if os.getenv("SCOPUS_INSTTOKEN"):
         h["X-ELS-Insttoken"] = os.environ["SCOPUS_INSTTOKEN"]
     return h
@@ -119,8 +119,8 @@ def harvest_range(base: str, y0: int, y1: int, out: list, parts: list) -> None:
     print(f"   {y0}-{y1}: {total} -> acumulado {len(out)}", flush=True)
 
 
-def enrich_with_openalex(qid: str, recs: list) -> int:
-    """Busca en OpenAlex los DOI de Scopus ausentes en la cosecha de OpenAlex."""
+def enrich_with_openalex(qid: str, recs: list, out_dir=RAW_SCOPUS_API) -> int:
+    """Busca en OpenAlex los DOI (de Scopus o WoS) ausentes en la cosecha de OpenAlex."""
     f = RAW_OA / f"{qid}.jsonl.gz"
     have = {norm_doi(r["doi"]) for r in read_jsonl_gz(f)} if f.exists() else set()
     missing = sorted({norm_doi(r["doi"]) for r in recs if r["doi"]} - have - {""})
@@ -135,7 +135,7 @@ def enrich_with_openalex(qid: str, recs: list) -> int:
             rec["referenced_works"] = []
             found.append(rec)
         time.sleep(0.1)
-    write_jsonl_gz(RAW_SCOPUS_API / f"{qid}_openalex.jsonl.gz", found)
+    write_jsonl_gz(out_dir / f"{qid}_openalex.jsonl.gz", found)
     return len(found)
 
 
@@ -143,8 +143,8 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--only", nargs="*")
     args = ap.parse_args()
-    if not os.getenv("SCOPUS_API_KEY"):
-        print("SCOPUS_API_KEY no definida: se omite la recolección en Scopus.")
+    if not elsevier_key():
+        print("Clave de Elsevier no definida (SCOPUS_API_KEY o Elsevier_api_key): se omite Scopus.")
         return
     cfg = load_config()
     g = cfg["global"]

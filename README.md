@@ -46,7 +46,9 @@ config/thesaurus.csv       Tesauro de normalización de palabras clave
 protocolo/                 Protocolo de la revisión (preguntas, criterios, PRISMA)
 src/01_harvest_openalex.py Recolección vía API REST de OpenAlex
 src/02_harvest_scopus_api.py   (opcional) Scopus Search API con clave institucional
+src/02b_harvest_wos_api.py     Web of Science Starter API (clave de Clarivate; reanudable)
 src/03_import_scopus_csv.py    (opcional) importación de exportaciones CSV de Scopus
+src/03b_import_wos_export.py   (opcional) importación de exportaciones de Web of Science
 src/04_clean_merge.py      Fusión, deduplicación, cribado y flujo PRISMA
 src/05_bibliometrics.py    Análisis de desempeño (Bradford, Lotka, países, autores, citas)
 src/06_networks.py         Co-ocurrencia, mapa temático, evolución temática, colaboración
@@ -66,7 +68,7 @@ articulo/                  Manuscrito (Markdown + DOCX)
 ### Opción A - GitHub Actions (recomendada, sin instalar nada)
 1. Obtenga una clave gratuita de OpenAlex en <https://openalex.org/settings/api> (desde febrero de 2026 la API exige clave).
 2. En GitHub: *Settings -> Secrets and variables -> Actions -> New repository secret* y cree `OPENALEX_API_KEY` y `SCOPUS_API_KEY`
-   (opcional `SCOPUS_INSTTOKEN` para la vista completa de Scopus). **Nunca suba las claves como archivos al repositorio.**
+   (opcional `SCOPUS_INSTTOKEN` para la vista completa de Scopus y `WOS_API_KEY` para Web of Science). **Nunca suba las claves como archivos al repositorio.**
 3. *Actions -> Pipeline bibliometrico -> Run workflow* con `stage = all`.
    Los datos, tablas y figuras se guardan automáticamente en el repositorio.
 
@@ -74,7 +76,7 @@ articulo/                  Manuscrito (Markdown + DOCX)
 ```bash
 pip install -r requirements.txt
 export OPENALEX_API_KEY=su_clave
-export SCOPUS_API_KEY=su_clave_elsevier
+export SCOPUS_API_KEY=su_clave_elsevier   # o Elsevier_api_key
 python src/01_harvest_openalex.py
 python src/02_harvest_scopus_api.py
 bash run_analysis.sh
@@ -82,6 +84,18 @@ bash run_analysis.sh
 
 ### Complementar con Scopus mediante exportación manual
 Ejecute en scopus.com cada cadena `scopus` de `config/queries.yaml`, exporte en CSV (*all available information*) y guarde como `data/raw/scopus_export/N1.csv`, `N4b.csv`, etc. Luego ejecute `bash run_analysis.sh`; los registros se fusionan y deduplican con los de OpenAlex.
+
+### Web of Science (no incluida en la versión del 3-nov-2026)
+El código está listo, pero WoS no se ejecutó por el tiempo de aprobación de la API. Para incorporarla en una actualización:
+
+- **Por API:** cree una clave en <https://developer.clarivate.com> (API *Web of Science Starter*). Con correo de una universidad suscrita a WoS elija el plan *Free Institutional Member* (5.000 peticiones/día). El plan *Free Trial* (50 peticiones/día) sirve para los conteos y, en varios días, para la cosecha completa: el script guarda el avance y continúa donde quedó.
+  ```bash
+  export WOS_API_KEY=su_clave_clarivate
+  python src/02b_harvest_wos_api.py --counts-only   # 14 peticiones
+  python src/02b_harvest_wos_api.py                 # cosecha completa
+  bash run_analysis.sh
+  ```
+- **Por exportación:** en webofscience.com → *Advanced Search*, pegue la cadena `wos` de cada consulta, exporte *Plain text file* con *Full Record* (máx. 1.000 por archivo) y guarde como `data/raw/wos_export/N1_0001-1000.txt`, `N1_1001-2000.txt`, `N4b.txt`, etc. Luego `bash run_analysis.sh`.
 
 ### Abrir en VOSviewer o biblioshiny
 `data/processed/vosviewer/<nivel>_scopus_format.csv` se puede importar como archivo de Scopus en VOSviewer (*Create map -> based on bibliographic data -> Scopus*) o en biblioshiny (`bibliometrix::biblioshiny()`).

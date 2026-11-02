@@ -42,7 +42,7 @@ La recolección se automatizó mediante el **consumo programático de API REST d
 - **OpenAlex** (fuente principal; Priem et al., 2022). Es un índice bibliográfico abierto que integra metadatos de Crossref, PubMed, ORCID, repositorios y editoriales; su cobertura de referencias es comparable a la de Scopus y Web of Science (Culbert et al., 2025) y sus datos tienen licencia CC0. Se consultó el filtro booleano `title_and_abstract.search` (con *stemming*), restringido a artículos y revisiones de 2000 a 2026. La descarga se hizo por paginación con cursor (lotes de 200 registros), con reintentos y espera exponencial y autenticación mediante clave de API. Para cada nivel se recuperaron además las 60 referencias más citadas localmente.
 - **Scopus Search API** (fuente de validación y complemento). Se ejecutaron las cadenas equivalentes en sintaxis TITLE-ABS-KEY. Con la clave disponible, sin token institucional, la API entrega una vista restringida (título, revista, año, citas, DOI y tipo), 25 registros por petición y un máximo de 5.000 resultados por consulta. Por ello, las consultas extensas se dividieron por rangos de años, y los DOI recuperados solo por Scopus se buscaron en OpenAlex para obtener metadatos completos.
 
-La cosecha se ejecutó el 29 de octubre de 2026. Sobre esta fecha de corte, 2026 se trata como un año parcial.
+Web of Science no se incluyó en esta versión (ver la sección 4.6). La cosecha se ejecutó el 29 de octubre de 2026. Sobre esta fecha de corte, 2026 se trata como un año parcial.
 
 **Periodo de búsqueda.** Se fijó el periodo 2000-2026 por tres razones:
 
@@ -322,6 +322,7 @@ El análisis de N6 muestra que Colombia cuenta con una escuela consolidada de di
 4. La literatura gris (informes de AGROSAVIA, MADR, ICA y tesis) no forma parte del análisis bibliométrico.
 5. 2026 es un año parcial, por lo que las tasas de crecimiento se calcularon hasta 2025.
 6. El corte en el año 2000 excluye una fracción pequeña de la literatura de cultivo (entre el 1,6 % y el 10,5 % según la consulta). Esa exclusión no afecta a los niveles de sostenibilidad (N1, N2), pero subrepresenta la literatura histórica sobre la diosgenina del ñame.
+7. No se incluyó Web of Science Core Collection, porque el acceso a su API (WoS Starter API, Clarivate) requiere una aprobación de varios días, incompatible con el cronograma del estudio. El riesgo de omisión es bajo: OpenAlex tiene una cobertura de referencias comparable a la de Scopus y Web of Science (Culbert et al., 2025), y la unión con Scopus enlazó entre el 91,4 % y el 99,3 % de sus DOI. Las cadenas de búsqueda en sintaxis de WoS (TS=) y el código de recolección e integración quedan disponibles en el repositorio para una actualización futura.
 
 # 5. Conclusiones
 

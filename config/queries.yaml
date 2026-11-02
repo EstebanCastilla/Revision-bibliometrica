@@ -7,7 +7,9 @@
 # que admite operadores booleanos (AND, OR, NOT, paréntesis y frases entre
 # comillas) y aplica stemming (p. ej. "biorefinery" recupera "biorefineries").
 # La sintaxis equivalente para Scopus (TITLE-ABS-KEY) se incluye en `scopus`
-# para replicar la búsqueda con la Scopus Search API o con exportaciones CSV.
+# y la de Web of Science Core Collection (TS = título, resumen, palabras clave
+# de autor y Keywords Plus) en `wos`, para replicar la búsqueda con sus API o
+# con exportaciones desde sus plataformas web.
 # =============================================================================
 
 global:
@@ -33,6 +35,10 @@ levels:
       TITLE-ABS-KEY(biorefiner* AND ("life cycle assessment" OR "life cycle analysis" OR
       "techno-economic" OR technoeconomic OR "economic feasibility" OR
       "sustainability assessment" OR "social life cycle" OR "life cycle sustainability"))
+    wos: >-
+      TS=(biorefiner* AND ("life cycle assessment" OR "life cycle analysis" OR "techno-economic" OR
+      technoeconomic OR "economic feasibility" OR "sustainability assessment" OR "social life cycle" OR
+      "life cycle sustainability"))
 
   # ---------------------------------------------------------------------------
   - id: N2
@@ -49,6 +55,10 @@ levels:
       TITLE-ABS-KEY((biorefiner* OR bioeconomy OR "bio-based" OR biofuel* OR bioenergy) AND
       ("social life cycle assessment" OR "social life cycle analysis" OR "S-LCA" OR "social LCA" OR
       "life cycle sustainability assessment" OR LCSA))
+    wos: >-
+      TS=((biorefiner* OR bioeconomy OR "bio-based" OR biofuel* OR bioenergy) AND ("social life cycle
+      assessment" OR "social life cycle analysis" OR "S-LCA" OR "social LCA" OR "life cycle sustainability
+      assessment" OR LCSA))
 
   # ---------------------------------------------------------------------------
   - id: N3
@@ -67,6 +77,11 @@ levels:
       cocoyam OR "root crop*" OR "tuber crop*") AND (biorefiner* OR bioethanol OR "ethanol production" OR
       "ethanol fermentation" OR "fuel ethanol" OR biogas OR "anaerobic digestion" OR biomethane OR
       biofertili* OR valori* OR "life cycle assessment" OR "techno-economic"))
+    wos: >-
+      TS=((cassava OR manioc OR yam OR yams OR dioscorea OR "sweet potato*" OR potato* OR taro OR cocoyam
+      OR "root crop*" OR "tuber crop*") AND (biorefiner* OR bioethanol OR "ethanol production" OR "ethanol
+      fermentation" OR "fuel ethanol" OR biogas OR "anaerobic digestion" OR biomethane OR biofertili* OR
+      valori* OR "life cycle assessment" OR "techno-economic"))
 
   # ---------------------------------------------------------------------------
   - id: N4
@@ -85,6 +100,10 @@ levels:
         scopus: >-
           TITLE-ABS-KEY((yam OR yams OR dioscorea OR "sweet potato*" OR "Ipomoea batatas") AND starch AND
           (extraction OR isolation OR "native starch" OR yield OR physicochemical OR characteri* OR properties OR industrial))
+        wos: >-
+          TS=((yam OR yams OR dioscorea OR "sweet potato*" OR "Ipomoea batatas") AND starch AND (extraction OR
+          isolation OR "native starch" OR yield OR physicochemical OR characteri* OR properties OR
+          industrial))
       - id: N4b
         route: "Bioetanol"
         openalex: >-
@@ -94,6 +113,9 @@ levels:
         scopus: >-
           TITLE-ABS-KEY((yam OR yams OR dioscorea OR "sweet potato*" OR "Ipomoea batatas") AND
           (bioethanol OR "ethanol production" OR "ethanol fermentation" OR "fuel ethanol" OR "ethanol yield" OR biofuel*))
+        wos: >-
+          TS=((yam OR yams OR dioscorea OR "sweet potato*" OR "Ipomoea batatas") AND (bioethanol OR "ethanol
+          production" OR "ethanol fermentation" OR "fuel ethanol" OR "ethanol yield" OR biofuel*))
       - id: N4c
         route: "Biogás"
         openalex: >-
@@ -104,6 +126,10 @@ levels:
           TITLE-ABS-KEY((yam OR yams OR dioscorea OR "sweet potato*" OR "Ipomoea batatas") AND
           (biogas OR "anaerobic digestion" OR "anaerobic co-digestion" OR biomethane OR "methane yield" OR
           "methane production" OR "biochemical methane potential"))
+        wos: >-
+          TS=((yam OR yams OR dioscorea OR "sweet potato*" OR "Ipomoea batatas") AND (biogas OR "anaerobic
+          digestion" OR "anaerobic co-digestion" OR biomethane OR "methane yield" OR "methane production" OR
+          "biochemical methane potential"))
       - id: N4d
         route: "Biofertilizante"
         openalex: >-
@@ -116,6 +142,10 @@ levels:
           TITLE-ABS-KEY((yam OR yams OR dioscorea OR "sweet potato*" OR "Ipomoea batatas") AND
           (peel* OR residue* OR waste* OR "by-product*" OR byproduct* OR vine* OR digestate) AND
           (biofertili* OR "bio-fertili*" OR compost* OR vermicompost OR "organic fertili*" OR biochar OR "soil amendment"))
+        wos: >-
+          TS=((yam OR yams OR dioscorea OR "sweet potato*" OR "Ipomoea batatas") AND (peel* OR residue* OR
+          waste* OR "by-product*" OR byproduct* OR vine* OR digestate) AND (biofertili* OR "bio-fertili*" OR
+          compost* OR vermicompost OR "organic fertili*" OR biochar OR "soil amendment"))
       - id: N4e
         route: "Metabolitos del ñame"
         openalex: >-
@@ -128,6 +158,10 @@ levels:
           TITLE-ABS-KEY((yam OR yams OR dioscorea) AND (diosgenin OR dioscorin OR allantoin OR saponin* OR
           polyphenol* OR phenolic* OR flavonoid* OR mucilage OR polysaccharide* OR "bioactive compound*" OR
           "resistant starch" OR batatasin* OR dioscorine OR carotenoid*))
+        wos: >-
+          TS=((yam OR yams OR dioscorea) AND (diosgenin OR dioscorin OR allantoin OR saponin* OR polyphenol*
+          OR phenolic* OR flavonoid* OR mucilage OR polysaccharide* OR "bioactive compound*" OR "resistant
+          starch" OR batatasin* OR dioscorine OR carotenoid*))
       - id: N4f
         route: "Metabolitos de la batata"
         openalex: >-
@@ -140,6 +174,10 @@ levels:
           TITLE-ABS-KEY(("sweet potato*" OR "Ipomoea batatas") AND (anthocyanin* OR "chlorogenic acid" OR
           caffeoylquinic OR "beta-carotene" OR carotenoid* OR sporamin OR polyphenol* OR phenolic* OR
           flavonoid* OR pectin OR "dietary fiber" OR "resistant starch" OR "bioactive compound*" OR "protein isolate"))
+        wos: >-
+          TS=(("sweet potato*" OR "Ipomoea batatas") AND (anthocyanin* OR "chlorogenic acid" OR caffeoylquinic
+          OR "beta-carotene" OR carotenoid* OR sporamin OR polyphenol* OR phenolic* OR flavonoid* OR pectin OR
+          "dietary fiber" OR "resistant starch" OR "bioactive compound*" OR "protein isolate"))
       - id: N4g
         route: "Biorrefinería / valorización integral"
         openalex: >-
@@ -149,6 +187,9 @@ levels:
         scopus: >-
           TITLE-ABS-KEY((yam OR yams OR dioscorea OR "sweet potato*" OR "Ipomoea batatas") AND
           (biorefiner* OR valori* OR "circular economy" OR "zero waste" OR "integrated process" OR cascad*))
+        wos: >-
+          TS=((yam OR yams OR dioscorea OR "sweet potato*" OR "Ipomoea batatas") AND (biorefiner* OR valori*
+          OR "circular economy" OR "zero waste" OR "integrated process" OR cascad*))
 
   # ---------------------------------------------------------------------------
   - id: N5
@@ -166,6 +207,11 @@ levels:
       ("life cycle assessment" OR "life cycle analysis" OR LCA OR "techno-economic" OR "economic feasibility" OR
       "economic analysis" OR profitability OR "social life cycle" OR "carbon footprint" OR
       "environmental impact" OR "sustainability assessment" OR "value chain"))
+    wos: >-
+      TS=((yam OR yams OR dioscorea OR "sweet potato*" OR "Ipomoea batatas") AND ("life cycle assessment"
+      OR "life cycle analysis" OR LCA OR "techno-economic" OR "economic feasibility" OR "economic
+      analysis" OR profitability OR "social life cycle" OR "carbon footprint" OR "environmental impact" OR
+      "sustainability assessment" OR "value chain"))
 
   # ---------------------------------------------------------------------------
   - id: N6
@@ -183,6 +229,9 @@ levels:
     scopus: >-
       TITLE-ABS-KEY((yam OR yams OR dioscorea OR "sweet potato*" OR batata OR "Ipomoea batatas") AND
       (colombia* OR "Montes de María" OR "Montes de Maria"))
+    wos: >-
+      TS=((yam OR yams OR dioscorea OR "sweet potato*" OR batata OR "Ipomoea batatas") AND (colombia* OR
+      "Montes de María" OR "Montes de Maria"))
   - id: N6c
     name: "Contexto territorial: bioprocesos con raíces, tubérculos y residuos agroindustriales en Colombia"
     description: >
@@ -199,6 +248,10 @@ levels:
       biofertili* OR "life cycle assessment" OR "techno-economic") AND
       (cassava OR yuca OR yam OR yams OR "sweet potato*" OR "agro-industrial" OR agroindustrial OR "crop residue*" OR starch) AND
       (colombia*))
+    wos: >-
+      TS=((biorefiner* OR biorrefiner* OR bioethanol OR biogas OR "anaerobic digestion" OR biofertili* OR
+      "life cycle assessment" OR "techno-economic") AND (cassava OR yuca OR yam OR yams OR "sweet potato*"
+      OR "agro-industrial" OR agroindustrial OR "crop residue*" OR starch) AND (colombia*))
   - id: N6b
     name: "Biorrefinerías evaluadas por instituciones colombianas"
     description: >
@@ -213,3 +266,6 @@ levels:
     scopus: >-
       TITLE-ABS-KEY(biorefiner* AND ("life cycle assessment" OR "techno-economic" OR
       "sustainability assessment" OR "social life cycle")) AND AFFILCOUNTRY(colombia)
+    wos: >-
+      TS=(biorefiner* AND ("life cycle assessment" OR "techno-economic" OR "sustainability assessment" OR
+      "social life cycle")) AND CU=(Colombia)

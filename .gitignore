@@ -2,3 +2,9 @@ __pycache__/
 *.pyc
 .venv/
 .DS_Store
+
+# Claves de API: nunca se versionan (se leen de variables de entorno)
+*api key*
+*api_key*
+*API_KEY*
+.env
