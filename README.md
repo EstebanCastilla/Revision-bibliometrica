@@ -12,7 +12,7 @@ Rutas fijas para ambos tubérculos: almidón nativo, bioetanol, biogás, biofert
 | | |
 |---|---|
 | Registros identificados | 34.616 (OpenAlex 19.988 + Scopus 14.628) |
-| Documentos únicos incluidos | **19.347** (2000-2026) |
+| Documentos únicos incluidos | **19.164** (2000-2026) |
 | N1 Sostenibilidad de biorrefinerías | 2.978 docs, TCAC 29,2 %; Colombia 9.º país |
 | N2 ACV-S / LCSA | 159 docs (dimensión social marginal) |
 | Brecha central | 0 estudios que integren ACV + TEA + ACV-S en tubérculos; ñame: 7 ACV, 20 TEA, 0 ACV-S |
