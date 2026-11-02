@@ -1,7 +1,7 @@
 ---
 title: "Evaluación de sostenibilidad de biorrefinerías basadas en raíces y tubérculos: revisión bibliométrica jerárquica con énfasis en ñame (*Dioscorea rotundata*) y batata (*Ipomoea batatas*)"
 subtitle: "Sustainability assessment of root and tuber biorefineries: a hierarchical bibliometric review focused on yam and sweet potato"
-author: "[Nombre del autor] — Maestría en Ingeniería, [Universidad]"
+author: "Stefanie Barrios Barrios — Maestría en Ingeniería, Universidad Tecnológica de Bolívar"
 date: "Fecha de corte de la búsqueda: 29 de octubre de 2026"
 lang: es
 ---
