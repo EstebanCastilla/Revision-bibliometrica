@@ -31,6 +31,8 @@ jobs:
       OPENALEX_MAILTO: ${{ secrets.OPENALEX_MAILTO }}
       SCOPUS_API_KEY: ${{ secrets.SCOPUS_API_KEY }}
       SCOPUS_INSTTOKEN: ${{ secrets.SCOPUS_INSTTOKEN }}
+      WOS_API_KEY: ${{ secrets.WOS_API_KEY }}
+      WOS_API_PLAN: ${{ secrets.WOS_API_PLAN }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -46,6 +48,7 @@ jobs:
           if [ -z "$OPENALEX_API_KEY" ]; then echo "::error::Defina el secret OPENALEX_API_KEY"; exit 1; fi
           python src/01_harvest_openalex.py
           python src/02_harvest_scopus_api.py
+          python src/02b_harvest_wos_api.py
 
       - name: Analisis bibliometrico
         if: env.STAGE == 'analyze' || env.STAGE == 'all'

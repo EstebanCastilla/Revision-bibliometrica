@@ -119,8 +119,8 @@ def harvest_range(base: str, y0: int, y1: int, out: list, parts: list) -> None:
     print(f"   {y0}-{y1}: {total} -> acumulado {len(out)}", flush=True)
 
 
-def enrich_with_openalex(qid: str, recs: list) -> int:
-    """Busca en OpenAlex los DOI de Scopus ausentes en la cosecha de OpenAlex."""
+def enrich_with_openalex(qid: str, recs: list, out_dir=RAW_SCOPUS_API) -> int:
+    """Busca en OpenAlex los DOI (de Scopus o WoS) ausentes en la cosecha de OpenAlex."""
     f = RAW_OA / f"{qid}.jsonl.gz"
     have = {norm_doi(r["doi"]) for r in read_jsonl_gz(f)} if f.exists() else set()
     missing = sorted({norm_doi(r["doi"]) for r in recs if r["doi"]} - have - {""})
@@ -135,7 +135,7 @@ def enrich_with_openalex(qid: str, recs: list) -> int:
             rec["referenced_works"] = []
             found.append(rec)
         time.sleep(0.1)
-    write_jsonl_gz(RAW_SCOPUS_API / f"{qid}_openalex.jsonl.gz", found)
+    write_jsonl_gz(out_dir / f"{qid}_openalex.jsonl.gz", found)
     return len(found)
 
 

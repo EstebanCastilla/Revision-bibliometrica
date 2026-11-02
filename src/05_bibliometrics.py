@@ -99,17 +99,20 @@ def annual_production(df):
 
 
 def source_contribution(df):
-    """Aporte de cada base por año: búsqueda OpenAlex vs. registros recuperados solo vía Scopus."""
+    """Aporte de cada base por año: OpenAlex, Scopus y Web of Science."""
     rows = []
     for lvl in LEVELS:
         d = subset(df, lvl)
         oa = d["sources"].apply(lambda s: "OpenAlex" in s)
         sc = d["sources"].apply(lambda s: "Scopus API" in s)
+        wos = d["sources"].apply(lambda s: "Web of Science API" in s or "Web of Science export" in s)
         for y, g in d.groupby("year"):
             rows.append({"level": lvl, "year": int(y), "total": len(g),
                          "openalex_search": int(oa[g.index].sum()), "scopus_search": int(sc[g.index].sum()),
                          "both": int((oa & sc)[g.index].sum()), "only_scopus": int((sc & ~oa)[g.index].sum()),
-                         "only_openalex": int((oa & ~sc)[g.index].sum())})
+                         "only_openalex": int((oa & ~sc & ~wos)[g.index].sum()),
+                         "wos_search": int(wos[g.index].sum()),
+                         "only_wos": int((wos & ~oa & ~sc)[g.index].sum())})
     pd.DataFrame(rows).to_csv(TABLES / "annual_production_by_source.csv", index=False)
 
 

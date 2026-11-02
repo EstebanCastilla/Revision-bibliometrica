@@ -12,11 +12,7 @@ import re
 
 import pandas as pd
 
-from common import RAW_SCOPUS_CSV, write_jsonl_gz
-
-# País = último elemento de cada afiliación ("Univ..., City, Colombia")
-COUNTRY_FIX = {"United States": "US", "USA": "US", "United Kingdom": "GB", "UK": "GB"}
-
+from common import RAW_SCOPUS_CSV, country_to_iso2, write_jsonl_gz
 
 def split(val, sep=";"):
     if not isinstance(val, str) or not val.strip():
@@ -26,7 +22,8 @@ def split(val, sep=";"):
 
 def row_to_record(r: pd.Series) -> dict:
     affs = split(r.get("Affiliations"))
-    countries = sorted({COUNTRY_FIX.get(a.split(",")[-1].strip(), a.split(",")[-1].strip()) for a in affs})
+    # País = último elemento de cada afiliación ("Univ..., City, Colombia"), en ISO alfa-2
+    countries = sorted({c for c in (country_to_iso2(a.split(",")[-1]) for a in affs) if c})
     names = split(r.get("Authors"))
     ids = split(r.get("Author(s) ID"))
     authors = [{"id": ids[i] if i < len(ids) else None, "name": n, "countries": [], "institutions": []}

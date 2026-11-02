@@ -14,6 +14,8 @@ CONFIG = ROOT / "config" / "queries.yaml"
 RAW_OA = ROOT / "data" / "raw" / "openalex"
 RAW_SCOPUS_API = ROOT / "data" / "raw" / "scopus_api"
 RAW_SCOPUS_CSV = ROOT / "data" / "raw" / "scopus_export"
+RAW_WOS_API = ROOT / "data" / "raw" / "wos_api"
+RAW_WOS_EXPORT = ROOT / "data" / "raw" / "wos_export"
 PROCESSED = ROOT / "data" / "processed"
 TABLES = ROOT / "results" / "tables"
 FIGURES = ROOT / "results" / "figures"
@@ -35,6 +37,7 @@ def iter_queries(cfg: dict):
                     "name": f'{level["name"]} - {sub["route"]}',
                     "openalex": " ".join(sub["openalex"].split()),
                     "scopus": " ".join(sub["scopus"].split()),
+                    "wos": " ".join(sub.get("wos", "").split()),
                     "extra_filter": sub.get("extra_filter"),
                 }
         else:
@@ -44,6 +47,7 @@ def iter_queries(cfg: dict):
                 "name": level["name"],
                 "openalex": " ".join(level["openalex"].split()),
                 "scopus": " ".join(level["scopus"].split()),
+                "wos": " ".join(level.get("wos", "").split()),
                 "extra_filter": level.get("extra_filter"),
             }
 
@@ -103,3 +107,26 @@ def run_metadata() -> dict:
         "environment": "GitHub Actions" if os.getenv("GITHUB_ACTIONS") else platform.node() or "local",
         "python": platform.python_version(),
     }
+
+
+COUNTRY_ALIASES = {
+    "usa": "US", "united states": "US", "peoples r china": "CN", "china": "CN", "england": "GB",
+    "scotland": "GB", "wales": "GB", "north ireland": "GB", "united kingdom": "GB", "uk": "GB",
+    "south korea": "KR", "korea": "KR", "russia": "RU", "iran": "IR", "taiwan": "TW", "vietnam": "VN",
+    "viet nam": "VN", "turkiye": "TR", "turkey": "TR", "u arab emirates": "AE", "czech republic": "CZ",
+    "bolivia": "BO", "venezuela": "VE", "tanzania": "TZ", "cote ivoire": "CI", "dem rep congo": "CD",
+}
+
+
+def country_to_iso2(name: str) -> str | None:
+    """Convierte el nombre de país de una afiliación (Scopus/WoS) a código ISO 3166-1 alfa-2."""
+    key = strip_accents((name or "").strip().rstrip(".")).lower()
+    if not key:
+        return None
+    if key in COUNTRY_ALIASES:
+        return COUNTRY_ALIASES[key]
+    try:
+        import pycountry
+        return pycountry.countries.lookup(key).alpha_2
+    except (ImportError, LookupError):
+        return None

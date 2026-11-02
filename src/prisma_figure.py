@@ -27,11 +27,15 @@ def main() -> None:
     ident = pd.read_csv(TABLES / "prisma_identification_by_query.csv")
     t = p.loc["Total"]
     by_src = ident.groupby("source")["records"].sum()
-    enrich = int(by_src.get("Scopus -> OpenAlex (DOI)", 0))
-    by_src = by_src.drop("Scopus -> OpenAlex (DOI)", errors="ignore")
+    links = [s for s in by_src.index if "-> OpenAlex" in s]
+    enrich = int(by_src[links].sum()) if links else 0
+    by_src = by_src.drop(links)
+    short = {"Web of Science API": "WoS", "Web of Science export": "WoS", "Scopus API": "Scopus",
+             "Scopus CSV": "Scopus"}
+    by_src = by_src.groupby(lambda s: short.get(s, s)).sum()
     src_txt = " · ".join(f"{s}: {es(n)}" for s, n in by_src.items())
     if enrich:
-        src_txt += f"\n(+{es(enrich)} DOI de Scopus completados\ncon metadatos de OpenAlex)"
+        src_txt += f"\n(+{es(enrich)} DOI de Scopus/WoS completados\ncon metadatos de OpenAlex)"
     nq = ident["query"].nunique()
     items = [f"{i}: {es(int(r.included))}" for i, r in p.drop("Total").iterrows()]
     lv = "\n".join("   ".join(items[k:k + 2]) for k in range(0, len(items), 2))
