@@ -16,7 +16,7 @@ Rutas fijas para ambos tubérculos: almidón nativo, bioetanol, biogás, biofert
 | N1 Sostenibilidad de biorrefinerías | 2.978 docs, TCAC 29,2 %; Colombia 9.º país |
 | N2 ACV-S / LCSA | 159 docs (dimensión social marginal) |
 | Brecha central | 0 estudios que integren ACV + TEA + ACV-S en tubérculos; ñame: 7 ACV, 20 TEA, 0 ACV-S |
-| Metabolitos priorizados | Ñame: fenólicos/flavonoides de cáscara; batata: antocianinas, ác. clorogénico o β-caroteno según variedad |
+| Metabolitos priorizados | Ñame: fenólicos/flavonoides de cáscara; batata: β-caroteno (variedad de pulpa naranja) |
 
 - Artículo: [`articulo/articulo_final.md`](articulo/articulo_final.md) · [DOCX](articulo/articulo_revision_bibliometrica.docx) · fuente editable [`articulo_revision_bibliometrica.md`](articulo/articulo_revision_bibliometrica.md)
 - Protocolo: [`protocolo/protocolo_revision.md`](protocolo/protocolo_revision.md) · Bitácora: [`protocolo/bitacora_decisiones.md`](protocolo/bitacora_decisiones.md)
